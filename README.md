@@ -14,10 +14,10 @@ This chapter introduces the basic concepts required to understand how the Web wo
 2. [History of Internet](#2-history-of-internet)
 3. [World Wide Web (WWW)](#3-world-wide-web-www)
 4. [Web Browser](#4-web-browser)
-5. [Client-Server Architecture](#5-Client-Server Architecture)
+5. [Client-Server Architecture](#5-client-server-architecture)
 6. [HTTP and HTTPS](#6-http-and-https)
-7. [Webpage](#7-webpage)
-8. [URL](#8-url)
+7. [URL](#7-url)
+8. [Webpage](#8-webpage)
 9. [Website](#9-website)
 10. [Working of a Website](#10-working-of-a-website)
 11. [Types of Websites](#11-types-of-websites)
@@ -28,7 +28,7 @@ This chapter introduces the basic concepts required to understand how the Web wo
 
 ---
 
-## 1.  What is the Internet?
+## 1. Internet
 
 ## English
 
@@ -326,7 +326,7 @@ Browser / Client
        ↓
 Browser / Client
 ```
-### HTTP
+## 6. HTTP and HTTPS
 
 - HTTP = Hyper Text Transfer Protocol
 
@@ -371,4 +371,216 @@ Webpage
 ```
 TLS — Transport Layer Security
 SSL — Secure Socket Layer
+```
+## 7. URL 
+
+- It stans for (Uniform Resource Locator).
+- A URL (Uniform Resource Locator) is the unique address of a web page on the internet. It tells the browser where to find the resource such as a web page, image, file, etc.
+
+In simple words:
+
+- A URL tells the browser where a resource is located and how it should be accessed.
+
+Example
+```
+https://www.regn.nielitvte.edu.in/courses
+```
+### 1. Structure of a URL
+
+A URL can contain the following main parts:
+```
+https://www.example.com:443/courses
+│       │              │   │
+│       │              │   └── Path
+│       │              └────── Port
+│       └───────────────────── Host
+└───────────────────────────── Protocol
+```
+Main Components
+```
+| Component    | Description                                                   | Example           |
+| ------------ | ------------------------------------------------------------- | ----------------- |
+| **Protocol** | Defines how the resource should be accessed                   | `https`           |
+| **Host**     | Identifies the server/domain hosting the resource             | `www.example.com` |
+| **Port**     | Identifies the communication port used by the service         | `443`             |
+| **Path**     | Specifies the location of a particular resource on the server | `/courses`        |
+```
+
+Note: The port number is often not written in a URL because the browser uses the default port for the selected protocol.
+
+### 2. Protocol
+
+- The protocol specifies the rules used for communication between the client and the server.
+
+Common web protocols include:
+```
+http://
+https://
+```
+
+### 3. Host
+
+- The host identifies the server or domain where the requested resource is located.
+
+Example:
+```
+https://www.regn.nielitvte.edu.in/courses
+        └──────────────┘
+              Host
+```
+Here:
+```
+www.regn.nielitvte.edu.in
+```
+is the host.
+
+The host commonly contains a domain name and may include a subdomain.
+
+### 4. Port
+
+A port identifies a communication endpoint on a server.
+
+Example:
+```
+https://www.example.com:443/courses
+                     └───┘
+                     Port
+```
+
+Common default web ports:
+```
+| Protocol | Default Port |
+| -------- | -----------: |
+| HTTP     |       80 |
+| HTTPS    |      443|
+```
+
+For example:
+```
+http://regn.nielitvte.edu.in
+```
+is normally equivalent to:
+```
+http://regn.nielitvte.edu.in:80
+```
+Similarly:
+```
+https://regn.nielitvte.edu.in
+```
+normally uses:
+```
+https://regn.nielitvte.edu.in:443
+```
+### 5. Path
+
+The path specifies the location of a particular resource on the server.
+
+Example:
+```
+https://www.example.com/courses/web-design
+                         └────────────────┘
+                                Path
+```
+
+Here:
+
+/courses/web-design
+
+is the path.
+
+## 8. Webpage
+- A webpage is a single page on the Internet.
+- It is displayed using a web browser.
+- A webpage is mainly created using HTML.
+- A webpage can contain:
+```
+Text
+Images
+Videos
+Links
+Buttons
+Forms
+```
+Every webpage can have a URL (web address).
+### Example
+
+Suppose we have a website:
+```
+https://regn.nielitvte.edu.in/
+```
+It may have:
+```
+Home → One webpage
+About → One webpage
+Courses → One webpage
+Contact → One webpage
+```
+## 9. Website
+ - A website is a collection of related webpages.
+ - All webpages are connected to each other using links (hyperlinks).
+ - A website has a Home Page, which is usually the first page we see.
+ - A website is accessed using a domain name or URL.
+ - A website can contain:
+```
+Text
+Images
+Videos
+Links
+Forms
+Buttons
+```
+Example:
+```
+www.nielit.gov.in
+```
+ - It may contain different webpages such as:
+```
+Home
+About Us
+Courses
+Notices
+Contact Us
+```
+### Types of Website
+
+ - There are mainly two types of websites:
+
+### 1. Static Website
+ - Content is fixed or predefined.
+ - Content usually remains the same for users.
+ - There is generally little or no user interaction.
+ - Usually does not require a database.
+ - Commonly created using HTML, CSS and JavaScript.
+ - Changes are usually made manually.
+
+### Examples
+```
+College information website
+Company profile website
+Personal portfolio website
+```
+##### Static website = "Website with mostly fixed content."
+### 2. Dynamic Website
+ - Content can change according to the user or request.
+ - Provides more user interaction.
+ - Usually uses a database.
+ - Uses both front-end and back-end technologies.
+ - Content can be generated in real time.
+
+### Examples
+```
+Facebook
+Online shopping websites
+Online banking websites
+Email websites
+```
+#####  Dynamic website = "Website where content can change according to users or data"
+
+Real world  Example
+
+Think of a book:
+```
+📖 Website → Complete book
+📄 Webpage → One page of the book
+🌐 URL → Address of that page
 ```
