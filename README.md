@@ -7,9 +7,11 @@ This chapter introduces the basic concepts required to understand how the Web wo
 
 ---
 
-## 📚 Chapter Overview
+# 📚 Table of Contents
 
-# In this chapter, we will learn:
+## Chapter 1 — Introduction to Web Designing
+
+### In this chapter, we will learn:
 1. [Internet](#1-internet)
 2. [History of Internet](#2-history-of-internet)
 3. [World Wide Web (WWW)](#3-world-wide-web-www)
@@ -25,6 +27,22 @@ This chapter introduces the basic concepts required to understand how the Web wo
 13. [Front End and Back End](#13-front-end-and-back-end)
 14. [Scripting Language](#14-scripting-language)
 15. [Responsive Web Design](#15-responsive-web-design)
+
+---
+
+## Chapter 2 — Editors
+
+### In this chapter, we will learn:
+1. [What is an Editor?](#1-what-is-an-editor)
+2. [Types of Editors](#2-types-of-editors)
+3. [Text Editor](#3-text-editor)
+4. [Code Editor](#4-code-editor)
+5. [Syntax Highlighting](#5-syntax-highlighting)
+6. [Auto-Completion](#6-auto-completion)
+7. [Multiple Tabs](#7-multiple-tabs)
+8. [Text Editor vs Code Editor](#8-text-editor-vs-code-editor)
+9. [Notepad++](#3-notepad)
+10. [Sublime Text](#4-sublime-text)
 
 ---
 
@@ -1292,5 +1310,421 @@ The website **automatically adjusts** itself for the smaller screen.
      ↓
 📱 Mobile
 ```
+
+//Editors
+# Chapter 2: Editors
+
+## 1. What is an Editor?
+
+An **editor** is a software application used to create, write, edit and save text or code.
+
+We can think of an editor as a **digital notebook** for writing.
+
+### Simple Example
+
+Just as we use a notebook to:
+
+- Write notes
+- Correct mistakes
+- Add new text
+- Save our work
+
+we use an editor to:
+
+- Write text
+- Edit text
+- Write computer code
+- Save files
+
+### Examples
+
+- Notepad
+- Notepad++
+- Sublime Text
+- Visual Studio Code
+
+---
+
+## 2. Types of Editors
+
+Editors can mainly be divided into:
+
+```
+                Editors
+                   ↓
+        ┌──────────┴──────────┐
+        ↓                     ↓
+   Text Editors           Code Editors
+```
+
+> **Note:** In practice, the terms can overlap. Many modern code editors also work as advanced text editors.
+
+---
+
+## 3. Text Editor
+
+A **text editor** is a program used to create, write, edit and save text files.
+
+It is mainly used for simple text work.
+
+### Example
+
+**Notepad** is a simple text editor.
+
+We can use it to write:
+
+```
+My Name is Rahul.
+I am learning Web Designing.
+```
+
+We can save the file as:
+
+```
+notes.txt
+```
+
+### Features of a Text Editor
+
+- Simple to use
+- Write and edit text
+- Open files
+- Save files
+- Find text
+- Replace text
+
+### Example
+
+```
+Notepad
+   ↓
+Write Text
+   ↓
+Edit Text
+   ↓
+Save File
+```
+
+---
+
+## 4. Code Editor
+
+A **code editor** is an editor specially designed for writing and editing computer programs or source code.
+
+It provides extra features that make coding easier.
+
+### Examples
+
+- Notepad++
+- Sublime Text
+- Visual Studio Code
+
+### Features of Code Editors
+
+- Syntax Highlighting
+- Auto-completion
+- Multiple Tabs
+- Find and Replace
+- Code Formatting
+- Support for different programming languages
+
+---
+
+## 5. Syntax Highlighting
+
+**Syntax highlighting** displays different parts of code in different colors/styles so that code is easier to read.
+
+### Example:
+
+```
+<h1>Hello World</h1>
+<p>Welcome</p>
+```
+
+The editor highlights tags, attributes and other parts differently.
+
+### Simple Meaning
+
+> Syntax highlighting makes code easier to read and understand.
+
+---
+
+## 6. Auto-Completion
+
+**Auto-completion** helps us while writing code by suggesting possible words, tags, functions or properties.
+
+For example, while writing:
+
+```
+<ht
+```
+
+the editor may suggest:
+
+```
+<html>
+```
+
+### Simple Meaning
+
+> Auto-completion helps us write code faster.
+
+---
+
+## 7. Multiple Tabs
+
+Code editors allow us to open several files at the same time.
+
+For example:
+
+```
+index.html | style.css | script.js
+```
+
+We can easily switch between these files.
+
+---
+
+# 3. Notepad++
+
+## What is Notepad++?
+
+**Notepad++** is a free and lightweight editor used to write and edit text and computer code.
+
+It is very useful for learning **HTML, CSS, JavaScript** and other programming languages.
+
+---
+
+## Basic Features
+
+- Easy to use
+- Fast and lightweight
+- Syntax highlighting
+- Multiple files can be opened in tabs
+- Supports many programming languages
+- Find and Replace option
+
+---
+
+## Basic Menus of Notepad++
+
+The main menu of Notepad++ contains options such as:
+
+```
+File | Edit | Search | View | Encoding | Language | Settings | Tools | Macro | Run | Plugins | Window | ?
+```
+
+---
+
+### 1. File
+
+Used to work with files.
+
+**Important options:**
+
+- **New** → Create a new file
+- **Open** → Open an existing file
+- **Save** → Save the current file
+- **Save As** → Save with a new name/location
+- **Close** → Close the file
+
+---
+
+### 2. Edit
+
+Used to edit the text or code.
+
+**Important options:**
+
+- **Undo** → Remove the last change
+- **Redo** → Bring back the undone change
+- **Cut** → Remove selected text
+- **Copy** → Copy selected text
+- **Paste** → Insert copied text
+- **Select All** → Select all text
+
+---
+
+### 3. Search
+
+Used to find or change text.
+
+**Important options:**
+
+- **Find** → Search for text
+- **Replace** → Replace one text with another
+- **Find Next** → Find the next occurrence
+
+---
+
+### 4. View
+
+Used to change how the editor looks.
+
+For example:
+
+- Show/Hide panels
+- Zoom in/out
+- Show tabs
+- Change display options
+
+---
+
+### 5. Language
+
+Used to select the programming language for syntax highlighting.
+
+For example:
+
+- HTML
+- CSS
+- JavaScript
+- PHP
+- Python
+
+---
+
+### 6. Settings
+
+Used to change editor settings and preferences.
+
+---
+
+### 7. Plugins
+
+Used to add extra features to Notepad++.
+
+---
+
+## ⭐ Remember
+
+> **Notepad++ = Write + Edit + Save Code**
+
+---
+
+# 4. Sublime Text
+
+## What is Sublime Text?
+
+**Sublime Text** is a fast and lightweight code editor used to write and edit computer code.
+
+It supports many programming languages and provides useful features for programmers.
+
+---
+
+## Basic Features
+
+- Fast and lightweight
+- Simple interface
+- Syntax highlighting
+- Multiple tabs
+- Multiple selection
+- Powerful search
+- Supports many programming languages
+
+---
+
+## Basic Menus of Sublime Text
+
+The main menu contains:
+
+```
+File | Edit | Selection | Find | View | Goto | Tools | Project | Preferences | Help
+```
+
+---
+
+### 1. File
+
+Used to work with files.
+
+**Important options:**
+
+- **New File** → Create a new file
+- **Open File** → Open an existing file
+- **Save** → Save the file
+- **Save As** → Save with another name/location
+- **Close File** → Close the file
+
+---
+
+### 2. Edit
+
+Used to edit code or text.
+
+**Important options:**
+
+- Undo
+- Redo
+- Cut
+- Copy
+- Paste
+- Select All
+
+---
+
+### 3. Selection
+
+Used to select text or multiple parts of code.
+
+---
+
+### 4. Find
+
+Used to search and replace text.
+
+**Important options:**
+
+- **Find** → Search text
+- **Find Next** → Find next occurrence
+- **Replace** → Replace text
+
+---
+
+### 5. View
+
+Used to control how the editor looks.
+
+For example:
+
+- Zoom
+- Side Bar
+- Layout
+- Word Wrap
+
+---
+
+### 6. Goto
+
+Used to quickly move to a particular:
+
+- Line
+- File
+- Symbol
+
+---
+
+### 7. Tools
+
+Provides tools and options useful for working with code.
+
+---
+
+### 8. Project
+
+Used to manage files and folders as a project.
+
+---
+
+### 9. Preferences
+
+Used to change Sublime Text settings and appearance.
+
+---
+
+### 10. Help
+
+Used to get help and information about Sublime Text.
+
 
 
