@@ -389,7 +389,7 @@ https://www.regn.nielitvte.edu.in/courses
 
 A URL can contain the following main parts:
 ```
-https://www.example.com:443/courses
+https://www.nielit.gov.in:443/courses
 │       │              │   │
 │       │              │   └── Path
 │       │              └────── Port
@@ -401,7 +401,7 @@ Main Components
 | Component    | Description                                                   | Example           |
 | ------------ | ------------------------------------------------------------- | ----------------- |
 | **Protocol** | Defines how the resource should be accessed                   | `https`           |
-| **Host**     | Identifies the server/domain hosting the resource             | `www.example.com` |
+| **Host**     | Identifies the server/domain hosting the resource             | `www.nielit.gov.in` |
 | **Port**     | Identifies the communication port used by the service         | `443`             |
 | **Path**     | Specifies the location of a particular resource on the server | `/courses`        |
 ```
@@ -442,7 +442,7 @@ A port identifies a communication endpoint on a server.
 
 Example:
 ```
-https://www.example.com:443/courses
+https://www.nielit.gov.in:443/courses
                      └───┘
                      Port
 ```
@@ -477,7 +477,7 @@ The path specifies the location of a particular resource on the server.
 
 Example:
 ```
-https://www.example.com/courses/web-design
+https://www.nielit.gov.in/courses/web-design
                          └────────────────┘
                                 Path
 ```
@@ -584,3 +584,713 @@ Think of a book:
 📄 Webpage → One page of the book
 🌐 URL → Address of that page
 ```
+
+
+
+
+
+# 10. Working of Website
+
+## 🌐 Introduction
+
+- When we type a website address (URL) in a browser and press Enter, several steps happen behind the scenes before the website appears on our screen.
+
+- **Basic Flow**
+
+```
+User
+  ↓
+Browser (Enter URL)
+  ↓
+DNS Lookup
+  ↓
+Connect to Server
+  ↓
+Send Request
+  ↓
+Server Processes the Request
+  ↓
+Response
+  ↓
+Browser Displays the Website
+```
+
+---
+
+## 1. Enter URL
+
+- First, the user enters a website address in the browser.
+
+Example:
+
+```
+https://www.nielit.gov.in
+```
+
+- The URL tells the browser which website the user wants to open.
+
+---
+
+## 2. DNS Lookup
+
+- The browser asks the DNS (Domain Name System) to find the IP address of the website.
+
+- **Domain Name → IP Address**
+
+For example:
+
+```
+www.nielit.gov.in → IP Address
+```
+
+### Simple Example
+
+- DNS works like a phone directory.
+
+- We remember a person's name, but the phone directory helps us find their phone number.
+
+### Similarly:
+
+```
+Website Name → DNS → IP Address
+```
+
+---
+
+## 3. Connect to Server
+
+- After getting the IP address, the browser connects to the web server using the Internet.
+
+- The server is the computer/system where the website and its resources are hosted.
+
+---
+
+## 4. Send Request
+
+- The browser sends an HTTP/HTTPS request to the server.
+
+For example:
+
+```
+/index.html
+```
+
+It means:
+
+- "Please send me the webpage."
+
+The request may ask for:
+
+```
+HTML
+CSS
+JavaScript
+Images
+Other website resources
+```
+
+---
+
+## 5. Server Processes the Request
+
+- The server receives the request and processes it.
+
+- For a simple website, the server may directly provide the required files.
+
+- For a dynamic website, the request may go to the backend application.
+
+- The backend may also communicate with a database to get required information.
+
+---
+
+## 6. Server Sends Response
+
+- After processing the request, the server sends a response back to the browser.
+
+The response can contain:
+
+```
+HTML
+CSS
+JavaScript
+Images
+Data
+```
+
+---
+
+## 7. Browser Displays the Website
+
+- The browser receives the files and processes them.
+
+```
+HTML → Structure
+CSS → Design
+JavaScript → Interactivity
+```
+
+The browser combines these resources and renders the webpage on the screen.
+
+```
+HTML + CSS + JavaScript
+          ↓
+     Browser Rendering
+          ↓
+     Webpage Displayed
+```
+
+---
+
+## 🍔 Real-Life Example: Ordering Food
+
+- Website working can be compared with ordering food in a restaurant.
+
+```
+| Website           | Restaurant                 |
+| ----------------- | -------------------------- |
+| Enter URL         | Place an order             |
+| DNS Lookup        | Waiter checks your order   |
+| Connect to Server | Waiter goes to kitchen     |
+| Send Request      | Waiter gives order to chef |
+| Server Processes  | Chef prepares food         |
+| Server Response   | Waiter brings food         |
+| Browser Displays  | You receive and enjoy food |
+```
+
+### Easy to Remember
+
+```
+Order → Process → Prepare → Deliver → Receive
+```
+
+Similarly:
+
+```
+Request → Process → Generate → Response → Display
+```
+
+# 🖥️ Frontend and Backend
+
+## Introduction
+
+A website mainly has two parts:
+
+```
+Frontend + Backend
+```
+
+---
+
+## 1. Frontend — What You See
+
+- Frontend is the part of a website that we can see and use.
+- It runs in the web browser.
+
+### Frontend includes:
+
+```
+Buttons
+Menus
+Images
+Text
+Forms
+Colors
+Website layout
+```
+
+### Technologies:
+
+```
+HTML + CSS + JavaScript
+```
+
+### Example:
+
+In a food-ordering website, we can see:
+
+```
+🍔 Burger
+₹150
+
+[ Order Now ]
+```
+
+- The menu, burger image, price and Order Now button are **frontend**.
+
+---
+
+## 2. Backend — What Happens Behind the Scene
+
+- Backend is the part of the website that the user normally cannot see.
+- It works on the server.
+
+### Backend:
+
+```
+Receives the user's request
+Processes the request
+Checks information
+Works with the database
+Sends the result back to the frontend
+```
+
+### Backend Technologies
+
+Examples:
+
+```
+PHP
+Python
+Node.js
+Java
+```
+
+---
+
+## 🔄 How Frontend and Backend Work Together
+
+Suppose you click:
+
+```
+[ Order Now ]
+```
+
+### The process is:
+
+```
+FRONTEND
+   ↓
+User clicks "Order Now"
+   ↓
+Request
+   ↓
+BACKEND
+   ↓
+Processes the order
+   ↓
+DATABASE
+   ↓
+Saves order
+   ↓
+BACKEND
+   ↓
+Response
+   ↓
+FRONTEND
+   ↓
+"Order Confirmed!"
+```
+
+---
+
+## 🍔 Simple Real-Life Example
+
+- Think about a restaurant.
+
+### Frontend = Dining Area + Menu
+
+- The customer sees:
+
+```
+Menu
+Food
+Price
+Order Button
+```
+
+### Backend = Kitchen + Staff
+
+Behind the scene:
+
+```
+Receive Order
+      ↓
+Check Food
+      ↓
+Prepare Order
+      ↓
+Process Payment
+      ↓
+Confirm Order
+```
+
+---
+
+## 🧠 Remember
+
+> 🖥️ **Frontend = What You See**
+
+> ⚙️ **Backend = What Happens Behind the Scene**
+
+---
+
+## 📊 Frontend vs Backend (Quick Comparison)
+```
+
+| Frontend               | Backend                       |
+| ---------------------- | ----------------------------- |
+| What you see           | What happens behind the scene |
+| Runs in browser        | Runs on server                |
+| HTML, CSS, JavaScript  | PHP, Python, Node.js etc.     |
+| Buttons, menus, images | Processing, database, login   |
+| User interacts with it | User normally doesn't see it  |
+```
+
+
+
+
+//Client, Server and Scripting Languages
+
+
+# 🌐 Client, Server and Scripting Languages
+
+## 1. What is a Client?
+
+A **client** is a device or software that sends a request to a server.
+
+In web development, the **web browser** acts as a client.
+
+### Examples of Clients
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Mobile Browser
+- Laptop/Desktop browser
+
+### Simple Example
+When you open an online shopping website on your laptop:
+
+> **Laptop + Browser = Client**
+
+The client asks the server for information.
+
+---
+
+## 2. What is a Server?
+
+A **server** is a computer that provides information or services to the client.
+
+A web server can:
+- Store website files
+- Receive requests
+- Process requests
+- Send responses to the client
+- Work with databases
+
+### Simple Example
+When you open a website:
+
+```
+Client                    Server
+Browser  ─── Request ───> Server
+Browser  <── Response ─── Server
+```
+
+### 🍽️ Real-Life Example
+Think about a restaurant:
+
+```
+Customer → places order → Kitchen
+Customer ← receives food ← Kitchen
+```
+
+Similarly:
+
+```
+Client → sends request → Server
+Client ← receives response ← Server
+```
+
+---
+
+## 3. What is Scripting?
+
+**Scripting** means writing instructions in a programming/scripting language to make a webpage or application perform a task.
+
+For example:
+- Check a form
+- Show a message
+- Validate an email
+- Login a user
+- Save information
+- Fetch information from a database
+
+---
+
+## 4. Types of Scripting
+
+In web development, scripting is mainly divided into two types:
+
+```
+             Scripting
+                │
+        ┌───────┴────────┐
+        ↓                ↓
+ Client-Side         Server-Side
+ Scripting           Scripting
+        ↓                ↓
+    Browser            Server
+```
+
+---
+
+## 5. Client-Side Scripting
+
+### Meaning
+**Client-side scripting** is scripting that runs in the user's browser.
+
+The most common client-side scripting language is:
+- **JavaScript**
+
+### Simple Flow
+```
+User
+ ↓
+Browser
+ ↓
+JavaScript
+ ↓
+Result
+```
+
+### Example
+Suppose a user enters an incorrect email:
+
+```
+Email: abc
+```
+
+JavaScript can immediately show:
+
+> Please enter a valid email address.
+
+The page does not necessarily need to contact the server just to perform this basic validation.
+
+### Uses of Client-Side Scripting
+JavaScript can be used for:
+- Form validation
+- Button actions
+- Animations
+- Changing webpage content
+- Showing/hiding elements
+- Creating interactive webpages
+
+### Remember
+> **Client-side scripting runs in the browser.**
+
+---
+
+## 6. Server-Side Scripting
+
+### Meaning
+**Server-side scripting** is scripting that runs on the server.
+
+Examples:
+- PHP
+- Python
+- Node.js
+
+### Simple Flow
+```
+User
+ ↓
+Browser
+ ↓
+Request
+ ↓
+Server
+ ↓
+Server-Side Script
+ ↓
+Database
+ ↓
+Response
+ ↓
+Browser
+```
+
+### Example: Login
+Suppose a user enters:
+
+```
+Username: student
+Password: 12345
+```
+
+When the user clicks Login:
+1. Browser sends the login request.
+2. Server receives the request.
+3. Server-side program checks the username and password.
+4. Server may check the database.
+5. Server sends the result back.
+6. Browser displays the result.
+
+```
+Browser
+   ↓
+Login Request
+   ↓
+Server
+   ↓
+PHP / Python / Node.js
+   ↓
+Database
+   ↓
+Result
+   ↓
+Browser
+```
+
+### Uses of Server-Side Scripting
+It is used for:
+- Login and registration
+- Database operations
+- User authentication
+- Payment processing
+- Saving data
+- Fetching data
+- Generating dynamic content
+
+### Remember
+> **Server-side scripting runs on the server.**
+
+---
+
+## 7. Client-Side vs Server-Side Scripting
+```
+| Client-Side Scripting              | Server-Side Scripting               |
+| ---------------------------------- | ----------------------------------- |
+| Runs in the browser                | Runs on the server                  |
+| Mainly JavaScript                  | PHP, Python, Node.js etc.           |
+| Used for webpage interaction       | Used for server processing          |
+| Can validate forms                 | Can check data with database        |
+| Makes pages interactive            | Handles business logic              |
+| User can see the result in browser | Processing happens behind the scene |
+```
+
+
+
+//Responsive design
+# 📱 Responsive Design
+
+## What is Responsive Design?
+
+**Responsive Design** means making a website that works properly on different screen sizes.
+
+The website automatically changes its layout according to the device.
+
+```
+        ONE WEBSITE
+             ↓
+   ┌─────────┼─────────┐
+   ↓         ↓         ↓
+Desktop    Tablet    Mobile
+   ↓         ↓         ↓
+Different screen sizes
+             ↓
+      Website adjusts
+```
+
+---
+
+## Simple Example
+
+The same website may look like this:
+
+### 💻 Laptop/Desktop
+
+```
+Home | About | Courses | Contact
+--------------------------------
+      Course 1 | Course 2
+```
+
+### 📱 Mobile
+
+```
+☰ Menu
+--------
+Course 1
+--------
+Course 2
+```
+
+The website is the **same**, but its **layout changes** according to the screen.
+
+---
+
+## Why is Responsive Design Needed?
+
+People use websites on different devices:
+
+- 💻 Laptop
+- 🖥️ Desktop
+- 📱 Mobile
+- 📲 Tablet
+
+A responsive website makes the website **easy to see and use** on all these devices.
+
+---
+
+## Main Features
+
+A responsive website:
+
+- Adjusts its layout
+- Adjusts images
+- Adjusts text
+- Changes the menu
+- Fits different screen sizes
+- Provides a better user experience
+
+---
+
+## How is it Created?
+
+Responsive websites are mainly created using:
+
+```
+HTML → Structure
+CSS → Design & Layout
+JavaScript → Interaction
+```
+
+**CSS Media Queries** are commonly used to change the design for different screen sizes.
+
+---
+
+## 🌍 Real-Life Example
+
+Suppose you open an online shopping website on your **laptop**.
+
+You see:
+
+```
+Logo | Home | Products | Cart | Profile
+```
+
+Now you open the same website on your **mobile**.
+
+You may see:
+
+```
+☰ Logo              🛒
+```
+
+The website **automatically adjusts** itself for the smaller screen.
+
+---
+
+## ⭐ Remember This
+
+> **Responsive Design = Same Website + Different Screen Sizes**
+
+```
+💻 Desktop
+     ↓
+📲 Tablet
+     ↓
+📱 Mobile
+```
+
+
