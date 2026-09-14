@@ -45,6 +45,21 @@ This chapter introduces the basic concepts required to understand how the Web wo
 10. [Sublime Text](#4-sublime-text)
 
 ---
+## Chapter 3 — Introduction to HTML
+
+### In this chapter, we will learn:
+1. [What is HTML?](#-introduction-to-html)
+2. [History of HTML](#-history-of-html--short-notes)
+3. [HTML5 Introduction](#-html5-introduction-and-basic-structure-of-html)
+4. [Basic Structure of HTML](#3-html5-basic-structure)
+5. [Explanation of Basic Tags](#4-explanation-of-basic-tags)
+6. [Creating and Running an HTML File Using Notepad++](#-creating-and-running-an-html-file-using-notepad)
+7. [HTML Tags and Their Types](#-html-tags-and-their-types)
+8. [Paired Tags](#1-paired-tags)
+9. [Empty Tags (Void Tags)](#2-empty-tags-void-tags)
+10. [Container Tags](#types-of-html-tags)
+
+---
 
 ## 1. Internet
 
@@ -559,7 +574,7 @@ Courses
 Notices
 Contact Us
 ```
-### Types of Website
+## 11. Types of Website
 
  - There are mainly two types of websites:
 
@@ -607,7 +622,7 @@ Think of a book:
 
 
 
-# 10. Working of Website
+## 10. Working of Website
 
 ## 🌐 Introduction
 
@@ -787,7 +802,7 @@ Similarly:
 Request → Process → Generate → Response → Display
 ```
 
-# 🖥️ Frontend and Backend
+## 13. Frontend and Backend
 
 ## Introduction
 
@@ -1021,7 +1036,7 @@ Client ← receives response ← Server
 
 ---
 
-## 3. What is Scripting?
+## 14. What is Scripting?
 
 **Scripting** means writing instructions in a programming/scripting language to make a webpage or application perform a task.
 
@@ -1189,7 +1204,7 @@ It is used for:
 
 
 //Responsive design
-# 📱 Responsive Design
+## 15. Responsive Design
 
 ## What is Responsive Design?
 
@@ -1728,3 +1743,454 @@ Used to get help and information about Sublime Text.
 
 
 
+
+
+# 🌐 Introduction to HTML
+
+## 1. What is HTML?
+
+**HTML** stands for **HyperText Markup Language**.
+
+ HTML is the **standard markup language** used to create the **structure** of a webpage.
+
+  Markup means using special tags or symbols to format and structure text.
+
+HTML tells the browser:
+
+> What content should be present on the webpage?
+
+For example:
+
+- Heading
+- Paragraph
+- Image
+- Link
+- Button
+- Table
+- Form
+
+### Simple Definition
+
+> **HTML gives structure to a webpage.**
+
+---
+
+## 🚗 Real-Life Example: A Car
+
+We can understand **HTML, CSS and JavaScript** using a car.
+
+A car has:
+
+- **Structure / Body**
+- **Design / Appearance**
+- **Controls / Actions**
+
+A webpage also has these three parts.
+```
+Car                         Website
+
+Structure                   HTML
+Design                      CSS
+Actions / Controls          JavaScript
+```
+
+# 📚 History of HTML — 
+
+HTML was invented by Tim Berners-Lee in 1991 while working at CERN.
+
+He is also known as the inventor of the World Wide Web (WWW)..
+
+---
+
+## 🕐 Timeline
+```
+| Year     | HTML Version | Main Point                                  |
+| -------- | ------------ | ------------------------------------------- |
+| **1989** | Beginning    | Tim Berners-Lee proposed the World Wide Web |
+| **1991** | HTML 1.0     | Basic HTML and simple webpages              |
+| **1995** | HTML 2.0     | More HTML features                          |
+| **1997** | HTML 3.2     | Tables and Forms                            |
+| **1999** | HTML 4.01    | Better structure, styles and scripting      |
+| **2014** | HTML5        | Audio, Video, Canvas, modern web features   |
+| **2017** | HTML 5.2     | Further improvements                        |
+
+```
+
+# 🌐 HTML5 Introduction and Basic Structure of HTML
+
+## 1. What is HTML5?
+
+**HTML5** is a modern version of HTML (HyperText Markup Language) used to create and structure webpages.
+
+HTML5 helps us create webpages with:
+
+- Text
+- Images
+- Links
+- Forms
+- Audio
+- Video
+- Graphics
+- Other interactive content
+
+### Simple Definition
+
+> **HTML5 is used to create and structure modern webpages.**
+
+---
+
+## 2. Why HTML5?
+
+HTML5 provides many useful features for modern websites.
+
+### Main Features
+
+- 🎵 Supports Audio
+- 🎥 Supports Video
+- 🖼️ Supports Graphics using Canvas
+- 📝 Provides better Forms
+- 📱 Works well with different devices
+- 🧩 Provides Semantic Tags such as `<header>`, `<nav>`, `<section>`, `<article>`, and `<footer>`
+
+
+
+---
+
+## 3. HTML5 Basic Structure
+
+Every HTML5 webpage follows a basic structure.
+
+```html
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My First Web Page</title>
+</head>
+
+<body>
+
+    <h1>Welcome to HTML5</h1>
+    <p>This is my first webpage.</p>
+
+</body>
+
+</html>
+```
+
+---
+
+## 4. Explanation of Basic Tags
+
+### `<!DOCTYPE html>`
+
+It tells the browser that the document is an **HTML5 document**.
+
+```html
+<!DOCTYPE html>
+```
+
+**Remember:**
+
+> DOCTYPE → Tells the browser which HTML standard is being used.
+
+---
+
+### `<html>`
+
+It is the **main/root element** of the HTML document.
+
+```html
+<html>
+    ...
+</html>
+```
+
+All other HTML elements are normally placed inside `<html>`.
+
+**Remember:**
+
+> `<html>` → Contains the complete HTML document.
+
+---
+
+### `<head>`
+
+The `<head>` contains **meta information about the webpage**.
+
+```html
+<head>
+    <title>My Website</title>
+</head>
+```
+
+It can contain:
+
+- `<title>`
+- Metadata
+- Links to CSS
+- Other page information
+
+> The content of `<head>` is generally **not displayed** as the main page content.
+
+---
+
+### `<title>`
+
+The `<title>` specifies the **title of the webpage**.
+
+```html
+<title>My First Web Page</title>
+```
+
+It normally appears in the **browser tab**.
+
+```
+Browser Tab
+┌──────────────────────────┐
+│ My First Web Page        │
+└──────────────────────────┘
+```
+
+---
+
+### `<body>`
+
+The `<body>` contains the **visible content** of the webpage.
+
+```html
+<body>
+
+    <h1>Welcome</h1>
+    <p>Hello Students!</p>
+
+</body>
+```
+
+It can contain:
+
+- Headings
+- Paragraphs
+- Images
+- Links
+- Tables
+- Forms
+- Videos
+- Buttons
+
+**Remember:**
+
+> `<body>` → What the user sees on the webpage.
+
+
+
+# 📝 Creating and Running an HTML File Using Notepad++
+
+## Step 1: Open Notepad++
+
+1. Click **Start Menu**.
+2. Search for **Notepad++**.
+3. Open **Notepad++**.
+
+---
+
+## Step 2: Create a New File
+
+Go to:
+
+```
+File → New
+```
+
+Or use the shortcut:
+
+```
+Ctrl + N
+```
+
+---
+
+## Step 3: Write HTML Code
+
+Type HTML code in Notepad++.
+
+Example:
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Webpage</title>
+</head>
+
+<body>
+
+    <h1>Hello Students!</h1>
+    <p>Welcome to Web Designing.</p>
+
+</body>
+
+</html>
+```
+
+---
+
+## Step 4: Save the File
+
+Go to:
+
+```
+File → Save As
+```
+
+Choose the location where you want to save the file.
+
+For example:
+
+```
+Desktop
+```
+
+Give the file a name with the **.html** extension:
+
+```
+myfirstpage.html
+```
+
+Then click **Save**.
+
+### Important
+
+The file must end with:
+
+```
+.html
+```
+
+Example:
+
+```
+myfirstpage.html
+```
+
+---
+
+## Step 5: Run the HTML File
+
+1. Go to the folder where you saved the file.
+2. Find:
+
+```
+myfirstpage.html
+```
+
+3. Then **double-click** the file.
+
+---
+
+## Step 6: View the Output
+
+The HTML file will open in your **default web browser**.
+
+You will see:
+
+```
+Hello Students!
+
+Welcome to Web Designing.
+```
+
+
+# 🏷️ HTML Tags 
+
+## What is an HTML Tag?
+
+An **HTML tag** is a special keyword written inside **angle brackets** `< >`.
+
+Tags are used to tell the browser **how to display or organize content**.
+
+### Example:
+
+```html
+<h1>Welcome</h1>
+```
+
+Here:
+
+```
+<h1>       → Opening Tag
+Welcome    → Content
+</h1>      → Closing Tag
+```
+
+---
+
+## Types of HTML Tags
+
+There are mainly **3 types**:
+
+```
+HTML Tags
+   │
+   ├── 1. Paired Tags
+   ├── 2. Empty Tags
+   └── 3. Container Tags
+```
+
+---
+
+## 1. Paired Tags
+
+**Paired tags** have two tags:
+
+- **Opening tag**
+- **Closing tag**
+
+They contain **content** between them.
+
+### Example
+
+```html
+<h1>Welcome</h1>
+```
+
+```
+<h1>       → Opening
+Welcome    → Content
+</h1>      → Closing
+```
+
+### More Examples
+
+```html
+<p>This is a paragraph.</p>
+
+<b>Bold Text</b>
+
+<i>Italic Text</i>
+```
+
+### Remember
+
+> **Paired Tag = Opening Tag + Content + Closing Tag**
+
+---
+
+## 2. Empty Tags (Void Tags)
+
+**Empty tags** do **not** have a closing tag.
+
+They are used to **insert or add** something to the webpage.
+
+### Examples
+
+```html
+<br>
+<hr>
+<img>
+<input>
+<meta>
+<link>
+```
