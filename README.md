@@ -21,12 +21,11 @@ This chapter introduces the basic concepts required to understand how the Web wo
 7. [URL](#7-url)
 8. [Webpage](#8-webpage)
 9. [Website](#9-website)
-10. [Working of a Website](#10-working-of-a-website)
-11. [Types of Websites](#11-types-of-websites)
-12. [Search Engine](#12-search-engine)
-13. [Front End and Back End](#13-front-end-and-back-end)
-14. [Scripting Language](#14-scripting-language)
-15. [Responsive Web Design](#15-responsive-web-design)
+10.[Working of a Website](#10-working-of-a-website)
+11.[Front End and Back End](#11-front-end-and-back-end)
+12.[Client and Server](#12-client-and-server)
+13. [Scripting Language](#13-scripting-language)
+14. [Responsive Design](#13-responsive-design)
 
 ---
 
@@ -40,9 +39,8 @@ This chapter introduces the basic concepts required to understand how the Web wo
 5. [Syntax Highlighting](#5-syntax-highlighting)
 6. [Auto-Completion](#6-auto-completion)
 7. [Multiple Tabs](#7-multiple-tabs)
-8. [Text Editor vs Code Editor](#8-text-editor-vs-code-editor)
-9. [Notepad++](#3-notepad)
-10. [Sublime Text](#4-sublime-text)
+8. [Notepad++](#3-notepad)
+9. [Sublime Text](#4-sublime-text)
 
 ---
 ## Chapter 3 — Introduction to HTML
@@ -58,6 +56,10 @@ This chapter introduces the basic concepts required to understand how the Web wo
 8. [Paired Tags](#1-paired-tags)
 9. [Empty Tags (Void Tags)](#2-empty-tags-void-tags)
 10. [Container Tags](#types-of-html-tags)
+11. [Syntax of an HTML Tag](#syntax-of-an-html-tag)
+12. [HTML Element](#-html-element)
+13. [HTML Attributes](#html-attributes)
+14. [`<body>` Tag Attributes](#body-tag-attributes)
 
 ---
 
@@ -574,7 +576,7 @@ Courses
 Notices
 Contact Us
 ```
-## 11. Types of Website
+##  Types of Website
 
  - There are mainly two types of websites:
 
@@ -802,7 +804,7 @@ Similarly:
 Request → Process → Generate → Response → Display
 ```
 
-## 13. Frontend and Backend
+## 11. Frontend and Backend
 
 ## Introduction
 
@@ -975,7 +977,8 @@ Confirm Order
 //Client, Server and Scripting Languages
 
 
-# 🌐 Client, Server and Scripting Languages
+## 12. Client and Server
+ 
 
 ## 1. What is a Client?
 
@@ -1036,7 +1039,7 @@ Client ← receives response ← Server
 
 ---
 
-## 14. What is Scripting?
+## 13. Scripting Languages
 
 **Scripting** means writing instructions in a programming/scripting language to make a webpage or application perform a task.
 
@@ -1204,7 +1207,7 @@ It is used for:
 
 
 //Responsive design
-## 15. Responsive Design
+## 14. Responsive Design
 
 ## What is Responsive Design?
 
@@ -2111,6 +2114,14 @@ An **HTML tag** is a special keyword written inside **angle brackets** `< >`.
 
 Tags are used to tell the browser **how to display or organize content**.
 
+## Syntax of an HTML Tag
+
+### Paired Tag Syntax
+
+```html
+<tagname> Content </tagname>
+```
+
 ### Example:
 
 ```html
@@ -2194,3 +2205,331 @@ They are used to **insert or add** something to the webpage.
 <meta>
 <link>
 ```
+
+## 3. Container Tags
+
+**Container tags** are tags that contain **other tags or content** inside them.
+
+They are used to **group and organize** webpage content.
+
+### Example
+
+```html
+<div>
+
+    <h1>My Website</h1>
+    <p>Welcome Students.</p>
+
+</div>
+```
+
+Here `<div>` is the **container**.
+
+```
+<div>
+   │
+   ├── <h1>
+   └── <p>
+</div>
+```
+
+//HTML Element
+# 🌐 HTML Element
+
+## 1. What is an HTML Element?
+
+An **HTML element** is a complete unit of a webpage that tells the browser **what content to display**.
+
+HTML elements are the **building blocks** of a webpage.
+
+### Simple Definition
+
+> **HTML Element = opening Tag + Content + closing Tag**
+
+---
+
+## 2. Structure of an HTML Element
+
+A normal HTML element contains **three parts**:
+
+```html
+<tagname>Content</tagname>
+```
+
+For example:
+
+```html
+<p>This is a paragraph.</p>
+```
+
+Here:
+
+```
+<p>                  → Opening Tag
+This is a paragraph. → Content
+</p>                 → Closing Tag
+```
+
+So:
+
+```
+Opening Tag + Content + Closing Tag
+        ↓          ↓          ↓
+       <p>       Text       </p>
+```
+
+Together, these form **one HTML element**.
+
+---
+
+## 3. Examples of HTML Elements
+
+### Heading Element
+
+```html
+<h1>Welcome</h1>
+```
+
+> Used to create a **main heading**.
+
+---
+
+### Paragraph Element
+
+```html
+<p>This is a paragraph.</p>
+```
+
+> Used to create a **paragraph**.
+
+---
+
+### Link Element
+
+```html
+<a href="https://example.com">Visit Website</a>
+```
+
+> Used to create a **link**.
+
+---
+
+### Image Element
+
+```html
+<img src="logo.png" alt="Logo">
+```
+
+> Used to display an **image**.
+
+//HTML attribute
+# HTML Attributes
+
+## 1. What are HTML Attributes?
+
+**HTML attributes** provide **extra information** about an HTML element.
+
+- Attributes are written inside the **opening tag**.
+- They usually come in **name-value pairs**.
+- They can change the **behavior, appearance, or information** of an element.
+
+
+### Syntax
+
+```html
+<tagname attribute="value">
+```
+
+### Example
+
+```html
+<img src="logo.png" alt="NIELIT Logo">
+```
+
+Here:
+
+```
+src → Attribute name
+"logo.png" → Attribute value
+
+alt → Attribute name
+"NIELIT Logo" → Attribute value
+```
+
+---
+
+## 2. Common HTML Attributes
+
+### `id`
+
+Gives an element a **unique identifier**.
+
+```html
+<p id="intro">Welcome Students</p>
+```
+
+> **Remember:** id = Unique identity
+
+---
+
+### `class`
+
+Gives an element a **class name**. It is commonly used with **CSS**.
+
+```html
+<div class="box">
+    Welcome
+</div>
+```
+
+> **Remember:** class = Group/Category
+
+---
+
+### `style`
+
+Adds **CSS directly** to an element.
+
+```html
+<p style="color:red;">
+    Welcome Students
+</p>
+```
+
+> **Result:** The text appears in **red**.
+
+---
+
+### `title`
+
+Provides **extra information** about an element.
+
+```html
+<p title="This is additional information">
+    Welcome
+</p>
+```
+
+> The information may appear as a **tooltip** when the mouse is placed over the element.
+
+---
+
+### `src`
+
+Specifies the **source/location** of a file.
+
+Commonly used with `<img>`.
+
+```html
+<img src="logo.png">
+```
+
+> **Remember:** src = Where is the file?
+
+---
+
+### `alt`
+
+Provides **alternative text** for an image.
+
+```html
+<img src="logo.png" alt="NIELIT Logo">
+```
+
+> If the image cannot be displayed, the alt text can describe the image.
+
+> **Remember:** alt = Alternative description
+
+---
+
+### `href`
+
+Specifies the **URL/address** of a link.
+
+```html
+<a href="https://nielit.gov.in">
+    Visit NIELIT
+</a>
+```
+
+> **Remember:** href = Where should the link go?
+
+---
+
+### `target`
+
+Specifies **where the link should open**.
+
+```html
+<a href="https://nielit.gov.in" target="_blank">
+    Visit NIELIT
+</a>
+```
+
+> `target="_blank"` generally opens the link in a **new tab**.
+
+---
+
+### `width` and `height`
+
+Used to specify the **size** of an element, commonly an image.
+
+```html
+<img src="logo.png" width="200" height="100">
+```
+
+```
+width → Width of the image
+height → Height of the image
+```
+
+---
+
+## 3. `<body>` Tag Attributes
+
+The `<body>` tag traditionally supports attributes such as **bgcolor**, **text**, and **background**.
+
+> **Note:** These are **legacy HTML attributes**. In modern HTML5, **CSS** is preferred for styling.
+
+### `bgcolor`
+
+Used to specify the **background color**.
+
+```html
+<body bgcolor="yellow">
+```
+
+---
+
+### `text`
+
+Used to specify the **text color**.
+
+```html
+<body text="red">
+```
+
+---
+
+### `background`
+
+Used to set a **background image**.
+
+```html
+<body background="nature.jpg">
+```
+
+---
+
+### Example
+
+```html
+<body bgcolor="yellow" text="red">
+
+    <h1>Welcome to HTML</h1>
+    <p>This is my webpage.</p>
+
+</body>
+```
+
+> This gives the page a **yellow background** and **red text**.
