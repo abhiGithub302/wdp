@@ -1,7 +1,6 @@
-# Chapter 1 — Introduction to web designing 
+# Chapter 1 — Introduction to web designing
 
 > **Web Designing and Publishing | NIELIT O Level (IT)**
-
 
 This chapter introduces the basic concepts required to understand how the Web works. Before learning HTML, CSS and JavaScript, it is important to understand the Internet, WWW, websites, webpages, browsers, servers, URLs and the client-server model.
 
@@ -12,6 +11,7 @@ This chapter introduces the basic concepts required to understand how the Web wo
 ## Chapter 1 — Introduction to Web Designing
 
 ### In this chapter, we will learn:
+
 1. [Internet](#1-internet)
 2. [History of Internet](#2-history-of-internet)
 3. [World Wide Web (WWW)](#3-world-wide-web-www)
@@ -20,18 +20,16 @@ This chapter introduces the basic concepts required to understand how the Web wo
 6. [HTTP and HTTPS](#6-http-and-https)
 7. [URL](#7-url)
 8. [Webpage](#8-webpage)
-9. [Website](#9-website)
-10.[Working of a Website](#10-working-of-a-website)
-11.[Front End and Back End](#11-front-end-and-back-end)
-12.[Client and Server](#12-client-and-server)
-13. [Scripting Language](#13-scripting-language)
-14. [Responsive Design](#13-responsive-design)
+9. [Website](#9-website) 10.[Working of a Website](#10-working-of-a-website) 11.[Front End and Back End](#11-front-end-and-back-end) 12.[Client and Server](#12-client-and-server)
+10. [Scripting Language](#13-scripting-language)
+11. [Responsive Design](#13-responsive-design)
 
 ---
 
 ## Chapter 2 — Editors
 
 ### In this chapter, we will learn:
+
 1. [What is an Editor?](#1-what-is-an-editor)
 2. [Types of Editors](#2-types-of-editors)
 3. [Text Editor](#3-text-editor)
@@ -43,9 +41,11 @@ This chapter introduces the basic concepts required to understand how the Web wo
 9. [Sublime Text](#4-sublime-text)
 
 ---
+
 ## Chapter 3 — Introduction to HTML
 
 ### In this chapter, we will learn:
+
 1. [What is HTML?](#-introduction-to-html)
 2. [History of HTML](#-history-of-html--short-notes)
 3. [HTML5 Introduction](#-html5-introduction-and-basic-structure-of-html)
@@ -71,6 +71,7 @@ The **Internet** is a globally connected network system that uses the **TCP/IP m
 Hinglish
 
 ## HEnglish
+
 Internet ek global network hai jo duniya bhar ke computers aur devices ko connect karta hai.
 
 In simple words:
@@ -98,6 +99,7 @@ Your Mobile
      ↓
 Friend's Mobile
 ```
+
 ## 2. History of Internet
 
 The Internet did not develop in a single day. It evolved gradually through research, experiments, and technological developments over several decades.
@@ -149,7 +151,7 @@ TCP/IP provided a communication model and established standards for transmitting
 
 TCP/IP
 TCP → Transmission Control Protocol
-IP  → Internet Protocol
+IP → Internet Protocol
 
 TCP/IP later became fundamental to Internet communication.
 
@@ -174,6 +176,7 @@ In 1990, the World Wide Web became available and helped make the Internet more p
 The course material also notes that the commercial Web started in 1990.
 
 Internet History — Quick Timeline
+
 ```
 1967
 │
@@ -200,7 +203,9 @@ Internet History — Quick Timeline
 │
 └── WWW became available and popularized the Internet
 ```
+
 ### Key Takeaways
+
 ARPA wanted to connect computers for resource sharing.
 1967 → ARPANET idea was presented.
 1969 → Four ARPANET nodes were connected.
@@ -208,7 +213,6 @@ ARPA wanted to connect computers for resource sharing.
 1983 → ARPANET adopted TCP/IP.
 1989 → WWW was proposed by Tim Berners-Lee.
 1990 → WWW became available and helped popularize the Internet.
-
 
 ## 3. World Wide Web (WWW)
 
@@ -251,6 +255,7 @@ A web browser is also known as a Web Client because it sends requests to web ser
 ### Examples of Web Browsers
 
 Some commonly used web browsers are:
+
 ```
 Google Chrome
 Mozilla Firefox
@@ -265,6 +270,7 @@ MS Internet Explorer
 ### What Does a Web Browser Do?
 
 A web browser mainly performs the following tasks:
+
 ```
 1.Accepts a website address or URL from the user.
 2.Sends a request to the appropriate web server.
@@ -278,12 +284,15 @@ A web browser mainly performs the following tasks:
 Suppose you want to visit an NIELIT GKP website.
 
 You open Google Chrome and enter:
+
 ```
 https://regn.nielitvte.edu.in/
 ```
+
 The browser acts as a client.
 
 It sends a request to the web server:
+
 ```
 Browser (Client)
        │
@@ -295,13 +304,15 @@ Browser (Client)
        ↓
 Browser (Client)
 ```
+
 The browser then interprets the received webpage and displays it.
- 
+
 ## 5. Client-Server Architecture
 
 Client-Server Architecture is a model in which a client requests a service or resource, and a server provides the requested service or resource.
 
 In Web applications, the web browser acts as the client, while the web server hosts webpages and responds to requests.
+
 ```
 
                  REQUEST
@@ -313,21 +324,24 @@ Client ────────────────────────�
   │                                    │
   │                                    ↓
   ←─────────────────────────── RESPONSE
-  ```
+```
 
- ### Steps:-
- ```
+### Steps:-
+
+```
 1.User enters a website address in the browser.
 2.Browser sends a request to the server.
 3.Server receives and processes the request.
 4.Server sends the requested webpage/resources as a response.
 5.Browser interprets the response and displays the webpage.
 ```
+
 ### Real-World Scenario
 
 Imagine a restaurant.
 
 When a customer visits a restaurant:
+
 ```
 Customer
    ↓
@@ -341,13 +355,16 @@ Food Delivered
    ↓
 Customer
 ```
+
 ```
 Customer = Client
 Kitchen = Server
 Order = Request
 Food = Response
 ```
+
 The same concept can be used to understand the Web:
+
 ```
 Browser / Client
        ↓
@@ -361,6 +378,7 @@ Browser / Client
        ↓
 Browser / Client
 ```
+
 ## 6. HTTP and HTTPS
 
 - HTTP = Hyper Text Transfer Protocol
@@ -369,6 +387,7 @@ Browser / Client
 - It work on PORT number 80.
 
 - It is used to transfer different types of information over the World Wide Web, such as:
+
 ```
 Text
 Graphics
@@ -377,7 +396,9 @@ Sound
 Video
 Multimedia
 ```
+
 ### Basic HTTP Communication
+
 ```
 User
   ↓
@@ -393,6 +414,7 @@ Browser
   ↓
 Webpage
 ```
+
 ### HTTPS
 
 - HTTPS = Hyper Text Transfer Protocol Secure
@@ -403,11 +425,13 @@ Webpage
 - It establishes an encrypted link between the client and server.
 
 - HTTPS uses security technologies such as:
+
 ```
 TLS — Transport Layer Security
 SSL — Secure Socket Layer
 ```
-## 7. URL 
+
+## 7. URL
 
 - It stans for (Uniform Resource Locator).
 - A URL (Uniform Resource Locator) is the unique address of a web page on the internet. It tells the browser where to find the resource such as a web page, image, file, etc.
@@ -417,12 +441,15 @@ In simple words:
 - A URL tells the browser where a resource is located and how it should be accessed.
 
 Example
+
 ```
 https://www.regn.nielitvte.edu.in/courses
 ```
+
 ### 1. Structure of a URL
 
 A URL can contain the following main parts:
+
 ```
 https://www.nielit.gov.in:443/courses
 │       │              │   │
@@ -431,7 +458,9 @@ https://www.nielit.gov.in:443/courses
 │       └───────────────────── Host
 └───────────────────────────── Protocol
 ```
+
 Main Components
+
 ```
 | Component    | Description                                                   | Example           |
 | ------------ | ------------------------------------------------------------- | ----------------- |
@@ -448,6 +477,7 @@ Note: The port number is often not written in a URL because the browser uses the
 - The protocol specifies the rules used for communication between the client and the server.
 
 Common web protocols include:
+
 ```
 http://
 https://
@@ -458,15 +488,19 @@ https://
 - The host identifies the server or domain where the requested resource is located.
 
 Example:
+
 ```
 https://www.regn.nielitvte.edu.in/courses
         └──────────────┘
               Host
 ```
+
 Here:
+
 ```
 www.regn.nielitvte.edu.in
 ```
+
 is the host.
 
 The host commonly contains a domain name and may include a subdomain.
@@ -476,6 +510,7 @@ The host commonly contains a domain name and may include a subdomain.
 A port identifies a communication endpoint on a server.
 
 Example:
+
 ```
 https://www.nielit.gov.in:443/courses
                      └───┘
@@ -483,6 +518,7 @@ https://www.nielit.gov.in:443/courses
 ```
 
 Common default web ports:
+
 ```
 | Protocol | Default Port |
 | -------- | -----------: |
@@ -491,26 +527,35 @@ Common default web ports:
 ```
 
 For example:
+
 ```
 http://regn.nielitvte.edu.in
 ```
+
 is normally equivalent to:
+
 ```
 http://regn.nielitvte.edu.in:80
 ```
+
 Similarly:
+
 ```
 https://regn.nielitvte.edu.in
 ```
+
 normally uses:
+
 ```
 https://regn.nielitvte.edu.in:443
 ```
+
 ### 5. Path
 
 The path specifies the location of a particular resource on the server.
 
 Example:
+
 ```
 https://www.nielit.gov.in/courses/web-design
                          └────────────────┘
@@ -524,10 +569,12 @@ Here:
 is the path.
 
 ## 8. Webpage
+
 - A webpage is a single page on the Internet.
 - It is displayed using a web browser.
 - A webpage is mainly created using HTML.
 - A webpage can contain:
+
 ```
 Text
 Images
@@ -536,26 +583,34 @@ Links
 Buttons
 Forms
 ```
+
 Every webpage can have a URL (web address).
+
 ### Example
 
 Suppose we have a website:
+
 ```
 https://regn.nielitvte.edu.in/
 ```
+
 It may have:
+
 ```
 Home → One webpage
 About → One webpage
 Courses → One webpage
 Contact → One webpage
 ```
+
 ## 9. Website
- - A website is a collection of related webpages.
- - All webpages are connected to each other using links (hyperlinks).
- - A website has a Home Page, which is usually the first page we see.
- - A website is accessed using a domain name or URL.
- - A website can contain:
+
+- A website is a collection of related webpages.
+- All webpages are connected to each other using links (hyperlinks).
+- A website has a Home Page, which is usually the first page we see.
+- A website is accessed using a domain name or URL.
+- A website can contain:
+
 ```
 Text
 Images
@@ -564,11 +619,15 @@ Links
 Forms
 Buttons
 ```
+
 Example:
+
 ```
 www.nielit.gov.in
 ```
- - It may contain different webpages such as:
+
+- It may contain different webpages such as:
+
 ```
 Home
 About Us
@@ -576,53 +635,58 @@ Courses
 Notices
 Contact Us
 ```
-##  Types of Website
 
- - There are mainly two types of websites:
+## Types of Website
+
+- There are mainly two types of websites:
 
 ### 1. Static Website
- - Content is fixed or predefined.
- - Content usually remains the same for users.
- - There is generally little or no user interaction.
- - Usually does not require a database.
- - Commonly created using HTML, CSS and JavaScript.
- - Changes are usually made manually.
+
+- Content is fixed or predefined.
+- Content usually remains the same for users.
+- There is generally little or no user interaction.
+- Usually does not require a database.
+- Commonly created using HTML, CSS and JavaScript.
+- Changes are usually made manually.
 
 ### Examples
+
 ```
 College information website
 Company profile website
 Personal portfolio website
 ```
+
 ##### Static website = "Website with mostly fixed content."
+
 ### 2. Dynamic Website
- - Content can change according to the user or request.
- - Provides more user interaction.
- - Usually uses a database.
- - Uses both front-end and back-end technologies.
- - Content can be generated in real time.
+
+- Content can change according to the user or request.
+- Provides more user interaction.
+- Usually uses a database.
+- Uses both front-end and back-end technologies.
+- Content can be generated in real time.
 
 ### Examples
+
 ```
 Facebook
 Online shopping websites
 Online banking websites
 Email websites
 ```
-#####  Dynamic website = "Website where content can change according to users or data"
 
-Real world  Example
+##### Dynamic website = "Website where content can change according to users or data"
+
+Real world Example
 
 Think of a book:
+
 ```
 📖 Website → Complete book
 📄 Webpage → One page of the book
 🌐 URL → Address of that page
 ```
-
-
-
-
 
 ## 10. Working of Website
 
@@ -960,6 +1024,7 @@ Confirm Order
 ---
 
 ## 📊 Frontend vs Backend (Quick Comparison)
+
 ```
 
 | Frontend               | Backend                       |
@@ -971,14 +1036,9 @@ Confirm Order
 | User interacts with it | User normally doesn't see it  |
 ```
 
-
-
-
 //Client, Server and Scripting Languages
 
-
 ## 12. Client and Server
- 
 
 ## 1. What is a Client?
 
@@ -987,6 +1047,7 @@ A **client** is a device or software that sends a request to a server.
 In web development, the **web browser** acts as a client.
 
 ### Examples of Clients
+
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
@@ -994,6 +1055,7 @@ In web development, the **web browser** acts as a client.
 - Laptop/Desktop browser
 
 ### Simple Example
+
 When you open an online shopping website on your laptop:
 
 > **Laptop + Browser = Client**
@@ -1007,6 +1069,7 @@ The client asks the server for information.
 A **server** is a computer that provides information or services to the client.
 
 A web server can:
+
 - Store website files
 - Receive requests
 - Process requests
@@ -1014,6 +1077,7 @@ A web server can:
 - Work with databases
 
 ### Simple Example
+
 When you open a website:
 
 ```
@@ -1023,6 +1087,7 @@ Browser  <── Response ─── Server
 ```
 
 ### 🍽️ Real-Life Example
+
 Think about a restaurant:
 
 ```
@@ -1044,6 +1109,7 @@ Client ← receives response ← Server
 **Scripting** means writing instructions in a programming/scripting language to make a webpage or application perform a task.
 
 For example:
+
 - Check a form
 - Show a message
 - Validate an email
@@ -1073,12 +1139,15 @@ In web development, scripting is mainly divided into two types:
 ## 5. Client-Side Scripting
 
 ### Meaning
+
 **Client-side scripting** is scripting that runs in the user's browser.
 
 The most common client-side scripting language is:
+
 - **JavaScript**
 
 ### Simple Flow
+
 ```
 User
  ↓
@@ -1090,6 +1159,7 @@ Result
 ```
 
 ### Example
+
 Suppose a user enters an incorrect email:
 
 ```
@@ -1103,7 +1173,9 @@ JavaScript can immediately show:
 The page does not necessarily need to contact the server just to perform this basic validation.
 
 ### Uses of Client-Side Scripting
+
 JavaScript can be used for:
+
 - Form validation
 - Button actions
 - Animations
@@ -1112,6 +1184,7 @@ JavaScript can be used for:
 - Creating interactive webpages
 
 ### Remember
+
 > **Client-side scripting runs in the browser.**
 
 ---
@@ -1119,14 +1192,17 @@ JavaScript can be used for:
 ## 6. Server-Side Scripting
 
 ### Meaning
+
 **Server-side scripting** is scripting that runs on the server.
 
 Examples:
+
 - PHP
 - Python
 - Node.js
 
 ### Simple Flow
+
 ```
 User
  ↓
@@ -1146,6 +1222,7 @@ Browser
 ```
 
 ### Example: Login
+
 Suppose a user enters:
 
 ```
@@ -1154,6 +1231,7 @@ Password: 12345
 ```
 
 When the user clicks Login:
+
 1. Browser sends the login request.
 2. Server receives the request.
 3. Server-side program checks the username and password.
@@ -1178,7 +1256,9 @@ Browser
 ```
 
 ### Uses of Server-Side Scripting
+
 It is used for:
+
 - Login and registration
 - Database operations
 - User authentication
@@ -1188,11 +1268,13 @@ It is used for:
 - Generating dynamic content
 
 ### Remember
+
 > **Server-side scripting runs on the server.**
 
 ---
 
 ## 7. Client-Side vs Server-Side Scripting
+
 ```
 | Client-Side Scripting              | Server-Side Scripting               |
 | ---------------------------------- | ----------------------------------- |
@@ -1204,9 +1286,8 @@ It is used for:
 | User can see the result in browser | Processing happens behind the scene |
 ```
 
-
-
 //Responsive design
+
 ## 14. Responsive Design
 
 ## What is Responsive Design?
@@ -1330,6 +1411,7 @@ The website **automatically adjusts** itself for the smaller screen.
 ```
 
 //Editors
+
 # Chapter 2: Editors
 
 ## 1. What is an Editor?
@@ -1744,19 +1826,15 @@ Used to change Sublime Text settings and appearance.
 
 Used to get help and information about Sublime Text.
 
-
-
-
-
 # 🌐 Introduction to HTML
 
 ## 1. What is HTML?
 
 **HTML** stands for **HyperText Markup Language**.
 
- HTML is the **standard markup language** used to create the **structure** of a webpage.
+HTML is the **standard markup language** used to create the **structure** of a webpage.
 
-  Markup means using special tags or symbols to format and structure text.
+Markup means using special tags or symbols to format and structure text.
 
 HTML tells the browser:
 
@@ -1789,6 +1867,7 @@ A car has:
 - **Controls / Actions**
 
 A webpage also has these three parts.
+
 ```
 Car                         Website
 
@@ -1797,7 +1876,7 @@ Design                      CSS
 Actions / Controls          JavaScript
 ```
 
-# 📚 History of HTML — 
+# 📚 History of HTML —
 
 HTML was invented by Tim Berners-Lee in 1991 while working at CERN.
 
@@ -1806,6 +1885,7 @@ He is also known as the inventor of the World Wide Web (WWW)..
 ---
 
 ## 🕐 Timeline
+
 ```
 | Year     | HTML Version | Main Point                                  |
 | -------- | ------------ | ------------------------------------------- |
@@ -1855,8 +1935,6 @@ HTML5 provides many useful features for modern websites.
 - 📱 Works well with different devices
 - 🧩 Provides Semantic Tags such as `<header>`, `<nav>`, `<section>`, `<article>`, and `<footer>`
 
-
-
 ---
 
 ## 3. HTML5 Basic Structure
@@ -1867,18 +1945,14 @@ Every HTML5 webpage follows a basic structure.
 <!DOCTYPE html>
 
 <html>
-
-<head>
+  <head>
     <title>My First Web Page</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Welcome to HTML5</h1>
     <p>This is my first webpage.</p>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -1906,7 +1980,7 @@ It is the **main/root element** of the HTML document.
 
 ```html
 <html>
-    ...
+  ...
 </html>
 ```
 
@@ -1924,7 +1998,7 @@ The `<head>` contains **meta information about the webpage**.
 
 ```html
 <head>
-    <title>My Website</title>
+  <title>My Website</title>
 </head>
 ```
 
@@ -1964,10 +2038,8 @@ The `<body>` contains the **visible content** of the webpage.
 
 ```html
 <body>
-
-    <h1>Welcome</h1>
-    <p>Hello Students!</p>
-
+  <h1>Welcome</h1>
+  <p>Hello Students!</p>
 </body>
 ```
 
@@ -1985,8 +2057,6 @@ It can contain:
 **Remember:**
 
 > `<body>` → What the user sees on the webpage.
-
-
 
 # 📝 Creating and Running an HTML File Using Notepad++
 
@@ -2023,18 +2093,14 @@ Example:
 ```html
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>My First Webpage</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Hello Students!</h1>
     <p>Welcome to Web Designing.</p>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -2105,8 +2171,7 @@ Hello Students!
 Welcome to Web Designing.
 ```
 
-
-# 🏷️ HTML Tags 
+# 🏷️ HTML Tags
 
 ## What is an HTML Tag?
 
@@ -2198,12 +2263,12 @@ They are used to **insert or add** something to the webpage.
 ### Examples
 
 ```html
-<br>
-<hr>
-<img>
-<input>
-<meta>
-<link>
+<br />
+<hr />
+<img />
+<input />
+<meta />
+<link />
 ```
 
 ## 3. Container Tags
@@ -2216,10 +2281,8 @@ They are used to **group and organize** webpage content.
 
 ```html
 <div>
-
-    <h1>My Website</h1>
-    <p>Welcome Students.</p>
-
+  <h1>My Website</h1>
+  <p>Welcome Students.</p>
 </div>
 ```
 
@@ -2233,7 +2296,297 @@ Here `<div>` is the **container**.
 </div>
 ```
 
+# HTML Tags by Purpose
+
+HTML tags can be grouped according to their **purpose**. The three important groups are:
+
+1. **Structural Tags**
+2. **Semantic Tags**
+3. **Formatting Tags**
+
+---
+
+## 1. Structural Tags
+
+**Structural tags** define the **basic structure or skeleton** of a webpage.
+
+### Common Structural Tags
+
+```
+
+| Tag               | Purpose                             |
+| ----------------- | ----------------------------------- |
+| `<!DOCTYPE html>` | Defines the HTML document type      |
+| `<html>`          | Root element of the webpage         |
+| `<head>`          | Contains information about the page |
+| `<title>`         | Defines the page title              |
+| `<body>`          | Contains visible webpage content    |
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>This is my webpage.</p>
+  </body>
+</html>
+```
+
+### Remember:
+
+> **Structural tags = Basic structure of the webpage**
+
+---
+
+## 2. Semantic Tags
+
+**Semantic tags** give **meaning** to the content.
+
+They help **humans and search engines** understand what different parts of a webpage represent.
+
+### Common Semantic Tags
+
+```
+| Tag         | Purpose                     |
+| ----------- | --------------------------- |
+| `<header>`  | Header of a page or section |
+| `<nav>`     | Navigation links            |
+| `<main>`    | Main content of the page    |
+| `<section>` | Section of content          |
+| `<article>` | Independent article/content |
+| `<aside>`   | Sidebar or related content  |
+| `<footer>`  | Footer of a page or section |
+```
+
+### Example
+
+```html
+<header>Website Header</header>
+<nav>Home | About | Contact</nav>
+<main>
+  <section>
+    <h2>Latest News</h2>
+    <article>Latest news content...</article>
+  </section>
+  <aside>Related Links</aside>
+</main>
+<footer>Copyright © 2026</footer>
+```
+
+### Remember:
+
+> **Semantic tags = Give meaning to content**
+
+---
+
+## 3. Formatting Tags
+
+**Formatting tags** are used to change the **appearance or presentation** of text.
+
+### Common Formatting Tags
+
+### `<b>` – Bold
+
+Makes text **bold**.
+
+Example:
+
+```html
+<b>Bold Text</b>
+```
+
+---
+
+### `<strong>` – Important
+
+Shows that the text is **important**.
+
+Example:
+
+```html
+<strong>Important Text</strong>
+```
+
+---
+
+### `<i>` – Italic
+
+Makes text **italic**.
+
+Example:
+
+```html
+<i>Italic Text</i>
+```
+
+---
+
+### `<em>` – Emphasis
+
+Gives **emphasis** to the text.
+
+Example:
+
+```html
+<em>Emphasized Text</em>
+```
+
+---
+
+### `<u>` – Underline
+
+**Underlines** the text.
+
+Example:
+
+```html
+<u>Underlined Text</u>
+```
+
+---
+
+### `<mark>` – Highlight
+
+**Highlights** the text.
+
+Example:
+
+```html
+<mark>Highlighted Text</mark>
+```
+
+---
+
+### `<small>` – Small Text
+
+Displays text in a **smaller size**.
+
+Example:
+
+```html
+<small>Small Text</small>
+```
+
+---
+
+### `<del>` – Deleted Text
+
+Shows **deleted or removed** text.
+
+Example:
+
+```html
+<del>Old Text</del>
+```
+
+---
+
+### `<ins>` – Inserted Text
+
+Shows **newly added** text.
+
+Example:
+
+```html
+<ins>New Text</ins>
+```
+
+---
+
+### `<s>` – No Longer Correct
+
+Shows text that is **no longer correct or relevant**.
+
+Example:
+
+```html
+<s>Old Price ₹500</s>
+```
+
+---
+
+### `<sub>` – Subscript
+
+Displays text **below** the normal line.
+
+Example:
+
+```html
+H<sub>2</sub>O
+```
+
+---
+
+### `<sup>` – Superscript
+
+Displays text **above** the normal line.
+
+Example:
+
+```html
+2<sup>3</sup>
+```
+
+### Examples
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Formatting Tags</title>
+  </head>
+  <body>
+    <h1>HTML Formatting Tags</h1>
+    <p>
+      <b>Bold Text</b>
+    </p>
+    <p>
+      <strong>Important Text</strong>
+    </p>
+
+    <p>
+      <i>Italic Text</i>
+    </p>
+
+    <p>
+      <em>Emphasized Text</em>
+    </p>
+
+    <p>
+      <u>Underlined Text</u>
+    </p>
+
+    <p>
+      <mark>Highlighted Text</mark>
+    </p>
+
+    <p>
+      <small>Small Text</small>
+    </p>
+
+    <p>
+      <del>Deleted Text</del>
+    </p>
+
+    <p>
+      <ins>Inserted Text</ins>
+    </p>
+
+    <p>H<sub>2</sub>O</p>
+
+    <p>2<sup>3</sup></p>
+  </body>
+</html>
+```
+
 //HTML Element
+
 # 🌐 HTML Element
 
 ## 1. What is an HTML Element?
@@ -2317,12 +2670,13 @@ Together, these form **one HTML element**.
 ### Image Element
 
 ```html
-<img src="logo.png" alt="Logo">
+<img src="logo.png" alt="Logo" />
 ```
 
 > Used to display an **image**.
 
 //HTML attribute
+
 # HTML Attributes
 
 ## 1. What are HTML Attributes?
@@ -2333,17 +2687,16 @@ Together, these form **one HTML element**.
 - They usually come in **name-value pairs**.
 - They can change the **behavior, appearance, or information** of an element.
 
-
 ### Syntax
 
 ```html
-<tagname attribute="value">
+<tagname attribute="value"></tagname>
 ```
 
 ### Example
 
 ```html
-<img src="logo.png" alt="NIELIT Logo">
+<img src="logo.png" alt="NIELIT Logo" />
 ```
 
 Here:
@@ -2377,9 +2730,7 @@ Gives an element a **unique identifier**.
 Gives an element a **class name**. It is commonly used with **CSS**.
 
 ```html
-<div class="box">
-    Welcome
-</div>
+<div class="box">Welcome</div>
 ```
 
 > **Remember:** class = Group/Category
@@ -2391,9 +2742,7 @@ Gives an element a **class name**. It is commonly used with **CSS**.
 Adds **CSS directly** to an element.
 
 ```html
-<p style="color:red;">
-    Welcome Students
-</p>
+<p style="color:red;">Welcome Students</p>
 ```
 
 > **Result:** The text appears in **red**.
@@ -2405,9 +2754,7 @@ Adds **CSS directly** to an element.
 Provides **extra information** about an element.
 
 ```html
-<p title="This is additional information">
-    Welcome
-</p>
+<p title="This is additional information">Welcome</p>
 ```
 
 > The information may appear as a **tooltip** when the mouse is placed over the element.
@@ -2421,7 +2768,7 @@ Specifies the **source/location** of a file.
 Commonly used with `<img>`.
 
 ```html
-<img src="logo.png">
+<img src="logo.png" />
 ```
 
 > **Remember:** src = Where is the file?
@@ -2433,7 +2780,7 @@ Commonly used with `<img>`.
 Provides **alternative text** for an image.
 
 ```html
-<img src="logo.png" alt="NIELIT Logo">
+<img src="logo.png" alt="NIELIT Logo" />
 ```
 
 > If the image cannot be displayed, the alt text can describe the image.
@@ -2447,9 +2794,7 @@ Provides **alternative text** for an image.
 Specifies the **URL/address** of a link.
 
 ```html
-<a href="https://nielit.gov.in">
-    Visit NIELIT
-</a>
+<a href="https://nielit.gov.in"> Visit NIELIT </a>
 ```
 
 > **Remember:** href = Where should the link go?
@@ -2461,9 +2806,7 @@ Specifies the **URL/address** of a link.
 Specifies **where the link should open**.
 
 ```html
-<a href="https://nielit.gov.in" target="_blank">
-    Visit NIELIT
-</a>
+<a href="https://nielit.gov.in" target="_blank"> Visit NIELIT </a>
 ```
 
 > `target="_blank"` generally opens the link in a **new tab**.
@@ -2475,7 +2818,7 @@ Specifies **where the link should open**.
 Used to specify the **size** of an element, commonly an image.
 
 ```html
-<img src="logo.png" width="200" height="100">
+<img src="logo.png" width="200" height="100" />
 ```
 
 ```
@@ -2496,7 +2839,7 @@ The `<body>` tag traditionally supports attributes such as **bgcolor**, **text**
 Used to specify the **background color**.
 
 ```html
-<body bgcolor="yellow">
+<body bgcolor="yellow"></body>
 ```
 
 ---
@@ -2506,7 +2849,7 @@ Used to specify the **background color**.
 Used to specify the **text color**.
 
 ```html
-<body text="red">
+<body text="red"></body>
 ```
 
 ---
@@ -2516,7 +2859,7 @@ Used to specify the **text color**.
 Used to set a **background image**.
 
 ```html
-<body background="nature.jpg">
+<body background="nature.jpg"></body>
 ```
 
 ---
@@ -2525,10 +2868,8 @@ Used to set a **background image**.
 
 ```html
 <body bgcolor="yellow" text="red">
-
-    <h1>Welcome to HTML</h1>
-    <p>This is my webpage.</p>
-
+  <h1>Welcome to HTML</h1>
+  <p>This is my webpage.</p>
 </body>
 ```
 
