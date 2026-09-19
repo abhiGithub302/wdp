@@ -20,9 +20,12 @@ This chapter introduces the basic concepts required to understand how the Web wo
 6. [HTTP and HTTPS](#6-http-and-https)
 7. [URL](#7-url)
 8. [Webpage](#8-webpage)
-9. [Website](#9-website) 10.[Working of a Website](#10-working-of-a-website) 11.[Front End and Back End](#11-front-end-and-back-end) 12.[Client and Server](#12-client-and-server)
-10. [Scripting Language](#13-scripting-language)
-11. [Responsive Design](#13-responsive-design)
+9. [Website](#9-website)
+10. [Working of a Website](#10-working-of-website)
+11. [Front End and Back End](#11-frontend-and-backend)
+12. [Client and Server](#12-client-and-server)
+13. [Scripting Languages](#13-scripting-languages)
+14. [Responsive Design](#14-responsive-design)
 
 ---
 
@@ -46,16 +49,16 @@ This chapter introduces the basic concepts required to understand how the Web wo
 
 ### In this chapter, we will learn:
 
-1. [What is HTML?](#-introduction-to-html)
-2. [History of HTML](#-history-of-html--short-notes)
+1. [What is HTML?](#1-what-is-html)
+2. [History of HTML](#-history-of-html)
 3. [HTML5 Introduction](#-html5-introduction-and-basic-structure-of-html)
 4. [Basic Structure of HTML](#3-html5-basic-structure)
 5. [Explanation of Basic Tags](#4-explanation-of-basic-tags)
 6. [Creating and Running an HTML File Using Notepad++](#-creating-and-running-an-html-file-using-notepad)
-7. [HTML Tags and Their Types](#-html-tags-and-their-types)
+7. [HTML Tags and Their Types](#-html-tags)
 8. [Paired Tags](#1-paired-tags)
 9. [Empty Tags (Void Tags)](#2-empty-tags-void-tags)
-10. [Container Tags](#types-of-html-tags)
+10. [Container Tags](#3-container-tags)
 11. [Syntax of an HTML Tag](#syntax-of-an-html-tag)
 12. [HTML Element](#-html-element)
 13. [HTML Attributes](#html-attributes)
