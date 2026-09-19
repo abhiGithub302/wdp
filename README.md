@@ -55,14 +55,13 @@ This chapter introduces the basic concepts required to understand how the Web wo
 4. [Basic Structure of HTML](#3-html5-basic-structure)
 5. [Explanation of Basic Tags](#4-explanation-of-basic-tags)
 6. [Creating and Running an HTML File Using Notepad++](#-creating-and-running-an-html-file-using-notepad)
-7. [HTML Tags and Their Types](#-html-tags)
+7. [HTML Tags and Their Types](#%EF%B8%8F-html-tags)
 8. [Paired Tags](#1-paired-tags)
 9. [Empty Tags (Void Tags)](#2-empty-tags-void-tags)
 10. [Container Tags](#3-container-tags)
-11. [Syntax of an HTML Tag](#syntax-of-an-html-tag)
 12. [HTML Element](#-html-element)
 13. [HTML Attributes](#html-attributes)
-14. [`<body>` Tag Attributes](#body-tag-attributes)
+14. [`<body>` Tag Attributes](#3-body-tag-attributes)
 
 ---
 
