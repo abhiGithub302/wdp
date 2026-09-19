@@ -59,6 +59,7 @@ This chapter introduces the basic concepts required to understand how the Web wo
 8. [Paired Tags](#1-paired-tags)
 9. [Empty Tags (Void Tags)](#2-empty-tags-void-tags)
 10. [Container Tags](#3-container-tags)
+11. [HTML Tags by Purpose](#html-tags-by-purpose)
 12. [HTML Element](#-html-element)
 13. [HTML Attributes](#html-attributes)
 14. [`<body>` Tag Attributes](#3-body-tag-attributes)
