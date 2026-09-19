@@ -60,9 +60,12 @@ This chapter introduces the basic concepts required to understand how the Web wo
 9. [Empty Tags (Void Tags)](#2-empty-tags-void-tags)
 10. [Container Tags](#3-container-tags)
 11. [HTML Tags by Purpose](#html-tags-by-purpose)
-12. [HTML Element](#-html-element)
-13. [HTML Attributes](#html-attributes)
-14. [`<body>` Tag Attributes](#3-body-tag-attributes)
+12. [HTML Heading Tags](#html-heading-tags)
+13. [HTML `<p>` Tag — Paragraph](#html-p-tag--paragraph)
+14. [HTML Element](#-html-element)
+15. [HTML Attributes](#html-attributes)
+16. [`<body>` Tag Attributes](#3-body-tag-attributes)
+17. [HTML `<head>` Section and Head Elements](#html-head-section-and-head-elements)
 
 ---
 
@@ -2390,151 +2393,283 @@ They help **humans and search engines** understand what different parts of a web
 
 ## 3. Formatting Tags
 
-**Formatting tags** are used to change the **appearance or presentation** of text.
 
-### Common Formatting Tags
+HTML text formatting tags are used to **change the appearance and meaning of text** on a webpage. They can make text **bold, italic, underlined, highlighted, smaller, deleted, emphasized**, etc.
 
-### `<b>` – Bold
+---
 
-Makes text **bold**.
+## 1. What is HTML Text Formatting?
 
-Example:
+- HTML formatting tags are used to **change the appearance** of text.
+- They help make text **bold, italic, underlined, highlighted**, etc.
+- Formatting makes webpage content **easy to read** and **visually appealing**.
+- Formatting tags are generally written inside the `<body>` section.
+
+---
+
+## 2. Common HTML Formatting Tags
+
+```
+| Tag        | Purpose                                 | Example                           |
+| ---------- | --------------------------------------- | --------------------------------- |
+| `<b>`      | Bold text                               | `<b>Bold Text</b>`                |
+| `<strong>` | Important text                          | `<strong>Important Text</strong>` |
+| `<i>`      | Italic text                             | `<i>Italic Text</i>`              |
+| `<em>`     | Emphasized text                         | `<em>Emphasized Text</em>`        |
+| `<u>`      | Underlined text                         | `<u>Underlined Text</u>`          |
+| `<mark>`   | Highlighted text                        | `<mark>Highlighted Text</mark>`   |
+| `<small>`  | Smaller text                            | `<small>Small Text</small>`       |
+| `<del>`    | Deleted text                            | `<del>Deleted Text</del>`         |
+| `<ins>`    | Inserted text                           | `<ins>Inserted Text</ins>`        |
+| `<s>`      | Text that is no longer correct/relevant | `<s>Old Text</s>`                 |
+| `<sub>`    | Subscript text                          | `H<sub>2</sub>O`                  |
+| `<sup>`    | Superscript text                        | `X<sup>2</sup>`                   |
+```
+
+## 3. `<i>` Tag — Italic Text
+
+The `<i>` tag is used to display text in **italic** style.
+
+### Syntax
 
 ```html
-<b>Bold Text</b>
+<i>Text here</i>
+```
+
+### Example
+
+```html
+<p>This is <i>italic</i> text.</p>
+```
+
+### Output
+
+This is *italic* text.
+
+> **Note:** `<i>` is mainly used for alternative voice, technical terms, or similar text that is conventionally presented in italic.
+
+---
+
+## 4. `<b>` Tag — Bold Text
+
+The `<b>` tag is used to make text **bold**.
+
+### Syntax
+
+```html
+<b>Text here</b>
+```
+
+### Example
+
+```html
+<p>This is <b>bold</b> text.</p>
+```
+
+### Output
+
+This is **bold** text.
+
+> **Note:** `<b>` is mainly a **presentational/styling** tag. It does not indicate that the text is especially important.
+
+---
+
+## 5. `<strong>` Tag — Important Text
+
+The `<strong>` tag indicates that the text has **strong importance**.
+
+It usually displays the text in **bold**.
+
+### Syntax
+
+```html
+<strong>Text here</strong>
+```
+
+### Example
+
+```html
+<p>This is <strong>important</strong> text.</p>
+```
+
+### Output
+
+This is **important** text.
+
+### `<b>` vs `<strong>`
+
+| `<b>` | `<strong>` |
+|---|---|
+| Makes text bold | Indicates important text |
+| Mainly visual styling | Has semantic meaning |
+| Does not indicate importance | Indicates importance to browsers and assistive technologies |
+
+---
+
+## 6. `<em>` Tag — Emphasized Text
+
+The `<em>` tag is used to **emphasize** text.
+
+It usually displays the text in **italic** style.
+
+### Syntax
+
+```html
+<em>Text here</em>
+```
+
+### Example
+
+```html
+<p>This is <em>emphasized</em> text.</p>
+```
+
+### Output
+
+This is *emphasized* text.
+
+### `<i>` vs `<em>`
+
+```
+<i> → mainly stylistic italic text
+<em> → emphasizes the meaning of the text
 ```
 
 ---
 
-### `<strong>` – Important
+## 7. `<u>` Tag — Underlined Text
 
-Shows that the text is **important**.
+The `<u>` tag is used to **underline** text.
 
-Example:
+### Syntax
 
 ```html
-<strong>Important Text</strong>
+<u>Text here</u>
+```
+
+### Example
+
+```html
+<p>This is <u>underlined</u> text.</p>
+```
+
+### Output
+
+This is <u>underlined</u> text.
+
+---
+
+## 8. `<mark>` Tag — Highlighted Text
+
+The `<mark>` tag is used to **highlight** text.
+
+By default, browsers usually display marked text with a **yellow background**.
+
+### Syntax
+
+```html
+<mark>Text here</mark>
+```
+
+### Example
+
+```html
+<p>This is <mark>highlighted</mark> text.</p>
+```
+
+### Output
+
+This is <mark>highlighted</mark> text.
+
+---
+
+## 9. `<s>` Tag — Strikethrough Text
+
+The `<s>` tag is used to show text that is **no longer correct, relevant, or applicable**.
+
+It displays a **strikethrough line** through the text.
+
+### Syntax
+
+```html
+<s>Text here</s>
+```
+
+### Example
+
+```html
+<p>This is <s>not correct</s> text.</p>
+```
+
+### Output
+
+This is ~~not correct~~ text.
+
+---
+
+## 10. `<small>` Tag — Smaller Text
+
+The `<small>` tag displays text in a **smaller size** than the surrounding text.
+
+### Example
+
+```html
+<p>This is <small>small text</small>.</p>
 ```
 
 ---
 
-### `<i>` – Italic
+## 11. `<del>` Tag — Deleted Text
 
-Makes text **italic**.
+The `<del>` tag represents text that has been **deleted or removed**.
 
-Example:
+It normally appears with a **strikethrough**.
+
+### Example
 
 ```html
-<i>Italic Text</i>
+<p>This is <del>deleted text</del>.</p>
 ```
 
 ---
 
-### `<em>` – Emphasis
+## 12. `<ins>` Tag — Inserted Text
 
-Gives **emphasis** to the text.
+The `<ins>` tag represents text that has been **inserted or added**.
 
-Example:
+Browsers normally display it with an **underline**.
+
+### Example
 
 ```html
-<em>Emphasized Text</em>
+<p>This is <ins>inserted text</ins>.</p>
 ```
 
 ---
 
-### `<u>` – Underline
+## 13. `<sub>` Tag — Subscript
 
-**Underlines** the text.
+The `<sub>` tag displays text **below** the normal text line.
 
-Example:
-
-```html
-<u>Underlined Text</u>
-```
-
----
-
-### `<mark>` – Highlight
-
-**Highlights** the text.
-
-Example:
+### Example
 
 ```html
-<mark>Highlighted Text</mark>
+<p>H<sub>2</sub>O</p>
 ```
 
----
+### Output
 
-### `<small>` – Small Text
+H₂O
 
-Displays text in a **smaller size**.
-
-Example:
+Another example:
 
 ```html
-<small>Small Text</small>
+<p>CO<sub>2</sub></p>
 ```
 
----
+### Output:
 
-### `<del>` – Deleted Text
-
-Shows **deleted or removed** text.
-
-Example:
-
-```html
-<del>Old Text</del>
-```
-
----
-
-### `<ins>` – Inserted Text
-
-Shows **newly added** text.
-
-Example:
-
-```html
-<ins>New Text</ins>
-```
-
----
-
-### `<s>` – No Longer Correct
-
-Shows text that is **no longer correct or relevant**.
-
-Example:
-
-```html
-<s>Old Price ₹500</s>
-```
-
----
-
-### `<sub>` – Subscript
-
-Displays text **below** the normal line.
-
-Example:
-
-```html
-H<sub>2</sub>O
-```
-
----
-
-### `<sup>` – Superscript
-
-Displays text **above** the normal line.
-
-Example:
-
-```html
-2<sup>3</sup>
-```
+CO₂
 
 ### Examples
 
@@ -2588,8 +2723,141 @@ Example:
 </html>
 ```
 
-//HTML Element
+# HTML Heading Tags
 
+HTML provides **six heading tags**, from `<h1>` to `<h6>`. They are used to define **headings and subheadings** on a webpage.
+
+---
+
+## 1. What are Heading Tags?
+
+- Heading tags are used to define **headings** in an HTML document.
+- HTML provides **six levels** of headings, from `<h1>` to `<h6>`.
+- `<h1>` is the **largest** heading, while `<h6>` is the **smallest** heading.
+- Headings help to **structure and organize** webpage content.
+- They make the content **easier to read and understand**.
+- Heading tags are written inside the `<body>` section.
+- Headings are also useful for **SEO (Search Engine Optimization)**.
+
+---
+
+## 2. Syntax of Heading Tags
+
+```html
+<h1>Heading Text</h1>
+```
+
+Here:
+
+```
+<h1> → Opening tag
+Heading Text → Heading content
+</h1> → Closing tag
+```
+
+---
+
+## 3. Different Levels of Headings
+
+```
+| Tag    | Purpose            | Size     |
+| ------ | ------------------ | -------- |
+| `<h1>` | Main heading       | Largest  |
+| `<h2>` | Sub heading        | Large    |
+| `<h3>` | Section heading    | Medium   |
+| `<h4>` | Subsection heading | Smaller  |
+| `<h5>` | Minor heading      | Small    |
+| `<h6>` | Smallest heading   | Smallest |
+```
+
+## Example of Heading 
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heading Tag Example</title>
+</head>
+<body>
+    <h1>Welcome to NIELIT</h1>
+    <h2>Web Designing</h2>
+    <h3>HTML</h3>
+    <h4>HTML Basics</h4>
+    <h5>Heading Tags</h5>
+    <h6>Introduction</h6>
+</body>
+</html>
+```
+
+# HTML `<p>` Tag — Paragraph
+
+The `<p>` tag is used to define a **paragraph** in an HTML document.
+
+---
+
+## 1. What is the `<p>` Tag?
+
+- The `<p>` tag is used to define a **paragraph** in an HTML document.
+- It is a **block-level element** (yani they occupied full width available on the page ).
+- Text inside `<p>` is displayed as a **separate paragraph**.
+- Browsers automatically add some **space before and after** a paragraph.
+- The `<p>` tag is written inside the `<body>` section.
+
+---
+
+## 2. Syntax of `<p>` Tag
+
+```html
+<p>Paragraph text goes here.</p>
+```
+
+Here:
+
+```
+<p> → Opening tag
+Paragraph text goes here. → Paragraph content
+</p> → Closing tag
+```
+
+> The `<p>` tag is a **paired/container element** because it has both an opening and closing tag.
+
+---
+
+
+### Example
+
+```html
+<p>This is the first paragraph.</p>
+
+<p>This is the second paragraph.</p>
+
+<p>This is the third paragraph.</p>
+```
+
+> Each `<p>` creates a **separate paragraph**.
+
+---
+
+## 3. Example of paragraph <p> tag
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Tag Example</title>
+</head>
+<body>
+    <h1>Welcome to NIELIT</h1>
+    <p>
+        This is the first paragraph.
+        It explains the use of the paragraph tag.
+    </p>
+    <p>
+        You can write multiple paragraphs
+        using the &lt;p&gt; tag in HTML.
+    </p>
+</body>
+</html>
+```
 # 🌐 HTML Element
 
 ## 1. What is an HTML Element?
@@ -2682,198 +2950,705 @@ Together, these form **one HTML element**.
 
 # HTML Attributes
 
+HTML attributes provide **extra information** about HTML elements. They are written inside the **opening tag** and generally follow the **name-value format**.
+
+---
+
 ## 1. What are HTML Attributes?
 
-**HTML attributes** provide **extra information** about an HTML element.
+- HTML attributes provide **additional information** about HTML elements.
+- They are always written inside the **opening tag**.
+- Attributes generally come in **name-value pairs**:
 
-- Attributes are written inside the **opening tag**.
-- They usually come in **name-value pairs**.
-- They can change the **behavior, appearance, or information** of an element.
+```
+attribute="value"
+```
+
+- They help **customize the behavior, appearance, or functionality** of an element.
 
 ### Syntax
 
 ```html
-<tagname attribute="value"></tagname>
+<tagname attribute="value">Content</tagname>
 ```
 
 ### Example
 
 ```html
-<img src="logo.png" alt="NIELIT Logo" />
+<p style="color: blue;">This is a paragraph.</p>
 ```
 
 Here:
 
 ```
-src → Attribute name
-"logo.png" → Attribute value
-
-alt → Attribute name
-"NIELIT Logo" → Attribute value
+<p> → HTML element
+style → Attribute name
+"color: blue;" → Attribute value
+This is a paragraph. → Content
 ```
 
 ---
 
 ## 2. Common HTML Attributes
-
-### `id`
-
-Gives an element a **unique identifier**.
-
-```html
-<p id="intro">Welcome Students</p>
+```
+| Attribute | Used With   | Purpose                                                |
+| --------- | ----------- | ------------------------------------------------------ |
+| `href`    | `<a>`       | Specifies the URL of the page the link goes to         |
+| `src`     | `<img>`     | Specifies the path of the image                        |
+| `width`   | `<img>`     | Specifies the width of an image                        |
+| `height`  | `<img>`     | Specifies the height of an image                       |
+| `alt`     | `<img>`     | Provides alternative text for an image                 |
+| `style`   | Any element | Adds inline CSS styles                                 |
+| `lang`    | `<html>`    | Declares the language of the webpage                   |
+| `title`   | Any element | Provides extra information, usually shown as a tooltip |
 ```
 
-> **Remember:** id = Unique identity
+## 3. `href` Attribute
 
----
+The `href` attribute is used with the `<a>` tag.
 
-### `class`
-
-Gives an element a **class name**. It is commonly used with **CSS**.
-
-```html
-<div class="box">Welcome</div>
-```
-
-> **Remember:** class = Group/Category
-
----
-
-### `style`
-
-Adds **CSS directly** to an element.
-
-```html
-<p style="color:red;">Welcome Students</p>
-```
-
-> **Result:** The text appears in **red**.
-
----
-
-### `title`
-
-Provides **extra information** about an element.
-
-```html
-<p title="This is additional information">Welcome</p>
-```
-
-> The information may appear as a **tooltip** when the mouse is placed over the element.
-
----
-
-### `src`
-
-Specifies the **source/location** of a file.
-
-Commonly used with `<img>`.
-
-```html
-<img src="logo.png" />
-```
-
-> **Remember:** src = Where is the file?
-
----
-
-### `alt`
-
-Provides **alternative text** for an image.
-
-```html
-<img src="logo.png" alt="NIELIT Logo" />
-```
-
-> If the image cannot be displayed, the alt text can describe the image.
-
-> **Remember:** alt = Alternative description
-
----
-
-### `href`
-
-Specifies the **URL/address** of a link.
-
-```html
-<a href="https://nielit.gov.in"> Visit NIELIT </a>
-```
-
-> **Remember:** href = Where should the link go?
-
----
-
-### `target`
-
-Specifies **where the link should open**.
-
-```html
-<a href="https://nielit.gov.in" target="_blank"> Visit NIELIT </a>
-```
-
-> `target="_blank"` generally opens the link in a **new tab**.
-
----
-
-### `width` and `height`
-
-Used to specify the **size** of an element, commonly an image.
-
-```html
-<img src="logo.png" width="200" height="100" />
-```
-
-```
-width → Width of the image
-height → Height of the image
-```
-
----
-
-## 3. `<body>` Tag Attributes
-
-The `<body>` tag traditionally supports attributes such as **bgcolor**, **text**, and **background**.
-
-> **Note:** These are **legacy HTML attributes**. In modern HTML5, **CSS** is preferred for styling.
-
-### `bgcolor`
-
-Used to specify the **background color**.
-
-```html
-<body bgcolor="yellow"></body>
-```
-
----
-
-### `text`
-
-Used to specify the **text color**.
-
-```html
-<body text="red"></body>
-```
-
----
-
-### `background`
-
-Used to set a **background image**.
-
-```html
-<body background="nature.jpg"></body>
-```
-
----
+It specifies the **URL or destination** of a hyperlink.
 
 ### Example
 
 ```html
-<body bgcolor="yellow" text="red">
-  <h1>Welcome to HTML</h1>
-  <p>This is my webpage.</p>
+<a href="https://www.nielit.gov.in">
+    Visit NIELIT
+</a>
+```
+
+### Output
+
+Visit NIELIT
+
+> When the user clicks the link, the browser goes to the specified URL.
+
+---
+
+## 4. `src` Attribute
+
+The `src` attribute is commonly used with the `<img>` tag.
+
+It specifies the **path or location** of the image to be displayed.
+
+### Example
+
+```html
+<img src="images/logo.png">
+```
+
+Here:
+
+```
+src → Attribute
+images/logo.png → Image path
+```
+
+---
+
+## 5. `width` and `height` Attributes
+
+The `width` and `height` attributes are used to specify the **size of an image**.
+
+### Example
+
+```html
+<img src="images/logo.png"
+     width="200"
+     height="100">
+```
+
+Here:
+
+```
+width="200" → Image width is 200 pixels
+height="100" → Image height is 100 pixels
+```
+
+---
+
+## 6. `alt` Attribute
+
+The `alt` attribute provides **alternative text** for an image.
+
+It is useful when the image cannot be displayed and also provides a text description of the image.
+
+### Example
+
+```html
+<img src="images/logo.png"
+     alt="NIELIT Logo">
+```
+
+> If the image cannot be loaded, the alternative text can be displayed.
+
+### Remember
+
+> **alt = Alternative text**
+
+---
+
+## 7. `style` Attribute
+
+The `style` attribute is used to add **inline CSS styles** to an HTML element.
+
+It can be used for properties such as:
+
+- color
+- font size
+- font weight
+- background color
+- etc.
+
+### Example
+
+```html
+<p style="color: blue;
+          font-size: 20px;
+          font-weight: bold;">
+    Hello NIELIT!
+</p>
+```
+
+### Output
+
+> The text appears **blue, larger, and bold**.
+
+---
+
+## 8. `lang` Attribute
+
+The `lang` attribute is commonly used with the `<html>` tag.
+
+It declares the **language of the webpage content**.
+
+### Example
+
+```html
+<html lang="en">
+```
+
+Here:
+
+```
+lang → Attribute
+"en" → English language
+```
+
+For example:
+
+```html
+<html lang="hi">
+```
+
+can be used when the document content is in **Hindi**.
+
+> The language information helps browsers and other technologies understand the language of the content.
+
+---
+
+## 9. `title` Attribute
+
+The `title` attribute provides **additional information** about an element.
+
+Browsers commonly display its value as a **tooltip** when the user hovers over the element.
+
+### Example
+
+```html
+<p title="This is a tooltip message">
+    Hover over this text
+</p>
+```
+
+> When the mouse pointer is placed over the text, the **tooltip** can appear.
+## Exampleof HTML attribute
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Attributes</title>
+</head>
+<body>
+    <h1 style="color: blue;">
+        HTML Attributes
+    </h1>
+    <p title="This is a tooltip message">
+        Hover over this text.
+    </p>
+    <a href="https://www.nielit.gov.in">
+        Visit NIELIT
+    </a>
+    <br><br>
+    <img src="images/logo.png"
+         width="200"
+         height="100"
+         alt="NIELIT Logo">
+</body>
+</html>
+```
+
+## 3. `<body>` Tag Attributes
+
+
+The `<body>` tag contains all the **visible content** of a webpage. Attributes of the `<body>` tag can be used to control the **appearance, background, and behavior** of the webpage.
+
+---
+
+## 1. What are `<body>` Attributes?
+
+- The `<body>` tag contains all the **visible content** of a webpage.
+- Attributes of the `<body>` tag are used to control the **appearance, background, and behavior** of the page.
+- These attributes are written inside the **opening `<body>` tag**.
+
+---
+
+## 2. Syntax
+
+```html
+<body attribute="value" attribute="value">
+    ...
 </body>
 ```
 
-> This gives the page a **yellow background** and **red text**.
+> You can use **one or more attributes** with the `<body>` tag.
+
+### Example
+
+```html
+<body bgcolor="lightblue" text="black">
+    <h1>Welcome to HTML</h1>
+</body>
+```
+
+---
+
+## 3. Common `<body>` Attributes
+```
+| Attribute    | Purpose                               | Values / Examples      | Example Code                               |
+| ------------ | ------------------------------------- | ---------------------- | ------------------------------------------ |
+| `bgcolor`    | Sets the background color of the page | Color name or HEX code | `<body bgcolor="lightblue">`               |
+| `background` | Sets a background image               | Image file path        | `<body background="bg.jpg">`               |
+| `text`       | Sets the default text color           | Color name or HEX code | `<body text="black">`                      |
+
+| `style`      | Adds inline CSS styles                | CSS properties         | `<body style="background-color:#f0f8ff;">` |
+```
+
+## 4. Explanation of `<body>` Attributes
+
+### 4.1 `bgcolor`
+
+The `bgcolor` attribute is used to set the **background color** of the webpage.
+
+```html
+<body bgcolor="lightblue">
+```
+
+
+
+```html
+<body bgcolor="blue">
+```
+
+---
+
+### 4.2 `background`
+
+The `background` attribute is used to set an **image as the background** of the webpage.
+
+```html
+<body background="bg.jpg">
+```
+
+> Here, `bg.jpg` is the image file used as the background.
+
+---
+
+### 4.3 `text`
+
+The `text` attribute sets the **default text color** of the webpage.
+
+```html
+<body text="black">
+```
+
+---
+
+### 4.4 `style`
+
+The `style` attribute is used to add **inline CSS** to the `<body>` element.
+
+```html
+<body style="background-color:red;">
+```
+## Example of body attribute
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Body Attribute Example</title>
+</head>
+<body bgcolor="#f0f8ff"
+      text="#333333"
+      >
+    <h1>Welcome to NIELIT Gorakhpur</h1>
+    <p>
+        This page demonstrates the use of
+        <b>body attributes</b> in HTML.
+    </p>
+    <p>
+        <a href="#">This is a link</a>
+    </p>
+</body>
+</html>
+```
+
+
+# HTML `<head>` Section and Head Elements
+
+The `<head>` section contains important **information about a webpage**. This information is mainly used by the **browser, search engines, and other web technologies**.
+
+---
+
+## 1. The `<head>` Section
+
+### What is the `<head>` Section?
+
+- The `<head>` section is a part of an HTML document.
+- It contains **meta-information** about the webpage.
+- The content inside `<head>` is generally **not visible** on the webpage.
+- It helps browsers and search engines **understand the webpage**.
+- It is written between the `<html>` and `<body>` sections.
+
+### Basic Structure
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Head section content -->
+</head>
+
+<body>
+    <!-- Visible webpage content -->
+</body>
+
+</html>
+```
+
+---
+
+## 2. Purpose of the `<head>` Section
+
+The `<head>` section is used to:
+
+- Set the **title** of the webpage.
+- Provide **meta-information**.
+- Specify the **character encoding**.
+- Provide a webpage **description**.
+- Define **keywords** and **author information**.
+- Link **external CSS** files.
+- Add **internal CSS**.
+- Include **JavaScript** files.
+- Provide information useful for **SEO**.
+- Help with **browser settings** and **responsive display**.
+
+---
+
+## 3. Common Tags Inside `<head>`
+```
+| Tag        | Purpose                                         |
+| ---------- | ----------------------------------------------- |
+| `<title>`  | Sets the title shown in the browser tab         |
+| `<meta>`   | Provides information/metadata about the webpage |
+| `<link>`   | Links external resources such as CSS            |
+| `<script>` | Adds or links JavaScript                        |
+| `<style>`  | Defines internal CSS                            |            
+```
+
+## 4. `<title>` Tag
+
+The `<title>` tag defines the **title of the webpage**.
+
+### Important Points
+
+- It is written inside the `<head>` section.
+- The title appears in the **browser tab**.
+- It helps **identify the webpage**.
+
+### Syntax
+
+```html
+<title>My First Webpage</title>
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Webpage</title>
+</head>
+<body>
+    <h1>Welcome to HTML</h1>
+</body>
+</html>
+```
+
+> The text **My First Webpage** appears in the browser tab.
+
+---
+
+## 5. `<meta>` Tag
+
+The `<meta>` tag provides **information (metadata)** about the webpage.
+
+### Important Points
+
+- It is written inside the `<head>` section.
+- It normally **does not display** content on the webpage.
+- It provides information that can be used by browsers, search engines, and other tools.
+- `<meta>` is a **void/empty element**, so it does **not** have a closing tag.
+
+### Basic Syntax
+
+```html
+<meta name="attribute" content="value">
+```
+
+For example:
+
+```html
+<meta charset="UTF-8">
+```
+
+---
+
+## 6. Common `<meta>` Options
+```
+| Attribute            | Purpose                                             | Example                                                                  |
+| -------------------- | --------------------------------------------------- | ------------------------------------------------------------------------ |
+| `charset`            | Specifies character encoding                        | `<meta charset="UTF-8">`                                                 |
+| `name="description"` | Provides a short description of the page            | `<meta name="description" content="Learn HTML">`                         |
+| `name="keywords"`    | Provides keywords related to the page               | `<meta name="keywords" content="HTML, Web Designing, NIELIT">`           |
+| `name="author"`      | Specifies the author                                | `<meta name="author" content="Your Name">`                               |
+| `name="viewport"`    | Helps make the page responsive on different devices | `<meta name="viewport" content="width=device-width, initial-scale=1.0">` |
+| `http-equiv`         | Provides HTTP-related instructions                  | `<meta http-equiv="refresh" content="30">`                               |
+```
+
+### Example
+
+```html
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="description"
+          content="This is my first webpage.">
+
+    <meta name="keywords"
+          content="HTML, Web Designing, NIELIT">
+
+    <meta name="author"
+          content="Your Name">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+</head>
+```
+
+---
+
+## 7. Why is `<meta>` Important?
+
+The `<meta>` tag can be used to:
+
+- Specify the **character encoding**, such as UTF-8.
+- Provide a **description** of the webpage.
+- Provide information about **keywords**.
+- Specify the **author** of the webpage.
+- Help make webpages **responsive** on different devices.
+- Provide information useful for **SEO**.
+- Improve **browser compatibility** and **accessibility**.
+
+---
+
+## 8. `<script>` Tag
+
+The `<script>` tag is used to add **JavaScript** to an HTML webpage.
+
+### Important Points
+
+- It can be written inside the `<head>` or `<body>` section.
+- It can contain **JavaScript code**.
+- It can also link an **external JavaScript file**.
+- JavaScript is used to make webpages **interactive and dynamic**.
+- The JavaScript code inside `<script>` is **not displayed** as normal webpage content.
+
+### Syntax
+
+```html
+<script>
+    // JavaScript code here
+</script>
+```
+
+### Example
+
+```html
+<script>
+    alert("Welcome to NIELIT!");
+</script>
+```
+
+### External JavaScript
+
+An external JavaScript file can be linked using `src`:
+
+```html
+<script src="script.js"></script>
+```
+
+> Here, `script.js` is an external JavaScript file.
+
+
+## 9. `<style>` Tag
+
+The `<style>` tag is used to write **internal CSS** inside an HTML document.
+
+### Important Points
+
+- It is normally written inside the `<head>` section.
+- It is used for **internal CSS**.
+- It controls **colors, fonts, layout, spacing**, and other visual properties.
+- The CSS code inside `<style>` is **not displayed** as webpage content.
+
+### Syntax
+
+```html
+<style>
+
+    selector {
+        property: value;
+    }
+
+</style>
+```
+
+### Example
+
+```html
+<style>
+
+    body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: #0066cc;
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+        color: #333333;
+    }
+
+</style>
+```
+
+---
+
+
+## 11. `<link>` Tag
+
+The `<link>` tag is used to connect an HTML document with an **external resource**, commonly an **external CSS file**.
+
+### Example
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+Here:
+
+```
+rel="stylesheet" → Specifies the relationship.
+href="style.css" → Specifies the CSS file.
+```
+
+---
+
+## 12. `<base>` Tag
+
+The `<base>` tag is used to specify a **base URL** for relative links.
+
+### Example
+
+```html
+<base href="https://example.com/">
+```
+
+> It is a **void/empty element** and does **not** have a closing tag.
+
+---
+
+## 13. Complete Example of `<head>`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>My First Webpage</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="description"
+          content="Learning HTML">
+
+    <meta name="keywords"
+          content="HTML, Web Designing, NIELIT">
+
+    <meta name="author"
+          content="Abhishek Yadav">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+
+    <script>
+        console.log("Welcome to HTML");
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Welcome to HTML</h1>
+
+    <p>This content is inside the body section.</p>
+
+</body>
+
+</html>
+```
