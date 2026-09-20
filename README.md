@@ -26,6 +26,7 @@ This chapter introduces the basic concepts required to understand how the Web wo
 12. [Client and Server](#12-client-and-server)
 13. [Scripting Languages](#13-scripting-languages)
 14. [Responsive Design](#14-responsive-design)
+15. [MCQ Question Chapter 1: Introduction to Web Design](#mcq-question-chapter-1-introduction-to-web-design)
 
 ---
 
@@ -42,6 +43,7 @@ This chapter introduces the basic concepts required to understand how the Web wo
 7. [Multiple Tabs](#7-multiple-tabs)
 8. [Notepad++](#3-notepad)
 9. [Sublime Text](#4-sublime-text)
+10. [MCQ Question Chapter 2: Editors (Notepad++, Sublime Text Editor)](#mcq-question-chapter-2-editors-notepad-sublime-text-editor)
 
 ---
 
@@ -1415,6 +1417,373 @@ The website **automatically adjusts** itself for the smaller screen.
      ↓
 📱 Mobile
 ```
+# MCQ Question Chapter 1: Introduction to Web Design
+
+## Internet, WWW, Website, Webpage Basics
+
+**Q1. An index page is ______.**
+
+(A) an index of encyclopedia articles  
+(B) where all Internet data is stored  
+(C) required for access to the Internet  
+(D) the first page of a website  
+
+**Answer: (D) the first page of a website**
+
+---
+
+**Q2. What does the .edu domain represents?**
+
+(A) Education domain  
+(B) Commercial domain  
+(C) E-Learning domain  
+(D) Entertainment domain  
+
+**Answer: (A) Education domain**
+
+---
+
+**Q3. Hypertext is a:**
+
+(A) Text with heavy text jargons  
+(B) Text more than 1000 words  
+(C) Text which contains links to other texts  
+(D) None of the above  
+
+**Answer: (C) Text which contains links to other texts**
+
+---
+
+**Q4. The most important `<head>` element of a webpage is a container for:**
+
+(A) Links  
+(B) Webpages  
+(C) Metadata  
+(D) Pictures  
+
+**Answer: (C) Metadata**
+
+---
+
+**Q5. Which tag is used to render and represents an independent piece of content of a document?**
+
+(A) Blog  
+(B) Newspaper  
+(C) Article  
+(D) Record  
+
+**Answer: (C) Article**
+
+---
+
+**Q6. Identify where a `<section>` element can be used.**
+
+(A) Chapters  
+(B) Introduction  
+(C) News Item  
+(D) All the above  
+
+**Answer: (D) All the above**
+
+---
+
+**Q7. Identify the non-semantic elements in HTML tags.**
+
+(A) `<div>`  
+(B) `<form>`  
+(C) `<table>`  
+(D) `<article>`  
+
+**Answer: (A) `<div>`**
+
+---
+
+## Working of Websites, Client and Server Scripting
+
+**Q8. What protocol is used by all computer connections to the Internet?**
+
+(A) UDP  
+(B) FTP  
+(C) TCP/IP  
+(D) Telnet  
+
+**Answer: (C) TCP/IP**
+
+---
+
+**Q9. File protocol is used for ________.**
+
+(A) deciding the design and structure of the file  
+(B) transfer of computer files from hard disk to main memory  
+(C) deciding the storage space of files  
+(D) transfer of computer files from a server to a client  
+
+**Answer: (D) transfer of computer files from a server to a client**
+
+---
+
+**Q10. What is the task of DNS Name server?**
+
+(A) Translating domain names into a specific IP address  
+(B) Translating domain names into a specific UDP address  
+(C) Translating domain names into a specific TCP address  
+(D) Translating domain names into a specific FTP address  
+
+**Answer: (A) Translating domain names into a specific IP address**
+
+---
+
+**Q11. HTTP PUT request method is used to:**
+
+(A) Return contents of a specified document  
+(B) Return header information  
+(C) Replace the specified document with the enclosed data  
+(D) Execute the specified document with the enclosed data  
+
+**Answer: (C) Replace the specified document with the enclosed data**
+
+---
+
+**Q12. Service which helps an organization to host a website on the Web Server:**
+
+(A) Web Service  
+(B) Web Hosting  
+(C) Web Marketing  
+(D) Web Publishing  
+
+**Answer: (B) Web Hosting**
+
+---
+
+**Q13. An online information retrieval tool that uses the data of a web search engine to produce its own results:**
+
+(A) Search Engine  
+(B) Meta Search Engine  
+(C) Mega Search Engine  
+(D) None of the above  
+
+**Answer: (B) Meta Search Engine**
+
+---
+
+**Q14. Which is not a valid meta search engine?**
+
+(A) Yahoo  
+(B) Startpage  
+(C) Excite  
+(D) DuckDuckGo  
+
+**Answer: (A) Yahoo**
+
+---
+
+**Q15. Which is not a main built-in search mechanisms?**
+
+(A) dialog-based  
+(B) dialog-free  
+(C) Incremental Search  
+(D) Decremental Search  
+
+**Answer: (D) Decremental Search**
+
+---
+
+**Q16. MIME stands for ________.**
+
+(A) Multipurpose Internet Mail Extensions  
+(B) Multipurpose Instant Mail Extensions  
+(C) Multipurpose Internet Message Extensions  
+(D) Multipurpose Instant Message Exchange  
+
+**Answer: (A) Multipurpose Internet Mail Extensions**
+
+---
+
+**Q17. SGML stands for:**
+
+(A) Standalone generalized markup language  
+(B) Standalone global makeup language  
+(C) Standard generalized markup language  
+(D) Standalone Graphical markup language  
+
+**Answer: (C) Standard generalized markup language**
+
+---
+
+## Front End, Back End, Client and Server Scripting Languages
+
+**Q18. What is the role of JavaScript in web design?**
+
+(A) define the content of webpages  
+(B) specify the layout of webpages  
+(C) program the behavior of webpages  
+(D) none of the above  
+
+**Answer: (C) program the behavior of webpages**
+
+---
+
+**Q19. JavaScript can change:**
+
+(A) HTML Content  
+(B) HTML Attribute Values  
+(C) HTML Styles  
+(D) All of the above  
+
+**Answer: (D) All of the above**
+
+---
+
+**Q20. An element can be accessed in JavaScript using:**
+
+(A) getElementsByName  
+(B) getElementsById  
+(C) getElementsByClassName  
+(D) All of the above  
+
+**Answer: (D) All of the above**
+
+---
+
+**Q21. Which keyword is a must to use when JavaScript code is to run in older browser?**
+
+(A) var  
+(B) let  
+(C) const  
+(D) none of the above  
+
+**Answer: (A) var**
+
+---
+
+**Q22. Variables in JavaScript cannot be declared using:**
+
+(A) var  
+(B) let  
+(C) nothing  
+(D) set  
+
+**Answer: (D) set**
+
+---
+
+**Q23. Which operator is used to get datatype of a variable in JavaScript?**
+
+(A) instanceof  
+(B) gettype  
+(C) typeof  
+(D) none of the above  
+
+**Answer: (C) typeof**
+
+---
+
+**Q24. Exponential operator in JavaScript is:**
+
+(A) ^  
+(B) %  
+(C) **  
+(D) None of the above  
+
+**Answer: (C) `**`**
+
+---
+
+**Q25. Which comparison operator is used to find equality of type as well as content between two variables?**
+
+(A) ==  
+(B) ===  
+(C) ====  
+(D) None of the above  
+
+**Answer: (B) ===**
+
+---
+
+**Q26. ________ are used to identify user input, user action and browser actions.**
+
+(A) Input handler  
+(B) Event handler  
+(C) Document handler  
+(D) Action handler  
+
+**Answer: (B) Event handler**
+
+---
+
+**Q27. Which JavaScript statement is used to perform different actions based on different conditions?**
+
+(A) if  
+(B) for  
+(C) while  
+(D) switch  
+
+**Answer: (D) switch**
+
+---
+
+**Q28. ________ is used to specify a new condition to test if the first condition is false.**
+
+(A) if  
+(B) else  
+(C) else if  
+(D) none of the above  
+
+**Answer: (C) else if**
+
+---
+
+**Q29. Which statement is used to come out switch block?**
+
+(A) exit  
+(B) break  
+(C) default  
+(D) out  
+
+**Answer: (B) break**
+
+---
+
+## Responsive Web Designing
+
+**Q30. How many columns are supported in the responsive grid?**
+
+(A) 10  
+(B) 11  
+(C) 12  
+(D) 13  
+
+**Answer: (C) 12**
+
+---
+
+**Q31. What is not true about W3.CSS?**
+
+(A) W3.CSS is a modern, responsive, mobile first CSS framework  
+(B) W3.CSS provides equality for all browsers  
+(C) W3.CSS provides equality for all devices  
+(D) W3.CSS is not the standard CSS  
+
+**Answer: (D) W3.CSS is not the standard CSS**
+
+---
+
+**Q32. Which statement is not true about responsive tables in W3.Table?**
+
+(A) w3-responsive class creates a responsive table  
+(B) It scroll horizontally on small screens  
+(C) w3-table class creates a responsive table  
+(D) on large screens, there is no difference  
+
+**Answer: (C) w3-table class creates a responsive table**
+
+---
+
+## Types of Websites (Static and Dynamic Websites)
+
+> **(No direct questions found in the provided papers on static vs dynamic websites, but related questions on web technologies are included above.)**
+
+---
 
 //Editors
 
@@ -1831,6 +2200,208 @@ Used to change Sublime Text settings and appearance.
 ### 10. Help
 
 Used to get help and information about Sublime Text.
+
+# MCQ Question Chapter 2: Editors (Notepad++, Sublime Text Editor)
+
+## Notepad++ Features and Shortcuts
+
+**Q33. Which converter is present in Notepad++?**
+
+(A) ASCII to HEX  
+(B) ASCII to OCT  
+(C) HEX to ASCII  
+(D) Both (A) and (C)  
+
+**Answer: (D) Both (A) and (C)**
+
+---
+
+**Q34. Which is not an encryption algorithm not present in Notepad++?**
+
+(A) MD5  
+(B) SHA-256  
+(C) MD6  
+(D) Both (A) and (B)  
+
+**Answer: (C) MD6**
+
+---
+
+**Q35. Which is not a valid encoding standard not present in Notepad++?**
+
+(A) ANSI  
+(B) UTF-8  
+(C) UTF-8 BOM  
+(D) UTF-16  
+
+**Answer: (D) UTF-16**
+
+---
+
+**Q36. Shortcut keys to hide lines in Notepad++:**
+
+(A) Alt+H  
+(B) Shift+H  
+(C) CTRL+H  
+(D) None of the above  
+
+**Answer: (A) Alt+H**
+
+---
+
+**Q37. Shortcut keys to activate Gaussian Blur:**
+
+(A) CTRL+Alt+Shift+G  
+(B) CTRL+Alt+G  
+(C) CTRL+Shift+G  
+(D) CTRL+Alt+Shift+0  
+
+**Answer: (A) CTRL+Alt+Shift+G**
+
+---
+
+**Q38. Shortcut keys for rotating canvas 90 Degree clockwise is ________.**
+
+(A) CTRL+Shift+0  
+(B) CTRL+Alt+Shift+0  
+(C) CTRL+Alt+Shift+F10  
+(D) CTRL+Alt+Shift+10  
+
+**Answer: (B) CTRL+Alt+Shift+0**
+
+---
+
+## Editor Usage, File Creation and Editing
+
+**Q39. ______ tag embeds CSS in a webpage.**
+
+(A) `<html>`  
+(B) `<style>`  
+(C) `<css>`  
+(D) `<xml>`  
+
+**Answer: (B) `<style>`**
+
+---
+
+**Q40. A set of navigation links is defined using tag:**
+
+(A) `<a>`  
+(B) `<nav>`  
+(C) `<href>`  
+(D) None of the above  
+
+**Answer: (B) `<nav>`**
+
+---
+
+**Q41. Browsers will usually underline inserted text in the tag ________.**
+
+(A) `<i>`  
+(B) `<ins>`  
+(C) `<u>`  
+(D) `<em>`  
+
+**Answer: (B) `<ins>`**
+
+---
+
+**Q42. `<del>` element defines text that has been deleted from a document. Browser display them as:**
+
+(A) Red color  
+(B) Strikethrough  
+(C) Bold  
+(D) Black color  
+
+**Answer: (B) Strikethrough**
+
+---
+
+**Q43. Which is true about `<iframe>` tag?**
+
+(A) Its inline frame  
+(B) Embed another document within a current HTML document  
+(C) None  
+(D) Both (A) and (B) are true  
+
+**Answer: (D) Both (A) and (B) are true**
+
+---
+
+**Q44. Which of the following is not a type of Screen frames in HTML?**
+
+(A) iframe  
+(B) uframe  
+(C) no frame  
+(D) frameset  
+
+**Answer: (B) uframe**
+
+---
+
+**Q45. Identify the invalid `<input>` tag "type" attribute value.**
+
+(A) radiobox  
+(B) checkbox  
+(C) submit  
+(D) text  
+
+**Answer: (A) radiobox**
+
+---
+
+**Q46. Identify the valid new `<input>` tag element in HTML 5?**
+
+(A) email  
+(B) letter  
+(C) fax  
+(D) None of the above  
+
+**Answer: (A) email**
+
+---
+
+**Q47. Autofocus attribute can be used on which element?**
+
+(A) Button  
+(B) Input  
+(C) Select  
+(D) All the above  
+
+**Answer: (D) All the above**
+
+---
+
+**Q48. What is not true about the `<label>` tag of HTML?**
+
+(A) Defines a label for many form elements  
+(B) Useful for screen-reader users  
+(C) Useful for visually challenged users  
+(D) All the above  
+
+**Answer: (D) All the above**
+
+---
+
+**Q49. ________ is a generic inline element that applies no inherent formatting.**
+
+(A) div  
+(B) span  
+(C) color  
+(D) width  
+
+**Answer: (B) span**
+
+---
+
+**Q50. To cluster a group of elements together to apply formatting ________.**
+
+(A) tag  
+(B) class  
+(C) id  
+(D) div  
+
+**Answer: (D) div**
 
 # 🌐 Introduction to HTML
 
