@@ -68,6 +68,14 @@ This chapter introduces the basic concepts required to understand how the Web wo
 15. [HTML Attributes](#html-attributes)
 16. [`<body>` Tag Attributes](#3-body-tag-attributes)
 17. [HTML `<head>` Section and Head Elements](#html-head-section-and-head-elements)
+18. [HTML `<br>` and `<hr>` Tags](#html-br-and-hr-tags)
+19. [HTML `<div>` and `<pre>` Tags](#html-div-and-pre-tags)
+20. [HTML `<img>` Tag](#html-img-tag)
+21. [HTML Comments](#html-comments)
+22. [HTML Anchor Tag and Target Attribute, Named Anchors](#html-anchor-tag-and-target-attribute-named-anchors)
+   - [1. Anchor / Hyperlink `<a>` Tag](#1-anchor--hyperlink-a-tag)
+   - [2. Target Attribute](#2target-attribute)
+   - [3. Named Anchors](#3-named-anchors)
 
 ---
 
@@ -4223,3 +4231,568 @@ The `<base>` tag is used to specify a **base URL** for relative links.
 
 </html>
 ```
+
+
+# HTML `<br>` and `<hr>` Tags
+
+---
+
+## 1. `<br>` Tag — Line Break
+
+The `<br>` tag is used to insert a **line break** in text.
+
+### Key Points
+
+- `<br>` moves the next text to a **new line**.
+- It is a **void (empty) element**.
+- It **does not** have a closing tag.
+- It is useful for writing **addresses, poems, or text in multiple lines**.
+- It does **not** create a new paragraph; it only creates a **line break**.
+
+### Syntax
+
+```html
+<br>
+```
+
+### Example
+
+```html
+<p>
+    National Institute of<br>
+    Electronics and<br>
+    Information Technology<br>
+    Gorakhpur
+</p>
+```
+
+### Output
+
+```
+National Institute of
+Electronics and
+Information Technology
+Gorakhpur
+```
+
+---
+
+## 2. `<hr>` Tag — Horizontal Rule
+
+The `<hr>` tag is used to insert a **horizontal line** on a webpage.
+
+### Key Points
+
+- `<hr>` creates a **horizontal line**.
+- It is a **void (empty) element**.
+- It **does not** have a closing tag.
+- It is useful for **separating different sections** of a webpage.
+- The line can be **customized using CSS**.
+
+### Syntax
+
+```html
+<hr>
+```
+
+### Example
+
+```html
+<h2>NIELIT Gorakhpur</h2>
+
+<p>Learn, Create, Grow...</p>
+
+<hr>
+
+<p>This is a new section after the horizontal line.</p>
+```
+
+---
+
+## 3. Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BR and HR Tags</title>
+</head>
+
+<body>
+
+    <h1>NIELIT Gorakhpur</h1>
+
+    <p>
+        National Institute of<br>
+        Electronics and<br>
+        Information Technology<br>
+        Gorakhpur
+    </p>
+
+    <hr>
+
+    <p>
+        This is a new section after the horizontal line.
+    </p>
+
+</body>
+
+</html>
+```
+
+---
+# HTML `<div>` and `<pre>` Tags
+
+---
+
+## 1. `<div>` Tag
+
+The `<div>` tag is a **container tag** used to **group and organize** multiple HTML elements.
+
+### Key Points
+
+- `<div>` is used to **group HTML elements**.
+- It helps **organize the content** of a webpage.
+- It does **not have a specific appearance** by default.
+- It is commonly used with **CSS** to design webpage sections.
+- A `<div>` can contain **headings, paragraphs, images, links**, and other HTML elements.
+
+### Syntax
+
+```html
+<div>
+    Content goes here
+</div>
+```
+
+### Example
+
+```html
+<div style="border:2px solid blue;
+            background-color:#f0f8ff;
+            padding:15px;
+            width:300px;">
+
+    <h2>Student Information</h2>
+
+    <p>Name: Rahul</p>
+    <p>Course: O Level</p>
+    <p>Institute: NIELIT Gorakhpur</p>
+
+</div>
+```
+
+### Where to Use `<div>`?
+
+Use `<div>` when you want to:
+
+- **Group related content**.
+- Create **different sections** of a webpage.
+- Apply **CSS** to a group of elements.
+- Design **layouts and containers**.
+
+---
+
+## 2. `<pre>` Tag
+
+The `<pre>` tag is used to display **preformatted text**.
+
+### Key Points
+
+- It **preserves spaces and line breaks** as written in the HTML code.
+- It is useful when the **exact formatting** of text needs to be maintained.
+- It is commonly used for displaying **code, addresses, poems, or formatted text**.
+- Text inside `<pre>` is normally displayed using a **fixed-width font**.
+
+### Syntax
+
+```html
+<pre>
+    Content goes here
+</pre>
+```
+
+### Example
+
+```html
+<pre>
+Name       : Rahul
+Course     : O Level
+Institute  : NIELIT
+City       : Gorakhpur
+
+Thank you!
+</pre>
+```
+
+### Where to Use `<pre>`?
+
+Use `<pre>` when you want to:
+
+- Display **programming code**.
+- Preserve **multiple spaces**.
+- Preserve **line breaks**.
+- Display **formatted addresses**.
+- Display **poems** or text where **spacing is important**.
+
+---
+
+## 3. Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Div and Pre Tag Example</title>
+</head>
+
+<body>
+
+    <h1>HTML Div and Pre Tags</h1>
+
+    <!-- div tag example -->
+
+    <div style="border:2px solid blue;
+                background-color:#f0f8ff;
+                padding:15px;
+                width:300px;">
+
+        <h2>Student Information</h2>
+
+        <p>Name: Rahul</p>
+        <p>Course: O Level</p>
+        <p>Institute: NIELIT Gorakhpur</p>
+
+    </div>
+
+    <br>
+
+    <!-- pre tag example -->
+
+    <h2>Student Details</h2>
+
+    <pre>
+Name       : Rahul
+Course     : O Level
+Institute  : NIELIT
+City       : Gorakhpur
+
+Thank you!
+    </pre>
+
+</body>
+
+</html>
+```
+
+
+# HTML `<img>` Tag 
+
+---
+
+## 1. `<img>` Tag
+
+The `<img>` tag is used to **insert an image** into a webpage.
+
+### Key Points
+
+- `<img>` is used to **display an image**.
+- It is a **void (empty) element**.
+- It **does not** have a closing tag.
+- The `src` attribute specifies the **path or URL** of the image.
+- The `alt` attribute provides **alternative text** if the image cannot be displayed.
+- Common attributes include `src`, `alt`, `width`, and `height`.
+
+### Syntax
+
+```html
+<img src="image.jpg"
+     alt="Description"
+     width="300"
+     height="200">
+```
+
+### Example
+
+```html
+<img src="college.jpg"
+     alt="NIELIT Gorakhpur Building"
+     width="400"
+     height="250">
+```
+
+### Important Attributes
+
+```
+src → Specifies the image file path.
+alt → Alternative text for the image.
+width → Sets the image width.
+height → Sets the image height.
+```
+
+
+
+---
+
+# HTML Comments
+
+HTML comments are used to write **notes or explanations** inside HTML code.
+
+### Key Points
+
+- Comments are **not displayed** in the browser.
+- They help **developers understand** the code.
+- Comments can **explain important sections** of a webpage.
+- Comments can be written as **single-line or multi-line** comments.
+
+### Syntax
+
+```html
+<!-- This is a comment -->
+```
+
+### Example
+
+```html
+<!-- This is the heading section -->
+
+<h1>Welcome to NIELIT Gorakhpur</h1>
+
+<!-- Image section starts here -->
+
+<img src="college.jpg"
+     alt="NIELIT Gorakhpur"
+     width="400"
+     height="250">
+
+<!-- Image section ends here -->
+```
+
+> The comments will **not appear** on the webpage.
+
+---
+
+## 3. Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image and Comments Example</title>
+</head>
+
+<body>
+
+    <!-- Main heading -->
+    <h1>Welcome to NIELIT Gorakhpur</h1>
+
+    <!-- Image section starts -->
+
+    <img src="college.jpg"
+         alt="NIELIT Gorakhpur Building"
+         width="400"
+         height="250">
+
+    <!-- Image section ends -->
+
+    <p>
+        This is a sample webpage demonstrating
+        the use of image and comment tags.
+    </p>
+
+</body>
+
+</html>
+```
+
+---
+
+
+# HTML Anchor Tag and Target Attribute, Named Anchors 
+
+---
+
+## 1. Anchor / Hyperlink `<a>` Tag
+
+The `<a>` tag is used to create a **hyperlink** to another webpage, file, email address, or a section within the same webpage.
+
+### Key Points
+
+- `<a>` is called the **anchor tag**.
+- The `href` attribute specifies the **destination**.
+- The link text is written **between** the opening and closing `<a>` tags.
+- The `target` attribute specifies **where** the linked page will open.
+
+### Syntax
+
+```html
+<a href="URL">Link Text</a>
+```
+
+### Example
+
+```html
+<a href="https://www.nielit.gov.in">
+    Visit NIELIT Website
+</a>
+```
+
+---
+
+## 2.Target Attribute
+
+The `target` attribute specifies **where the linked document will open**.
+
+### Syntax
+
+```html
+<a href="URL" target="value">Link Text</a>
+```
+
+### Common Target Values
+
+```
+_self → Opens in the same tab. This is the default.
+_blank → Opens in a new tab/window.
+_parent → Opens in the parent frame.
+_top → Opens in the full/top-level window.
+```
+
+### Example
+
+```html
+<a href="https://www.nielit.gov.in"
+   target="_blank">
+    Visit NIELIT Website
+</a>
+```
+
+Here:
+
+```
+href → Where to go?
+target → Where to open?
+_blank → Open in a new tab.
+```
+
+### Example:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Target Attribute Example</title>
+</head>
+
+<body>
+
+    <h1>HTML Anchor Tag - Target Attribute</h1>
+
+    <p>
+        <a href="https://www.nielit.gov.in" target="_self">
+            Open NIELIT in Same Tab (_self)
+        </a>
+    </p>
+    <p>
+        <a href="https://www.nielit.gov.in" target="_blank">
+            Open NIELIT in New Tab (_blank)
+        </a>
+    </p>
+
+    <p>
+        <a href="page.html" target="_parent">
+            Open Page in Parent Frame (_parent)
+        </a>
+    </p>
+    <p>
+        <a href="page.html" target="_top">
+            Open Page in Full Window (_top)
+        </a>
+    </p>
+</body>
+</html>
+```
+
+---
+
+## 3. Named Anchors
+
+Named anchors are used to create a link to a **specific section of the same webpage**.
+
+In modern HTML, the **`id` attribute** is used to create the destination.
+
+### How It Works
+
+**First, create a link:**
+
+```html
+<a href="#about">About Us</a>
+```
+
+**Then create the destination:**
+
+```html
+<h2 id="about">About Us</h2>
+```
+
+Here:
+
+```
+href="#about" → Link to the section.
+id="about" → Destination of the link.
+# indicates that the link points to an element ID.
+```
+
+---
+
+## 4. Complete Named Anchor Example
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Named Anchor Example</title>
+</head>
+
+<body>
+
+    <h1>My Webpage</h1>
+
+    <!-- Navigation Links -->
+    <a href="#about">About Us</a> |
+    <a href="#courses">Courses</a> |
+    <a href="#contact">Contact Us</a>
+
+    <br><br><br><br><br>
+
+    <!-- About Section -->
+    <h2 id="about">About Us</h2>
+    <p>
+        This is the About Us section of the webpage.
+    </p>
+
+    <br><br><br><br>
+
+    <!-- Courses Section -->
+    <h2 id="courses">Courses</h2>
+    <p>
+        We offer various courses in Information Technology.
+    </p>
+
+    <br><br><br><br>
+
+    <!-- Contact Section -->
+    <h2 id="contact">Contact Us</h2>
+    <p>
+        Email: info@example.com
+    </p>
+
+</body>
+
+</html>
+```
+
+
