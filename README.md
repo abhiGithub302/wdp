@@ -1,8 +1,9 @@
-# Chapter 1 — Introduction to web designing
+# M2-R5.1 Web Designing and Publishing | NIELIT O Level (IT)
 
-> **Web Designing and Publishing | NIELIT O Level (IT)**
+> ****
 
-This chapter introduces the basic concepts required to understand how the Web works. Before learning HTML, CSS and JavaScript, it is important to understand the Internet, WWW, websites, webpages, browsers, servers, URLs and the client-server model.
+This module introduces students to web designing, even if they have no previous knowledge of the subject. Nowadays, many businesses depend on websites and web applications for their work. This module helps students learn how to design and create websites using HTML, CSS, JavaScript, and AngularJS. Students will also learn how to add multimedia such as images, audio, and video to websites. By the end of the module, students will understand how the World Wide Web works, how web pages are designed, and how websites are published and made available on the Internet.
+
 
 ---
 
