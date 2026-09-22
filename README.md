@@ -4797,3 +4797,561 @@ id="about" → Destination of the link.
 ```
 
 
+
+## 1.  HTML Table?
+
+An **HTML Table** is used to display data in **rows and columns**.
+
+Tables are useful for displaying:
+
+- Student details
+- Marks
+- Course information
+- Employee records
+- Product details
+
+A table is created using the `<table>` tag.
+
+---
+
+## 2. Basic Table Tags
+``` 
+1. <table>  2. <tr> 3. <th> 4 <td>   5. <caption>      
+ 
+
+```
+## 1. `<table>` Tag
+
+The `<table>` tag is the **main container** of an HTML table.
+
+```html
+<table border="1">
+    ...
+</table>
+```
+
+> **Use:** Creates the table.
+
+---
+
+## 2. `<tr>` Tag
+
+`<tr>` stands for **Table Row**.
+
+It creates a **horizontal row** in the table.
+
+```html
+<tr>
+    <td>Rahul</td>
+    <td>O Level</td>
+</tr>
+```
+
+> **Use:** Creates one row.
+
+---
+
+## 3. `<th>` Tag
+
+`<th>` stands for **Table Header**.
+
+It creates a **heading cell**. By default, browsers usually display `<th>` text as **bold and centered**.
+
+```html
+<tr>
+    <th>Name</th>
+    <th>Course</th>
+    <th>City</th>
+</tr>
+```
+
+### Output:
+
+```
+┌──────────┬──────────┬──────────┐
+│   Name   │  Course  │   City   │
+└──────────┴──────────┴──────────┘
+     ↑
+    <th>
+```
+
+---
+
+## 4. `<td>` Tag
+
+`<td>` stands for **Table Data**.
+
+It creates a **normal data cell**.
+
+```html
+<tr>
+    <td>Rahul</td>
+    <td>O Level</td>
+    <td>Gorakhpur</td>
+</tr>
+```
+
+> **Use:** Displays actual data in the table.
+
+---
+
+## 5. `<caption>` Tag
+
+`<caption>` gives a **title** to the table.
+
+```html
+<table border="1">
+
+    <caption>Student Details</caption>
+
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+
+</table>
+```
+
+---
+---
+
+## 3.Table Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table</title>
+</head>
+<body>
+
+    <caption>Student Details</caption>
+
+    <table border="1">
+        <tr>
+            <th>S. No.</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>City</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Rahul</td>
+            <td>O Level</td>
+            <td>Gorakhpur</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Priya</td>
+            <td>A Level</td>
+            <td>Lucknow</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Ankit</td>
+            <td>B Level</td>
+            <td>Varanasi</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+```
+
+### Structure
+
+```
+<table>
+   └── <tr>
+        ├── <th>
+        ├── <th>
+        ├── <th>
+        └── <th>
+
+   └── <tr>
+        ├── <td>
+        ├── <td>
+        ├── <td>
+        └── <td>
+</table>
+```
+
+---
+
+
+
+---
+
+
+
+# 3. Table Attributes?
+
+**Table attributes** are used to provide additional information and control the **appearance, size, alignment, spacing, and behavior** of an HTML table and its cells.
+
+Common table attributes are used with:
+
+```
+<table>
+<tr>
+<th>
+<td>
+```
+
+---
+
+## 2. Commonly Used Table Attributes
+```
+| Attribute     | Applies To                        | Description                                          |
+| ------------- | --------------------------------- | ---------------------------------------------------- |
+| `border`      | `<table>`                         | Sets the border width of the table.                  |
+| `width`       | `<table>`, `<th>`, `<td>`         | Sets the width of the table or cell.                 |
+| `height`      | `<table>`, `<th>`, `<td>`         | Sets the height of the table or cell.                |
+| `cellpadding` | `<table>`                         | Sets the space between cell content and cell border. |
+| `cellspacing` | `<table>`                         | Sets the space between adjacent cells.               |
+| `align`       | `<table>`, `<tr>`, `<th>`, `<td>` | Aligns the table, row, or cell content.              |
+| `bgcolor`     | `<table>`, `<tr>`, `<th>`, `<td>` | Sets the background color.                           |
+| `bordercolor` | `<table>`                         | Sets the color of the table border.                  |
+| `colspan`     | `<th>`, `<td>`                    | Merges cells horizontally across columns.            |
+| `rowspan`     | `<th>`, `<td>`                    | Merges cells vertically across rows.                 |
+```
+
+---
+
+## 1. `border`
+
+The `border` attribute is used to set the **border width** of a table.
+
+```html
+<table border="1">
+```
+
+### Example:
+
+```html
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+</table>
+```
+
+> **Remember:** border → Table border
+
+---
+
+## 2. `width`
+
+The `width` attribute sets the **width** of the table or cell.
+
+```html
+<table width="600">
+```
+
+It can be specified in **pixels or percentage**.
+
+```html
+<table width="80%">
+```
+
+### Example:
+
+```html
+<table border="1" width="600">
+```
+
+---
+
+## 3. `height`
+
+The `height` attribute sets the **height** of the table or cell.
+
+```html
+<table border="1" height="250">
+```
+
+> It can also be specified using **pixels or percentage**.
+
+---
+
+## 4. `cellpadding`
+
+`cellpadding` sets the space between the **content of a cell and its border**.
+
+```html
+<table border="1" cellpadding="10">
+```
+
+> **Remember:** Cellpadding = **Inside** the cell
+
+```
+┌─────────────────────┐
+│                     │
+│     Cell Content    │
+│                     │
+└─────────────────────┘
+       ↑       ↑
+     Space = Cellpadding
+```
+
+---
+
+## 5. `cellspacing`
+
+`cellspacing` sets the space **between two adjacent cells**.
+
+```html
+<table border="1" cellspacing="5">
+```
+
+> **Remember:** Cellspacing = **Between** cells
+
+```
+┌──────────┐     ┌──────────┐
+│  Cell 1  │     │  Cell 2  │
+└──────────┘     └──────────┘
+                  ↑
+              Cellspacing
+```
+
+### Difference
+```
+| `cellpadding`           | `cellspacing`           |
+| ----------------------- | ----------------------- |
+| Space **inside** a cell | Space **between** cells |
+| Content ↔ Border        | Cell ↔ Cell             |
+```
+
+---
+
+## 6. `align`
+
+The `align` attribute is used to **align** the table or content.
+
+Common values:
+
+```
+left
+center
+right
+```
+
+### Example:
+
+```html
+<table border="1" align="center">
+```
+
+For a row:
+
+```html
+<tr align="center">
+```
+
+---
+
+## 7. `bgcolor`
+
+The `bgcolor` attribute sets the **background color**.
+
+### Example:
+
+```html
+<table border="1" bgcolor="lightyellow">
+```
+
+For a row:
+
+```html
+<tr bgcolor="lightblue">
+```
+
+For a cell:
+
+```html
+<td bgcolor="lightgreen">Rahul</td>
+```
+
+---
+
+## 8. `bordercolor`
+
+The `bordercolor` attribute sets the **color of the table border**.
+
+```html
+<table border="2" bordercolor="blue">
+```
+
+---
+
+## 9. `colspan`
+
+`colspan` is used to **merge two or more columns horizontally**.
+
+### Example:
+
+```html
+<table border="1">
+    <tr>
+        <th colspan="3">Student Details</th>
+    </tr>
+
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>City</th>
+    </tr>
+</table>
+```
+
+Here:
+
+```
+<th colspan="3">
+```
+
+means one cell occupies **3 columns**.
+
+```
+┌──────────────────────────────┐
+│       Student Details        │
+│          colspan="3"         │
+├───────────┬─────────┬────────┤
+│   Name    │ Course  │  City  │
+└───────────┴─────────┴────────┘
+        ← Horizontal →
+```
+
+> **Memory:** colspan → Columns → Horizontal
+
+---
+
+## 10. `rowspan`
+
+`rowspan` is used to **merge two or more rows vertically**.
+
+### Example:
+
+```html
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+
+    <tr>
+        <td rowspan="2">Rahul</td>
+        <td>O Level</td>
+    </tr>
+
+    <tr>
+        <td>A Level</td>
+    </tr>
+</table>
+```
+
+Here:
+
+```
+<td rowspan="2">Rahul</td>
+```
+
+means the Rahul cell occupies **2 rows**.
+
+```
+┌───────────┬──────────┐
+│           │ O Level  │
+│   Rahul   ├──────────┤
+│ rowspan=2 │ A Level  │
+│           │          │
+└───────────┴──────────┘
+       ↑
+    Vertical
+```
+
+> **Memory:** rowspan → Rows → Vertical
+
+---
+
+## 13. Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Attributes</title>
+</head>
+<body>
+
+    <table border="1"
+           width="80%"
+           cellpadding="10"
+           cellspacing="0"
+           align="center"
+           bgcolor="#f9f9f9">
+
+        <caption><b>Student Details</b></caption>
+
+        <tr bgcolor="lightblue">
+            <th width="10%">S. No.</th>
+            <th width="30%">Name</th>
+            <th width="30%">Course</th>
+            <th width="30%">City</th>
+        </tr>
+
+        <tr align="center">
+            <td>1</td>
+            <td>Rahul</td>
+            <td>O Level</td>
+            <td>Gorakhpur</td>
+        </tr>
+
+        <tr align="center" bgcolor="#f2f2f2">
+            <td>2</td>
+            <td>Priya</td>
+            <td>A Level</td>
+            <td>Lucknow</td>
+        </tr>
+
+        <tr align="center">
+            <td>3</td>
+            <td>Ankit</td>
+            <td>B Level</td>
+            <td>Varanasi</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+```
+
+---
+
+## Quick Revision
+
+```
+border       → Border
+width        → Width
+height       → Height
+cellpadding  → Space inside cell
+cellspacing  → Space between cells
+align        → Alignment
+bgcolor      → Background color
+bordercolor  → Border color
+colspan      → Merge columns horizontally
+rowspan      → Merge rows vertically
+```
+
