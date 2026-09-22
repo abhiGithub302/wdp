@@ -77,6 +77,27 @@ This module introduces students to web designing, even if they have no previous 
    - [1. Anchor / Hyperlink `<a>` Tag](#1-anchor--hyperlink-a-tag)
    - [2. Target Attribute](#2target-attribute)
    - [3. Named Anchors](#3-named-anchors)
+23. [HTML Table](#html-table)
+   - [Basic Table Tags](#basic-table-tags)
+     - [1. `<table>` Tag](#table-tag)
+     - [2. `<tr>` Tag](#tr-tag)
+     - [3. `<th>` Tag](#th-tag)
+     - [4. `<td>` Tag](#td-tag)
+     - [5. `<caption>` Tag](#caption-tag)
+   - [Table Example](#table-example)
+24. [Table Attributes](#table-attributes)
+   - [Commonly Used Table Attributes](#commonly-used-table-attributes)
+     - [1. `border`](#border-attribute)
+     - [2. `width`](#width-attribute)
+     - [3. `height`](#height-attribute)
+     - [4. `cellpadding`](#cellpadding-attribute)
+     - [5. `cellspacing`](#cellspacing-attribute)
+     - [6. `align`](#align-attribute)
+     - [7. `bgcolor`](#bgcolor-attribute)
+     - [8. `bordercolor`](#bordercolor-attribute)
+     - [9. `colspan`](#colspan-attribute)
+     - [10. `rowspan`](#rowspan-attribute)
+   - [Complete Example of Table Attributes](#complete-example-of-table-attributes)
 
 ---
 
@@ -4798,7 +4819,9 @@ id="about" → Destination of the link.
 
 
 
-## 1.  HTML Table?
+<a id="html-table"></a>
+
+## 1. HTML Table?
 
 An **HTML Table** is used to display data in **rows and columns**.
 
@@ -4814,12 +4837,16 @@ A table is created using the `<table>` tag.
 
 ---
 
+<a id="basic-table-tags"></a>
+
 ## 2. Basic Table Tags
 ``` 
 1. <table>  2. <tr> 3. <th> 4 <td>   5. <caption>      
  
 
 ```
+<a id="table-tag"></a>
+
 ## 1. `<table>` Tag
 
 The `<table>` tag is the **main container** of an HTML table.
@@ -4833,6 +4860,8 @@ The `<table>` tag is the **main container** of an HTML table.
 > **Use:** Creates the table.
 
 ---
+
+<a id="tr-tag"></a>
 
 ## 2. `<tr>` Tag
 
@@ -4850,6 +4879,8 @@ It creates a **horizontal row** in the table.
 > **Use:** Creates one row.
 
 ---
+
+<a id="th-tag"></a>
 
 ## 3. `<th>` Tag
 
@@ -4877,6 +4908,8 @@ It creates a **heading cell**. By default, browsers usually display `<th>` text 
 
 ---
 
+<a id="td-tag"></a>
+
 ## 4. `<td>` Tag
 
 `<td>` stands for **Table Data**.
@@ -4894,6 +4927,8 @@ It creates a **normal data cell**.
 > **Use:** Displays actual data in the table.
 
 ---
+
+<a id="caption-tag"></a>
 
 ## 5. `<caption>` Tag
 
@@ -4920,7 +4955,9 @@ It creates a **normal data cell**.
 ---
 ---
 
-## 3.Table Example
+<a id="table-example"></a>
+
+## 3. Table Example
 
 ```html
 <!DOCTYPE html>
@@ -4992,6 +5029,8 @@ It creates a **normal data cell**.
 
 
 
+<a id="table-attributes"></a>
+
 # 3. Table Attributes?
 
 **Table attributes** are used to provide additional information and control the **appearance, size, alignment, spacing, and behavior** of an HTML table and its cells.
@@ -5006,6 +5045,8 @@ Common table attributes are used with:
 ```
 
 ---
+
+<a id="commonly-used-table-attributes"></a>
 
 ## 2. Commonly Used Table Attributes
 ```
@@ -5024,6 +5065,8 @@ Common table attributes are used with:
 ```
 
 ---
+
+<a id="border-attribute"></a>
 
 ## 1. `border`
 
@@ -5052,6 +5095,8 @@ The `border` attribute is used to set the **border width** of a table.
 
 ---
 
+<a id="width-attribute"></a>
+
 ## 2. `width`
 
 The `width` attribute sets the **width** of the table or cell.
@@ -5074,6 +5119,8 @@ It can be specified in **pixels or percentage**.
 
 ---
 
+<a id="height-attribute"></a>
+
 ## 3. `height`
 
 The `height` attribute sets the **height** of the table or cell.
@@ -5085,6 +5132,8 @@ The `height` attribute sets the **height** of the table or cell.
 > It can also be specified using **pixels or percentage**.
 
 ---
+
+<a id="cellpadding-attribute"></a>
 
 ## 4. `cellpadding`
 
@@ -5107,6 +5156,8 @@ The `height` attribute sets the **height** of the table or cell.
 ```
 
 ---
+
+<a id="cellspacing-attribute"></a>
 
 ## 5. `cellspacing`
 
@@ -5136,6 +5187,8 @@ The `height` attribute sets the **height** of the table or cell.
 
 ---
 
+<a id="align-attribute"></a>
+
 ## 6. `align`
 
 The `align` attribute is used to **align** the table or content.
@@ -5162,6 +5215,8 @@ For a row:
 
 ---
 
+<a id="bgcolor-attribute"></a>
+
 ## 7. `bgcolor`
 
 The `bgcolor` attribute sets the **background color**.
@@ -5186,6 +5241,8 @@ For a cell:
 
 ---
 
+<a id="bordercolor-attribute"></a>
+
 ## 8. `bordercolor`
 
 The `bordercolor` attribute sets the **color of the table border**.
@@ -5195,6 +5252,8 @@ The `bordercolor` attribute sets the **color of the table border**.
 ```
 
 ---
+
+<a id="colspan-attribute"></a>
 
 ## 9. `colspan`
 
@@ -5237,6 +5296,8 @@ means one cell occupies **3 columns**.
 > **Memory:** colspan → Columns → Horizontal
 
 ---
+
+<a id="rowspan-attribute"></a>
 
 ## 10. `rowspan`
 
@@ -5285,7 +5346,9 @@ means the Rahul cell occupies **2 rows**.
 
 ---
 
-## 13. Complete Example
+<a id="complete-example-of-table-attributes"></a>
+
+## 13. Complete Example of table attributes
 
 ```html
 <!DOCTYPE html>
