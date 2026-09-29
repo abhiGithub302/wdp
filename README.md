@@ -98,6 +98,10 @@ This module introduces students to web designing, even if they have no previous 
      - [9. `colspan`](#colspan-attribute)
      - [10. `rowspan`](#rowspan-attribute)
    - [Complete Example of Table Attributes](#complete-example-of-table-attributes)
+25. [HTML Lists](#html-lists)
+    - [HTML Ordered List `<ol>`](#html-ordered-list-ol)
+    - [HTML Unordered List `<ul>`](#html-unordered-list-ul)
+    - [HTML Description List `<dl>`](#html-description-list-dl)
 
 ---
 
@@ -5417,4 +5421,564 @@ bordercolor  → Border color
 colspan      → Merge columns horizontally
 rowspan      → Merge rows vertically
 ```
+# HTML Lists
+
+## 1. What is an HTML List?
+
+An **HTML list** is used to display a collection of **related items** in a structured format.
+
+Lists are commonly used for:
+
+- Menus
+- Features
+- Categories
+- Navigation items
+
+
+HTML provides **three types of lists**:
+
+1. **Ordered List** – `<ol>`
+2. **Unordered List** – `<ul>`
+3. **Description List** – `<dl>`
+
+# HTML Ordered List `<ol>`
+
+## 1. What is an Ordered List?
+
+An **Ordered List** is used to display a collection of related items in a **numbered or sequential order**.
+
+- It is created using the `<ol>` tag.
+- Each list item is created using the `<li>` tag.
+
+### Example
+
+```html
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>PHP</li>
+</ol>
+```
+
+### Output
+
+```
+1. HTML
+2. CSS
+3. JavaScript
+4. PHP
+```
+
+---
+
+## 2. Syntax of Ordered List
+
+```html
+<ol type="value" start="number">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ol>
+```
+
+### Main Tags
+```
+Tag     Purpose 
+<ol>  Creates the ordered list 
+<li>  Defines an individual list item 
+```
+---
+
+## 3. Attributes of `<ol>`
+ - type
+ - start
+ - reversed
+---
+
+## 4. `type` Attribute
+
+The `type` attribute is used to change the **numbering style** of an ordered list.
+
+### Common values:
+```
+| Value | Numbering |
+| `1`   | 1, 2, 3... |
+| `A`   | A, B, C... |
+| `a`   | a, b, c... |
+| `I`   | I, II, III... |
+| `i`   | i, ii, iii... |
+```
+### Example
+
+```html
+<ol type="A">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+```
+
+### Output
+
+```
+A. HTML
+B. CSS
+C. JavaScript
+```
+
+---
+
+## 5. `start` Attribute
+
+The `start` attribute specifies **where the numbering should begin**.
+
+### Example
+
+```html
+<ol start="5">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+```
+
+### Output
+
+```
+5. HTML
+6. CSS
+7. JavaScript
+```
+
+It can also be used with **other numbering styles**.
+
+```html
+<ol type="i" start="5">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ol>
+```
+
+### Output:
+
+```
+v. One
+vi. Two
+vii. Three
+```
+
+---
+
+## 6. `reversed` Attribute
+
+The `reversed` attribute displays the ordered list in **reverse order**.
+
+```html
+<ol reversed>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+```
+
+### Output:
+
+```
+3. HTML
+2. CSS
+1. JavaScript
+```
+
+### Important
+
+> `reversed` is a **Boolean attribute**, so we normally write:
+> `<ol reversed>`
+
+---
+
+
+
+## 8. Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordered List</title>
+</head>
+<body>
+
+    <h2>Number List</h2>
+
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h2>Uppercase Letter List</h2>
+
+    <ol type="A">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ol>
+
+    <h2>Lowercase Roman List</h2>
+
+    <ol type="i" start="5">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <h2>Reversed List</h2>
+
+    <ol reversed>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+</body>
+</html>
+```
+
+# HTML Unordered List `<ul>`
+
+## 1. What is an Unordered List?
+
+An **Unordered List** is used to display a collection of related items using **bullet points**.
+
+- It is created using the `<ul>` tag.
+- Each list item is created using the `<li>` tag.
+
+### Common Uses
+
+- Menu items
+- Features
+- Sidebar menus
+- FAQ sections
+
+---
+
+## 2. Syntax of Unordered List
+
+```html
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+```
+
+### Output
+
+```
+• Item 1
+• Item 2
+• Item 3
+```
+
+### Important Tags
+
+-  `<ul>`  Creates an unordered list 
+  - `<li>`  Defines each list item 
+
+---
+
+## 3. `type` Attribute
+
+The `type` attribute specifies the **bullet style**.
+
+The common values shown are:
+
+-  `disc`  ● Filled circle 
+ -  `circle`   ○ Hollow circle 
+-  `square`  ■ Square 
+### Example
+
+```html
+<ul type="circle">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+```
+
+### Output:
+
+```
+○ HTML
+○ CSS
+○ JavaScript
+```
+
+---
+
+## 4. Default Bullet – `disc`
+
+By default, an unordered list generally uses the **disc** bullet.
+
+```html
+<ul type="disc">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+```
+
+### Output:
+
+```
+● HTML
+● CSS
+● JavaScript
+```
+
+---
+
+## 5. Circle Bullet
+
+Use `type="circle"` for a **hollow circle**.
+
+```html
+<ul type="circle">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+```
+
+### Output:
+
+```
+○ HTML
+○ CSS
+○ JavaScript
+```
+
+---
+
+## 6. Square Bullet
+
+Use `type="square"` for **square bullets**.
+
+```html
+<ul type="square">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+```
+
+### Output:
+
+```
+■ HTML
+■ CSS
+■ JavaScript
+```
+# HTML Unordered List `<ul>` – Complete Example
+
+## Complete Example Code
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unordered List</title>
+</head>
+<body>
+
+    <h2>Disc List</h2>
+
+    <ul type="disc">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Circle List</h2>
+
+    <ul type="circle">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Square List</h2>
+
+    <ul type="square">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+</body>
+</html>
+```
+
+---
+
+## Output
+
+### Disc List
+
+```
+● HTML
+● CSS
+● JavaScript
+```
+
+### Circle List
+
+```
+○ HTML
+○ CSS
+○ JavaScript
+```
+
+### Square List
+
+```
+■ HTML
+■ CSS
+■ JavaScript
+```
+
+---
+
+> **Note:** Har `<ul>` ke andar `<li>` tags use kiye gaye hain jo individual list items banate hain.
+
+
+# HTML Description List `<dl>`
+
+## 1. What is a Description List?
+
+A **Description List** is used to display a list of **terms and their descriptions**.
+
+It is useful when one item needs an **explanation or definition**.
+
+### Common Uses
+
+- Glossary of terms
+- FAQ sections
+- Technical terms
+
+
+---
+
+## 2. Tags Used in Description List
+
+A description list uses **three main tags**:
+
+
+-  `<dl>` | Description List
+- `<dt>` | Description Term 
+-  `<dd>` | Description Details 
+
+### Easy Memory
+
+```
+<dl> → Description List
+<dt> → Description Term
+<dd> → Description/Details
+```
+
+---
+
+## 3. Syntax of Description List
+
+```html
+<dl>
+
+    <dt>Term 1</dt>
+    <dd>Description 1</dd>
+
+    <dt>Term 2</dt>
+    <dd>Description 2</dd>
+
+</dl>
+```
+
+The basic structure is:
+
+```html
+<dl>
+    <dt>Term</dt>
+    <dd>Description</dd>
+</dl>
+```
+
+---
+
+## 4. `<dl>` Tag
+
+`<dl>` creates the **complete description list**.
+
+```html
+<dl>
+    ...
+</dl>
+```
+
+> It acts as a **container** for `<dt>` and `<dd>` elements.
+
+---
+
+## 5. `<dt>` Tag
+
+`<dt>` stands for **Description Term**.
+
+It defines the **term, name, or item** that you want to describe.
+
+```html
+<dt>HTML</dt>
+```
+
+> Here, **HTML** is the term.
+
+---
+
+## 6. `<dd>` Tag
+
+`<dd>` defines the **description or details** of a term.
+
+```html
+<dd>Hyper Text Markup Language</dd>
+```
+
+> Here, **Hyper Text Markup Language** is the description of HTML.
+
+---
+
+## 7. Basic Example
+
+```html
+<dl>
+
+    <dt>HTML</dt>
+    <dd>Hyper Text Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+
+</dl>
+```
+
+### Output
+
+```
+HTML
+    Hyper Text Markup Language
+
+CSS
+    Cascading Style Sheets
+```
+
+---
+
 
