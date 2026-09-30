@@ -103,6 +103,31 @@ This module introduces students to web designing, even if they have no previous 
     - [HTML Unordered List `<ul>`](#html-unordered-list-ul)
     - [HTML Description List `<dl>`](#html-description-list-dl)
 
+26. [HTML Forms](#html-forms)
+- [2. Form Elements](#2-form-elements)
+- [HTML `<input>` Tag](#html-input-tag)
+    - [3. Input Types](#3-input-types)
+    - [4. Text Input](#4-text-input)
+    - [5. Password Input](#5-password-input)
+    - [6. Email Input](#6-email-input)
+    - [7. Number Input](#7-number-input)
+    - [8. Date Input](#8-date-input)
+    - [9. Radio Buttons](#9-radio-buttons)
+    - [10. Checkboxes](#10-checkboxes)
+    - [11. Dropdown List](#11-dropdown-list)
+    - [12. Text Area](#12-text-area)
+    - [13. Submit Button](#13-submit-button)
+    - [14. Reset Button](#14-reset-button)
+    - [15. Input Attributes](#15-input-attributes)
+- [HTML `<label>` Tag](#html-label-tag)
+- [`<textarea>`](#textarea)
+- [`<select>`](#select)
+- [`<option>`](#option)
+- [`<button>`](#button)
+- [16. Example](#16-example)
+
+---    
+
 ---
 
 ## 1. Internet
@@ -5980,5 +6005,542 @@ CSS
 ```
 
 ---
+
+
+
+
+# HTML Forms
+
+## 1. What is a Form?
+
+An **HTML form** is used to **collect information from the user**.
+
+Forms are commonly used for:
+
+- Registration
+- Login
+- Feedback
+- Contact forms
+- Online applications
+- Surveys
+
+The main tag used to create a form is:
+
+```html
+<form>
+    Form elements
+</form>
+```
+
+---
+
+## 2. Form Elements
+
+**Form elements** are the controls used to take input from the user.
+
+
+-  `<input>`
+- `<label>`
+-  `<textarea>`
+-  `<select>` 
+-  `<option>` 
+-  `<button>` 
+
+---
+# HTML `<input>` Tag
+
+The `<input>` tag is used to create different types of **input fields and controls** in an HTML form.
+
+## 3. Input Types
+
+The `<input>` tag uses the **`type` attribute** to define the type of input.
+
+- `text` ===> Single-line text 
+-  `password` ====> Password 
+-  `email` ====> Email address 
+- `number` ====> Number 
+-  `date` ====> Date 
+-  `radio` ====> Select one option 
+-  `checkbox` ====> Select one or more options 
+-  `submit` ====> Submit the form 
+-  `reset` ====> Reset the form 
+-  `button` ====> Normal button 
+
+---
+
+## 4. Text Input
+
+`type="text"` is used to enter **single-line text**.
+
+```html
+<label>Student Name:</label>
+<input type="text" name="student_name">
+```
+
+### Example:
+
+```
+Student Name: [________________]
+```
+
+---
+
+## 5. Password Input
+
+`type="password"` is used to enter a **password**.
+
+```html
+<label>Password:</label>
+<input type="password" name="password">
+```
+
+> The entered characters are normally **hidden**.
+
+---
+
+## 6. Email Input
+
+`type="email"` is used to enter an **email address**.
+
+```html
+<label>Email:</label>
+<input type="email" name="email">
+```
+
+> The browser can perform basic **email-format validation**.
+
+---
+
+## 7. Number Input
+
+`type="number"` is used to enter **numbers**.
+
+```html
+<label>Age:</label>
+<input type="number" name="age">
+```
+
+You can specify a **range**:
+
+```html
+<input type="number" name="age" min="18" max="60">
+```
+
+---
+
+## 8. Date Input
+
+`type="date"` is used to select a **date**.
+
+```html
+<label>Date of Birth:</label>
+<input type="date" name="dob">
+```
+
+---
+
+## 9. Radio Buttons
+
+Radio buttons are used when the user has to **select one option from a group**.
+
+```html
+<label>Gender:</label>
+
+<input type="radio" name="gender" value="male">
+Male
+
+<input type="radio" name="gender" value="female">
+Female
+```
+
+### Important
+
+> Radio buttons in the **same group** should have the **same `name`**.
+
+```
+○ Male
+○ Female
+```
+
+> Normally, **only one** option can be selected.
+
+---
+
+## 10. Checkboxes
+
+Checkboxes are used when the user can select **one or more options**.
+
+```html
+<label>Skills:</label>
+
+<input type="checkbox" name="skill" value="html">
+HTML
+
+<input type="checkbox" name="skill" value="css">
+CSS
+
+<input type="checkbox" name="skill" value="javascript">
+JavaScript
+```
+
+### Example:
+
+```
+☑ HTML
+☑ CSS
+☐ JavaScript
+```
+
+---
+
+## 11. Dropdown List
+
+A dropdown list is created using `<select>` and `<option>`.
+
+```html
+<label>Course:</label>
+
+<select name="course">
+    <option>O Level</option>
+    <option>A Level</option>
+    <option>B Level</option>
+</select>
+```
+
+### Tags
+
+```
+<select> → Creates dropdown
+<option> → Creates option
+```
+
+---
+
+## 12. Text Area
+
+`<textarea>` is used to enter **multiple lines of text**.
+
+It is useful for:
+
+- Address
+- Comments
+- Feedback
+- Messages
+
+### Example:
+
+```html
+<label>Address:</label><br>
+
+<textarea name="address" rows="4" cols="40"></textarea>
+```
+
+### Difference
+
+```
+<input type="text">  → Single line
+
+<textarea>            → Multiple lines
+```
+
+---
+
+## 13. Submit Button
+
+The submit button is used to **submit the form**.
+
+```html
+<input type="submit" value="Submit">
+```
+
+### Output:
+
+```
+[ Submit ]
+```
+
+---
+
+## 14. Reset Button
+
+The reset button is used to **reset the form fields** to their initial values.
+
+```html
+<input type="reset" value="Reset">
+```
+
+### Output:
+
+```
+[ Reset ]
+```
+
+---
+
+## 15. Input Attributes
+
+Input attributes provide additional information or control the behavior of an input.
+
+-  `type` | Defines input type |
+- `name` | Gives a name to the input |
+-  `value` | Defines the input value |
+-  `id` | Gives a unique identity |
+- `placeholder` | Shows a hint |
+- `required` | Makes field mandatory |
+-  `maxlength` | Maximum number of characters |
+- `minlength` | Minimum number of characters |
+- `min` | Minimum value |
+- `max` | Maximum value |
+
+
+### Example
+
+```html
+<input type="text"
+       name="username"
+       placeholder="Enter your name"
+       required
+       maxlength="30">
+```
+
+Here:
+
+- `type` → Text input
+- `name` → Name of the field
+- `placeholder` → Hint shown inside the field
+- `required` → Field is compulsory
+- `maxlength` → Maximum 30 characters
+
+---
+# HTML `<label>` Tag
+
+The `<label>` tag is used to provide a **text label/name** for a form control such as an **input field, checkbox, or radio button**.
+
+It helps the user understand **what information** should be entered or selected.
+
+---
+
+## Basic Syntax
+
+```html
+<label>Student Name:</label>
+<input type="text">
+```
+
+### Output:
+
+```
+Student Name: [________________]
+```
+
+---
+
+## 1. Connecting `<label>` with `<input>`
+
+The best practice is to connect the label with the input using:
+
+- **`for`** attribute in `<label>`
+- **`id`** attribute in `<input>`
+
+```html
+<label for="name">Student Name:</label>
+
+<input type="text" id="name" name="student_name">
+```
+
+Here:
+
+```
+<label for="name">
+          ↓
+<input id="name">
+```
+
+> The value of **`for`** should **match** the **`id`** of the related input.
+
+
+
+---
+
+# `<textarea>`
+
+Used for **multi-line text input**.
+
+```html
+<textarea name="address" rows="4" cols="30"></textarea>
+```
+
+### Important Attributes
+
+-  `name` | Identifies the field |
+- `rows` | Number of visible rows |
+-  `cols` | Width of the textarea |
+-  `placeholder` | Shows a hint |
+-  `required` | Makes it compulsory |
+
+
+---
+
+# `<select>`
+
+Used to create a **dropdown list**.
+
+```html
+<select name="course">
+    ...
+</select>
+```
+
+### Important Attributes
+
+
+- `name` | Identifies the field |
+-  `id` | Unique identifier |
+-  `required` | Makes selection compulsory |
+
+
+---
+
+# `<option>`
+
+Defines an **option inside `<select>`**.
+
+```html
+<option value="olevel">O Level</option>
+```
+
+### Important Attributes
+
+
+-  `value` | Value submitted with the form |
+-  `selected` | Selects an option by default |
+-  `disabled` | Disables an option |
+
+---
+
+# `<button>`
+
+Creates a **clickable button**.
+
+```html
+<button type="submit">Submit</button>
+```
+
+### Important Attributes
+
+-  `type` | Defines button type |
+- `name` | Gives the button a name |
+- `value` | Specifies button value |
+- `disabled` | Disables the button |
+
+## 16. Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+
+        <label>Student Name:</label>
+        <input type="text"
+               name="student_name"
+               placeholder="Enter your name"
+               required>
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email"
+               name="email"
+               placeholder="Enter your email">
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password"
+               name="password">
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number"
+               name="age"
+               min="18"
+               max="60">
+
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date"
+               name="dob">
+
+        <br><br>
+
+        <label>Gender:</label>
+
+        <input type="radio"
+               name="gender"
+               value="male">
+        Male
+
+        <input type="radio"
+               name="gender"
+               value="female">
+        Female
+
+        <br><br>
+
+        <label>Skills:</label>
+
+        <input type="checkbox"
+               name="skill"
+               value="html">
+        HTML
+
+        <input type="checkbox"
+               name="skill"
+               value="css">
+        CSS
+
+        <input type="checkbox"
+               name="skill"
+               value="javascript">
+        JavaScript
+
+        <br><br>
+
+        <label>Course:</label>
+
+        <select name="course">
+            <option>O Level</option>
+            <option>A Level</option>
+            <option>B Level</option>
+        </select>
+
+        <br><br>
+
+        <label>Address:</label><br>
+
+        <textarea name="address"
+                  rows="4"
+                  cols="40">
+        </textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
+```
 
 
