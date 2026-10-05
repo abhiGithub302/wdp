@@ -125,6 +125,30 @@ This module introduces students to web designing, even if they have no previous 
 - [`<option>`](#option)
 - [`<button>`](#button)
 - [16. Example](#16-example)
+- [HTML Frames: Frameset and Nested Frames](#html-frames-frameset-and-nested-frames)
+   - [1. What is a Frame?](#1-what-is-a-frame)
+   - [2. `<frameset>` Tag](#2-frameset-tag)
+   - [3. `rows` Attribute](#3-rows-attribute)
+   - [4. `cols` Attribute](#4-cols-attribute)
+   - [5. Complete Frameset Example](#5-complete-frameset-example)
+   - [6. Nested Frames](#6-nested-frames)
+- [HTML5 New Elements and Features](#html5-new-elements-and-features)
+   - [1. `<section>` Tag](#1-section-tag)
+   - [2. `<nav>` Tag](#2-nav-tag)
+   - [3. `<article>` Tag](#3-article-tag)
+   - [4. `<aside>` Tag](#4-aside-tag)
+   - [5. Difference Between Section, Article and Aside](#5-difference-between-section-article-and-aside)
+   - [6. `<audio>` Tag](#6-audio-tag)
+   - [7. `<video>` Tag](#7-video-tag)
+   - [8. `required` Attribute](#8-required-attribute)
+   - [9. `pattern` Attribute](#9-pattern-attribute)
+   - [10. `autofocus` Attribute](#10-autofocus-attribute)
+   - [11. `email` Input Type](#11-email-input-type)
+   - [12. `number` Input Type](#12-number-input-type)
+   - [13. `date` Input Type](#13-date-input-type)
+   - [14. `range` Input Type](#14-range-input-type)
+   - [15. Embedding Multimedia in HTML](#15-embedding-multimedia-in-html)
+   - [16. HTML Layout](#16-html-layout)
 
 ---    
 
@@ -6543,4 +6567,695 @@ Creates a **clickable button**.
 </html>
 ```
 
+# HTML Frames: Frameset and Nested Frames
 
+> **Important:** `<frameset>` is a **legacy HTML feature** and is **not used in modern HTML5**. It is included here because O-Level syllabi.
+
+---
+
+## 1. What is a Frame?
+
+A **frame** is a section of a browser window used to display a **separate HTML document**.
+
+Using frames, one browser window could be divided into **multiple sections**, and each section could display a **different HTML page**.
+
+For example:
+
+```
++---------------------------+
+|        Header             |
++-------------+-------------+
+|   Menu      |   Content   |
+|             |             |
+|             |             |
++-------------+-------------+
+```
+
+> Each section could load a **different HTML file**.
+
+---
+
+## 2. `<frameset>` Tag
+
+The `<frameset>` tag was used to **divide the browser window into multiple frames**.
+
+Instead of using `<body>`, a frameset document generally used `<frameset>`.
+
+### Syntax
+
+```html
+<frameset rows="20%,80%">
+    <frame src="header.html">
+    <frame src="content.html">
+</frameset>
+```
+
+Here:
+
+- `rows` divides the window **horizontally**.
+- `<frame>` specifies the HTML page to display.
+- `src` specifies the HTML file loaded inside the frame.
+
+---
+
+## 3. `rows` Attribute
+
+The `rows` attribute divides the browser window into **horizontal sections**.
+
+### Example:
+
+```html
+<frameset rows="30%,70%">
+    <frame src="top.html">
+    <frame src="bottom.html">
+</frameset>
+```
+
+### Output conceptually:
+
+```
++----------------------+
+|       top.html       | 30%
++----------------------+
+|      bottom.html     | 70%
++----------------------+
+```
+
+---
+
+## 4. `cols` Attribute
+
+The `cols` attribute divides the browser window into **vertical sections**.
+
+### Example:
+
+```html
+<frameset cols="30%,70%">
+    <frame src="menu.html">
+    <frame src="content.html">
+</frameset>
+```
+
+### Output:
+
+```
++---------+----------------+
+|         |                |
+|  Menu   |    Content     |
+|         |                |
+|  30%    |      70%       |
++---------+----------------+
+```
+
+---
+
+## 5. Complete Frameset Example
+
+Suppose we have three files:
+
+- `header.html`
+- `menu.html`
+- `content.html`
+
+### Main file:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frameset Example</title>
+</head>
+
+<frameset rows="20%,80%">
+
+    <frame src="header.html">
+
+    <frameset cols="30%,70%">
+        <frame src="menu.html">
+        <frame src="content.html">
+    </frameset>
+
+</frameset>
+
+</html>
+```
+
+### This creates:
+
+```
++--------------------------------+
+|            Header              |
++-------------+------------------+
+|             |                  |
+|    Menu     |     Content      |
+|             |                  |
++-------------+------------------+
+```
+
+---
+
+## 6. Nested Frames
+
+A **nested frame** means placing one `<frameset>` **inside another** `<frameset>`.
+
+In simple words:
+
+> **Frameset के अंदर दूसरा Frameset = Nested Frames**
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Frames</title>
+</head>
+
+<frameset rows="20%,80%">
+
+    <frame src="header.html">
+
+    <frameset cols="30%,70%">
+        <frame src="menu.html">
+        <frame src="content.html">
+    </frameset>
+
+</frameset>
+
+</html>
+```
+
+### Here:
+
+```
+Outer Frameset
+      ↓
+   rows
+      ↓
++----------------------+
+|       Header         |
++----------------------+
+|      Nested          |
+|     Frameset         |
+| +-------+----------+ |
+| | Menu  | Content  | |
+| +-------+----------+ |
++----------------------+
+```
+
+> The **second `<frameset>`** is nested inside the **first `<frameset>`**.
+
+---
+
+## 7. `<frame>` Tag
+
+The `<frame>` tag specifies the **HTML document** that should be displayed inside a frame.
+
+### Example:
+
+```html
+<frame src="menu.html">
+```
+
+Here:
+
+- `<frame>` → creates a frame
+- `src` → specifies the HTML page to display
+
+
+
+# HTML5 New Elements and Features
+
+HTML5 introduced several new **semantic elements, multimedia elements, form input types, validation attributes**, and **embedding features**.
+
+---
+
+## 1. `<section>` Tag
+
+The `<section>` tag is used to define a **section or logical part** of a webpage.
+
+For example, a webpage can have separate sections for:
+
+- About Us
+- Courses
+- Services
+- Contact
+
+### Example
+
+```html
+<section>
+    <h2>About Us</h2>
+    <p>We provide web designing courses.</p>
+</section>
+```
+
+> **Easy definition:** `<section>` = A meaningful section of a webpage.
+
+---
+
+## 2. `<nav>` Tag
+
+The `<nav>` tag is used to define a **navigation section** containing important links.
+
+### Example
+
+```html
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+</nav>
+```
+
+> **Easy definition:** `<nav>` = Navigation/menu links of a webpage.
+
+---
+
+## 3. `<article>` Tag
+
+The `<article>` tag represents **independent and self-contained content**.
+
+Examples:
+
+- News article
+- Blog post
+- Magazine article
+- Forum post
+
+### Example
+
+```html
+<article>
+    <h2>Introduction to HTML</h2>
+    <p>HTML is used to create the structure of webpages.</p>
+</article>
+```
+
+> **Easy definition:** `<article>` = Independent piece of content.
+
+---
+
+## 4. `<aside>` Tag
+
+The `<aside>` tag represents **additional or related content**.
+
+It can be used for:
+
+- Sidebar
+- Related links
+- Advertisements
+- Additional information
+
+### Example
+
+```html
+<aside>
+    <h3>Related Courses</h3>
+    <p>CSS</p>
+    <p>JavaScript</p>
+</aside>
+```
+
+> **Easy definition:** `<aside>` = Additional/side content related to the main content.
+
+---
+
+## 5. Difference Between Section, Article and Aside
+
+-  `<section>` Groups a related section of content |
+- `<article>`  Independent/self-contained content |
+ - `<aside>`  Additional or related content |
+
+### Example layout:
+
+```
++----------------------------------+
+|             Header               |
++----------------------------------+
+|              Nav                 |
++----------------------------------+
+|             Section              |
+|                                  |
+|   +--------------------------+   |
+|   |        Article           |   |
+|   +--------------------------+   |
+|                                  |
+|                    +---------+   |
+|                    |  Aside  |   |
+|                    +---------+   |
++----------------------------------+
+```
+
+---
+
+## 6. `<audio>` Tag
+
+The `<audio>` tag is used to **embed/play audio files** on a webpage.
+
+### Basic Example
+
+```html
+<audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+```
+
+`controls` displays audio controls such as:
+
+- Play
+- Pause
+- Volume
+- Progress bar
+
+### Common attributes
+
+
+-  `controls` | Displays audio controls |
+-  `autoplay` | Starts audio automatically |
+ - `loop` | Repeats audio |
+-  `muted` | Starts audio muted |
+
+### Example:
+
+```html
+<audio controls loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+---
+
+## 7. `<video>` Tag
+
+The `<video>` tag is used to **embed/play video files** on a webpage.
+
+### Example
+
+```html
+<video width="500" controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+### Common attributes
+
+
+-  `controls`  Displays video controls 
+- `width`  Sets video width 
+-  `height`  Sets video height 
+-  `autoplay`  Starts automatically 
+-  `loop`  Repeats video 
+-  `muted`  Starts muted 
+-  `poster`  Displays an image before video starts 
+
+---
+
+# HTML5 Form Validation
+
+HTML5 provides **built-in form validation** features. These help check user input **before** the form is submitted.
+
+---
+
+## 8. `required` Attribute
+
+The `required` attribute makes a form field **mandatory**.
+
+```html
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+```
+
+> If the user leaves the field empty and submits the form, the browser displays a **validation message**.
+
+> **Easy definition:** required = This field cannot be left empty.
+
+---
+
+## 9. `pattern` Attribute
+
+The `pattern` attribute specifies a **pattern** that the input value must match.
+
+It uses a **regular expression**.
+
+### Example for a 10-digit phone number:
+
+```html
+<input type="tel"
+       name="phone"
+       pattern="[0-9]{10}"
+       required>
+```
+
+Here:
+
+```
+[0-9]{10}
+```
+
+means **exactly 10 digits**.
+
+### Example:
+
+```
+9876543210  ✓
+98765       ✗
+```
+
+---
+
+## 10. `autofocus` Attribute
+
+The `autofocus` attribute automatically places the **cursor** in a particular form field when the page loads.
+
+```html
+<input type="text"
+       name="name"
+       autofocus>
+```
+
+> When the page opens, the cursor will automatically be placed in this field.
+
+> **Easy definition:** autofocus = Automatically focus on this field when the page opens.
+
+---
+
+## 11. `email` Input Type
+
+The `email` input type is used for entering an **email address**.
+
+```html
+<input type="email"
+       name="email"
+       placeholder="Enter your email"
+       required>
+```
+
+> The browser performs basic **email-format validation**.
+
+### Example:
+
+```
+student@example.com ✓
+student@example    ✗
+```
+
+---
+
+## 12. `number` Input Type
+
+The `number` input type is used for **numerical values**.
+
+```html
+<input type="number"
+       name="age"
+       min="18"
+       max="60">
+```
+
+Here:
+
+- `min="18"` → minimum value
+- `max="60"` → maximum value
+
+---
+
+## 13. `date` Input Type
+
+The `date` input type is used to **select a date**.
+
+```html
+<label for="dob">Date of Birth:</label>
+
+<input type="date"
+       id="dob"
+       name="dob">
+```
+
+> The browser generally provides a **date picker**.
+
+---
+
+## 14. `range` Input Type
+
+The `range` input type creates a **slider** for selecting a value within a specified range.
+
+```html
+<label for="volume">Volume:</label>
+
+<input type="range"
+       id="volume"
+       name="volume"
+       min="0"
+       max="100"
+       value="50">
+```
+
+Here:
+
+```
+Minimum = 0
+Maximum = 100
+Default = 50
+```
+
+---
+
+## 15. Embedding Multimedia in HTML
+
+HTML5 allows **multimedia** such as audio and video to be embedded directly into webpages.
+
+### Audio
+
+```html
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+```
+
+### Video
+
+```html
+<video width="500" controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+So:
+
+```
+HTML5
+ ├── Audio
+ └── Video
+```
+
+---
+
+## 16. HTML Layout
+
+**HTML layout** means organizing different parts of a webpage.
+
+HTML5 **semantic elements** make webpage structure easier to understand.
+
+### Common layout elements:
+
+```
++--------------------------------+
+|            Header              |
++--------------------------------+
+|             Nav                |
++--------------------------------+
+|                                |
+|           Main                 |
+|  +--------------------------+  |
+|  |        Section           |  |
+|  |                          |  |
+|  |        Article           |  |
+|  +--------------------------+  |
+|                                |
+|                    Aside       |
++--------------------------------+
+|            Footer              |
++--------------------------------+
+```
+
+### Example:
+
+```html
+<header>
+    <h1>My Website</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Web Designing</h2>
+
+        <article>
+            <h3>HTML</h3>
+            <p>HTML creates the structure of a webpage.</p>
+        </article>
+    </section>
+
+    <aside>
+        <h3>Related Courses</h3>
+        <p>CSS</p>
+        <p>JavaScript</p>
+    </aside>
+
+</main>
+
+<footer>
+    <p>Copyright 2026</p>
+</footer>
+```
+
+---
+
+## 17. `<iframe>` Tag
+
+The `<iframe>` tag is used to **embed another webpage or external content** inside the current webpage.
+
+### Basic syntax
+
+```html
+<iframe src="page.html"></iframe>
+```
+
+### Example
+
+```html
+<iframe
+    src="https://example.com"
+    width="600"
+    height="400">
+</iframe>
+```
+
+### Common attributes:
+
+
+ - `src` | URL/page to display |
+ - `width` | Width of iframe |
+ - `height` | Height of iframe |
+- `title` | Accessible title/description |
+
+### YouTube example
+
+```html
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video">
+</iframe>
+```
+
+> **Easy definition:** `<iframe>` = Display another webpage/document/content inside your webpage.
