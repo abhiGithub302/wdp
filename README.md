@@ -124,7 +124,7 @@ This module introduces students to web designing, even if they have no previous 
 - [`<select>`](#select)
 - [`<option>`](#option)
 - [`<button>`](#button)
-- [16. Example](#16-example)
+- [16. Example Hotel Registration Form](#16-example-hotel-registration-form)
 - [HTML Frames: Frameset and Nested Frames](#html-frames-frameset-and-nested-frames)
    - [1. What is a Frame?](#1-what-is-a-frame)
    - [2. `<frameset>` Tag](#2-frameset-tag)
@@ -6457,108 +6457,237 @@ Creates a **clickable button**.
 - `value` | Specifies button value |
 - `disabled` | Disables the button |
 
-## 16. Example
+## 16. Example Hotel Registration Form  
+
+![Hotel Registration Form](hotel-registration-form.png)
+
+## Complete HTML Code
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration Form</title>
+    <title>Hotel Registration Form</title>
 </head>
+
 <body>
 
-    <h2>Student Registration Form</h2>
+    <h1>Hotel Registration Form</h1>
 
-    <form>
+    <form action="register.php" method="post">
 
-        <label>Student Name:</label>
-        <input type="text"
-               name="student_name"
-               placeholder="Enter your name"
-               required>
+        <!-- Guest Information -->
+        <fieldset>
+            <legend>Guest Information</legend>
 
-        <br><br>
+            <label for="fullname">Full Name:</label>
+            <input type="text"
+                   id="fullname"
+                   name="fullname"
+                   placeholder="Enter your full name"
+                   required>
 
-        <label>Email:</label>
-        <input type="email"
-               name="email"
-               placeholder="Enter your email">
+            <br><br>
 
-        <br><br>
+            <label for="email">Email:</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="Enter your email"
+                   required>
 
-        <label>Password:</label>
-        <input type="password"
-               name="password">
+            <br><br>
 
-        <br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="Enter phone number"
+                   required>
 
-        <label>Age:</label>
-        <input type="number"
-               name="age"
-               min="18"
-               max="60">
+            <br><br>
 
-        <br><br>
+            <label for="password">Password:</label>
+            <input type="password"
+                   id="password"
+                   name="password"
+                   required>
 
-        <label>Date of Birth:</label>
-        <input type="date"
-               name="dob">
+            <br><br>
 
-        <br><br>
+            <label>Gender:</label>
 
-        <label>Gender:</label>
+            <input type="radio"
+                   id="male"
+                   name="gender"
+                   value="male">
+            <label for="male">Male</label>
 
-        <input type="radio"
-               name="gender"
-               value="male">
-        Male
+            <input type="radio"
+                   id="female"
+                   name="gender"
+                   value="female">
+            <label for="female">Female</label>
 
-        <input type="radio"
-               name="gender"
-               value="female">
-        Female
+            <input type="radio"
+                   id="other"
+                   name="gender"
+                   value="other">
+            <label for="other">Other</label>
 
-        <br><br>
+        </fieldset>
 
-        <label>Skills:</label>
+        <br>
 
-        <input type="checkbox"
-               name="skill"
-               value="html">
-        HTML
+        <!-- Booking Information -->
+        <fieldset>
+            <legend>Booking Information</legend>
 
-        <input type="checkbox"
-               name="skill"
-               value="css">
-        CSS
+            <label for="checkin">Check-in Date:</label>
+            <input type="date"
+                   id="checkin"
+                   name="checkin"
+                   required>
 
-        <input type="checkbox"
-               name="skill"
-               value="javascript">
-        JavaScript
+            <br><br>
 
-        <br><br>
+            <label for="checkout">Check-out Date:</label>
+            <input type="date"
+                   id="checkout"
+                   name="checkout"
+                   required>
 
-        <label>Course:</label>
+            <br><br>
 
-        <select name="course">
-            <option>O Level</option>
-            <option>A Level</option>
-            <option>B Level</option>
-        </select>
+            <label for="room">Room Type:</label>
 
-        <br><br>
+            <select id="room" name="room" required>
+                <option value="">-- Select Room --</option>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite</option>
+            </select>
 
-        <label>Address:</label><br>
+            <br><br>
 
-        <textarea name="address"
-                  rows="4"
-                  cols="40">
-        </textarea>
+            <label for="guests">Number of Guests:</label>
+            <input type="number"
+                   id="guests"
+                   name="guests"
+                   min="1"
+                   max="10"
+                   required>
 
-        <br><br>
+        </fieldset>
 
-        <input type="submit" value="Submit">
+        <br>
+
+        <!-- Additional Services -->
+        <fieldset>
+            <legend>Additional Services</legend>
+
+            <label>Select Services:</label>
+
+            <br>
+
+            <input type="checkbox"
+                   id="breakfast"
+                   name="services"
+                   value="breakfast">
+            <label for="breakfast">Breakfast</label>
+
+            <br>
+
+            <input type="checkbox"
+                   id="airport"
+                   name="services"
+                   value="airport_pickup">
+            <label for="airport">Airport Pickup</label>
+
+            <br>
+
+            <input type="checkbox"
+                   id="wifi"
+                   name="services"
+                   value="wifi">
+            <label for="wifi">Wi-Fi</label>
+
+            <br>
+
+            <input type="checkbox"
+                   id="parking"
+                   name="services"
+                   value="parking">
+            <label for="parking">Parking</label>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Address -->
+        <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="address">Address:</label>
+            <br>
+
+            <textarea id="address"
+                      name="address"
+                      rows="5"
+                      cols="40"
+                      placeholder="Enter your complete address"
+                      required></textarea>
+
+            <br><br>
+
+            <label for="city">City:</label>
+            <input type="text"
+                   id="city"
+                   name="city"
+                   required>
+
+            <br><br>
+
+            <label for="state">State:</label>
+            <input type="text"
+                   id="state"
+                   name="state"
+                   required>
+
+            <br><br>
+
+            <label for="pincode">PIN Code:</label>
+            <input type="number"
+                   id="pincode"
+                   name="pincode"
+                   required>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Special Request -->
+        <fieldset>
+            <legend>Special Request</legend>
+
+            <label for="request">Special Request:</label>
+            <br>
+
+            <textarea id="request"
+                      name="request"
+                      rows="4"
+                      cols="40"
+                      placeholder="Enter your special request"></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Buttons -->
+
+        <input type="submit" value="Register">
+
         <input type="reset" value="Reset">
 
     </form>
@@ -6566,6 +6695,10 @@ Creates a **clickable button**.
 </body>
 </html>
 ```
+
+---
+
+
 
 # HTML Frames: Frameset and Nested Frames
 
