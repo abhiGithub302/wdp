@@ -132,12 +132,17 @@ This module introduces students to web designing, even if they have no previous 
    - [4. `cols` Attribute](#4-cols-attribute)
    - [5. Complete Frameset Example](#5-complete-frameset-example)
    - [6. Nested Frames](#6-nested-frames)
-- [HTML5 New Elements and Features](#html5-new-elements-and-features)
-   - [1. `<section>` Tag](#1-section-tag)
-   - [2. `<nav>` Tag](#2-nav-tag)
-   - [3. `<article>` Tag](#3-article-tag)
-   - [4. `<aside>` Tag](#4-aside-tag)
-   - [5. Difference Between Section, Article and Aside](#5-difference-between-section-article-and-aside)
+- - [16. HTML Layout](#16-html-layout)
+- [HTML Layout and Semantic tag](#html-layout-and-semantic-tag)
+   - [1. What is HTML Layout?](#1-what-is-html-layout)
+   - [2. Main HTML Layout Elements](#2-main-html-layout-elements)
+   - [3. `<nav>`](#3-nav)
+   - [4. `<main>`](#4-main)
+   - [5. `<section>`](#5-section)
+   - [6. `<article>`](#6-article)
+   - [7. `<aside>`](#7-aside)
+   - [8. `<footer>`](#8-footer)
+   - [9. Complete HTML Layout](#9-complete-html-layout)
    - [6. `<audio>` Tag](#6-audio-tag)
    - [7. `<video>` Tag](#7-video-tag)
    - [8. `required` Attribute](#8-required-attribute)
@@ -148,7 +153,7 @@ This module introduces students to web designing, even if they have no previous 
    - [13. `date` Input Type](#13-date-input-type)
    - [14. `range` Input Type](#14-range-input-type)
    - [15. Embedding Multimedia in HTML](#15-embedding-multimedia-in-html)
-   - [16. HTML Layout](#16-html-layout)
+   
 
 ---    
 
@@ -6917,41 +6922,111 @@ Here:
 
 
 
-# HTML5 New Elements and Features
+# HTML Layout and Semantic tag
 
-HTML5 introduced several new **semantic elements, multimedia elements, form input types, validation attributes**, and **embedding features**.
+**HTML Layout** refers to the way different parts or sections of a webpage are **organized and arranged** on the screen.
 
----
+A webpage is usually divided into areas such as:
 
-## 1. `<section>` Tag
-
-The `<section>` tag is used to define a **section or logical part** of a webpage.
-
-For example, a webpage can have separate sections for:
-
-- About Us
-- Courses
-- Services
-- Contact
-
-### Example
-
-```html
-<section>
-    <h2>About Us</h2>
-    <p>We provide web designing courses.</p>
-</section>
+```
+┌──────────────────────────────────────────────┐
+│                  HEADER                      │
+│        Logo / Website Name / Heading         │
+├──────────────────────────────────────────────┤
+│                    NAV                       │
+│       Home | About | Services | Contact      │
+├───────────────────────────┬──────────────────┤
+│                           │                  │
+│          MAIN             │      ASIDE       │
+│                           │                  │
+│   ┌───────────────────┐   │   Related Links  │
+│   │     SECTION       │   │   Advertisement  │
+│   └───────────────────┘   │                  │
+│                           │                  │
+├───────────────────────────┴──────────────────┤
+│                  FOOTER                      │
+│          Copyright / Contact                 │
+└──────────────────────────────────────────────┘
 ```
 
-> **Easy definition:** `<section>` = A meaningful section of a webpage.
+> In modern HTML, **HTML defines the structure**, while **CSS defines the actual visual layout**.
 
 ---
 
-## 2. `<nav>` Tag
+## 1. What is HTML Layout?
 
-The `<nav>` tag is used to define a **navigation section** containing important links.
+Suppose you are creating a **college website**.
 
-### Example
+You may want:
+
+- **Top** → College name and logo
+- **Below** → Navigation menu
+- **Left/center** → Main content
+- **Right** → Notice/links
+- **Bottom** → Copyright
+
+This arrangement is called the **layout** of the webpage.
+
+HTML provides elements to represent these areas:
+
+```
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+```
+
+> These are called **semantic HTML elements**.
+### Semantic tags are HTML elements whose names clearly describe the meaning or purpose of their content.
+
+---
+
+## 2. Main HTML Layout Elements
+
+### `<header>`
+
+The `<header>` represents the **top or introductory area** of a webpage or section.
+
+It can contain:
+
+- Logo
+- Website name
+- Heading
+- Introduction
+- Search box
+
+### Example:
+
+```html
+<header>
+    <h1>NIELIT Gorakhpur</h1>
+    <p>National Institute of Electronics & Information Technology</p>
+</header>
+```
+
+### Output concept:
+
+```
+┌──────────────────────────────────────┐
+│          NIELIT Gorakhpur            │
+│ National Institute of Electronics... │
+└──────────────────────────────────────┘
+```
+
+> **Important:** `<header>` does not necessarily mean only the top of the entire webpage. A `<header>` can also belong to an `<article>` or `<section>`.
+
+---
+
+## 3. `<nav>`
+
+`<nav>` represents a **navigation area**.
+
+It normally contains links that help users **move between pages or sections**.
+
+### Example:
 
 ```html
 <nav>
@@ -6962,87 +7037,289 @@ The `<nav>` tag is used to define a **navigation section** containing important 
 </nav>
 ```
 
-> **Easy definition:** `<nav>` = Navigation/menu links of a webpage.
+### Output:
+
+```
+Home | About | Courses | Contact
+```
+
+### Why use `<nav>` instead of `<div>`?
+
+**This:**
+
+```html
+<div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+</div>
+```
+
+doesn't communicate that the links are **navigation**.
+
+**This:**
+
+```html
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+</nav>
+```
+
+clearly identifies the content as **navigation**.
 
 ---
 
-## 3. `<article>` Tag
+## 4. `<main>`
 
-The `<article>` tag represents **independent and self-contained content**.
+`<main>` contains the **primary content** of the webpage.
+
+### Example:
+
+```html
+<main>
+    <h1>Web Designing Course</h1>
+    <p>
+        This course teaches HTML, CSS and JavaScript.
+    </p>
+</main>
+```
+
+> The main content should be the content that is **directly related to the primary purpose** of the page.
+
+> Generally, a webpage should have **one `<main>` element**.
+
+---
+
+## 5. `<section>`
+
+`<section>` represents a **thematic or logical section** of content.
+
+For example, a course page might have:
+
+```html
+<section>
+    <h2>HTML</h2>
+    <p>HTML is used to create the structure of webpages.</p>
+</section>
+
+<section>
+    <h2>CSS</h2>
+    <p>CSS is used to style webpages.</p>
+</section>
+
+<section>
+    <h2>JavaScript</h2>
+    <p>JavaScript adds interactivity to webpages.</p>
+</section>
+```
+
+### Conceptually:
+
+```
+MAIN
+│
+├── SECTION
+│   └── HTML
+│
+├── SECTION
+│   └── CSS
+│
+└── SECTION
+    └── JavaScript
+```
+
+> **Simple definition:** `<section>` is used to **divide related content into logical sections**.
+
+---
+
+## 6. `<article>`
+
+`<article>` represents **independent, self-contained content**.
 
 Examples:
 
 - News article
 - Blog post
-- Magazine article
+- Product review
 - Forum post
+- Course announcement
 
-### Example
+### Example:
 
 ```html
 <article>
-    <h2>Introduction to HTML</h2>
-    <p>HTML is used to create the structure of webpages.</p>
+    <h2>HTML5 Introduced New Semantic Elements</h2>
+
+    <p>
+        HTML5 provides semantic elements such as
+        header, nav, section, article and footer.
+    </p>
 </article>
 ```
 
-> **Easy definition:** `<article>` = Independent piece of content.
+> The important concept is that an article should **make sense as an independent piece of content**.
+
+For example:
+
+```
+NEWS PAGE
+
+┌──────────────────────────────┐
+│ Article 1                    │
+│ HTML5 Introduction           │
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│ Article 2                    │
+│ CSS Grid Layout              │
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│ Article 3                    │
+│ JavaScript Basics            │
+└──────────────────────────────┘
+```
+
+> Each can be represented using `<article>`.
 
 ---
 
-## 4. `<aside>` Tag
+## 7. `<aside>`
 
-The `<aside>` tag represents **additional or related content**.
+`<aside>` represents content **related to the main content but not part of the primary content**.
 
-It can be used for:
+Typical examples:
 
 - Sidebar
 - Related links
 - Advertisements
-- Additional information
+- Recent posts
+- Author information
 
-### Example
+### Example:
 
 ```html
 <aside>
-    <h3>Related Courses</h3>
-    <p>CSS</p>
-    <p>JavaScript</p>
+    <h3>Related Links</h3>
+
+    <a href="#">HTML Tutorial</a><br>
+    <a href="#">CSS Tutorial</a><br>
+    <a href="#">JavaScript Tutorial</a>
 </aside>
 ```
 
-> **Easy definition:** `<aside>` = Additional/side content related to the main content.
-
----
-
-## 5. Difference Between Section, Article and Aside
-
--  `<section>` Groups a related section of content |
-- `<article>`  Independent/self-contained content |
- - `<aside>`  Additional or related content |
-
-### Example layout:
+### Conceptually:
 
 ```
-+----------------------------------+
-|             Header               |
-+----------------------------------+
-|              Nav                 |
-+----------------------------------+
-|             Section              |
-|                                  |
-|   +--------------------------+   |
-|   |        Article           |   |
-|   +--------------------------+   |
-|                                  |
-|                    +---------+   |
-|                    |  Aside  |   |
-|                    +---------+   |
-+----------------------------------+
+┌───────────────────────────┬──────────────────┐
+│                           │                  │
+│       MAIN CONTENT        │      ASIDE       │
+│                           │                  │
+│                           │ Related Links    │
+│                           │ Recent Posts     │
+│                           │ Advertisement    │
+│                           │                  │
+└───────────────────────────┴──────────────────┘
 ```
 
 ---
 
+## 8. `<footer>`
+
+`<footer>` represents the **footer information** of a webpage or section.
+
+It commonly contains:
+
+- Copyright
+- Contact information
+- Author information
+- Important links
+- Privacy policy
+
+### Example:
+
+```html
+<footer>
+    <p>Copyright © 2026 NIELIT Gorakhpur</p>
+</footer>
+```
+
+### Output:
+
+```
+┌─────────────────────────────────────────┐
+│ Copyright © 2026 NIELIT Gorakhpur       │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 9. Complete HTML Layout
+
+Now let's combine all the elements.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Layout</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to my website</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Courses</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Web Designing</h2>
+
+            <article>
+                <h3>HTML</h3>
+                <p>
+                    HTML is used to create the structure
+                    of a webpage.
+                </p>
+            </article>
+
+            <article>
+                <h3>CSS</h3>
+                <p>
+                    CSS is used to style a webpage.
+                </p>
+            </article>
+
+        </section>
+
+        <aside>
+            <h3>Related Links</h3>
+
+            <p>HTML Tutorial</p>
+            <p>CSS Tutorial</p>
+            <p>JavaScript Tutorial</p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2026 My Website</p>
+    </footer>
+
+</body>
+
+</html>
+```
 ## 6. `<audio>` Tag
 
 The `<audio>` tag is used to **embed/play audio files** on a webpage.
