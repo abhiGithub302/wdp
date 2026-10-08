@@ -7409,29 +7409,241 @@ The `pattern` attribute specifies a **pattern** that the input value must match.
 
 It uses a **regular expression**.
 
-### Example for a 10-digit phone number:
+# Why Use `pattern`?
+
+HTML already provides some validation:
+
+```html
+<input type="email" required>
+```
+
+The browser checks whether the input **looks like an email address**.
+
+But sometimes we need our **own rules**.
+
+For example:
+
+- Mobile number must contain **exactly 10 digits**
+- Name should contain **only letters**
+- PIN code must contain **exactly 6 digits**
+- Username should contain **only letters and numbers**
+- Password should contain **uppercase, lowercase and numbers**
+
+For these requirements, **`pattern`** is useful.
+
+---
+
+## 9.1. Mobile Number Example
 
 ```html
 <input type="tel"
-       name="phone"
+       name="mobile"
        pattern="[0-9]{10}"
        required>
 ```
 
-Here:
+### Pattern:
 
 ```
 [0-9]{10}
 ```
 
-means **exactly 10 digits**.
+### Break it down:
+
+```
+[0-9]     → Any digit from 0 to 9
+{10}      → Exactly 10 times
+```
+
+### Therefore:
+
+```
+9876543210   ✓
+1234567890   ✓
+987654321    ✗
+98765432101  ✗
+98765abc10   ✗
+```
+
+---
+
+## 9.2. Indian Mobile Number
+
+If you want the number to **start with 6, 7, 8, or 9**:
+
+```html
+<input type="tel"
+       name="mobile"
+       pattern="[6-9][0-9]{9}"
+       required>
+```
+
+### Breakdown:
+
+```
+[6-9]       → First digit must be 6, 7, 8 or 9
+[0-9]{9}    → Next 9 digits
+```
 
 ### Example:
 
 ```
-9876543210  ✓
-98765       ✗
+9876543210   ✓
+8123456789   ✓
+5876543210   ✗
 ```
+
+---
+
+## 9.3. Name Validation
+
+Suppose we want a name containing **only letters and spaces**:
+
+```html
+<input type="text"
+       name="name"
+       pattern="[A-Za-z ]+"
+       required>
+```
+
+### Breakdown
+
+```
+[A-Za-z]    → A-Z or a-z
+             → English letters
+
+[ ]         → Space
+
++           → One or more characters
+```
+
+### Examples:
+
+```
+Abhishek          ✓
+Abhishek Yadav    ✓
+Abhishek123       ✗
+Abhishek@         ✗
+```
+
+---
+
+## 9.4. PIN Code Validation
+
+For a **6-digit PIN code**:
+
+```html
+<input type="text"
+       name="pincode"
+       pattern="[0-9]{6}"
+       required>
+```
+
+### Examples:
+
+```
+273001    ✓
+226001    ✓
+27300     ✗
+2730011   ✗
+ABC001    ✗
+```
+
+---
+
+## 9.5. Username Validation
+
+Suppose the username can contain:
+
+- letters
+- numbers
+- underscore
+
+```html
+<input type="text"
+       name="username"
+       pattern="[A-Za-z0-9_]+"
+       required>
+```
+
+### Examples:
+
+```
+abhishek        ✓
+abhishek123     ✓
+abhi_123        ✓
+abhi@123        ✗
+abhi yadav      ✗
+```
+
+---
+
+## 9.6. Password Validation
+
+We can use `pattern` to create **password rules**.
+
+For example:
+
+At least:
+
+- 1 uppercase letter
+- 1 lowercase letter
+- 1 number
+- 8 characters
+
+```html
+<input type="password"
+       name="password"
+       pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}"
+       required>
+```
+
+### Breakdown
+
+```
+(?=.*[A-Z])    → At least one uppercase letter
+
+(?=.*[a-z])    → At least one lowercase letter
+
+(?=.*[0-9])    → At least one number
+
+.{8,}          → At least 8 characters
+```
+
+### Example:
+
+```
+Abhishek1    ✓
+Password123  ✓
+abcdefghi    ✗
+ABCDEFGH1    ✗
+Abcdefgh     ✗
+```
+
+---
+
+## 9.7 Important Regex Symbols
+
+These symbols are commonly used with `pattern`.
+
+| Symbol | Meaning | Example |
+|---|---|---|
+| `[0-9]` | Any digit | 5 |
+| `[A-Z]` | Uppercase letter | A |
+| `[a-z]` | Lowercase letter | a |
+| `[A-Za-z]` | Upper/lowercase letter | A, b |
+| `[6-9]` | Digit from 6 to 9 | 7 |
+| `{10}` | Exactly 10 times | 1234567890 |
+| `{6}` | Exactly 6 times | 273001 |
+| `{3,}` | Minimum 3 times | Abc |
+| `{3,10}` | Between 3 and 10 times | Abhishek |
+| `+` | One or more | abc |
+| `*` | Zero or more | abc or empty |
+| `?` | Zero or one | a |
+| `.` | Any character | a, 1, @ |
+| `\d` | A digit | 5 |
+| `\s` | Whitespace | space |
+| `\|` | OR | `cat\|dog` |
 
 ---
 
