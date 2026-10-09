@@ -9,7 +9,7 @@ This module introduces students to web designing, even if they have no previous 
 
 # 📚 Table of Contents
 
-## Chapter 1 — Introduction to Web Designing
+## Unit 1 — Introduction to Web Designing
 
 ### In this chapter, we will learn:
 
@@ -27,11 +27,11 @@ This module introduces students to web designing, even if they have no previous 
 12. [Client and Server](#12-client-and-server)
 13. [Scripting Languages](#13-scripting-languages)
 14. [Responsive Design](#14-responsive-design)
-15. [MCQ Question Chapter 1: Introduction to Web Design](#mcq-question-chapter-1-introduction-to-web-design)
+15. [MCQ Question Unit 1: Introduction to Web Design](#mcq-question-chapter-1-introduction-to-web-design)
 
 ---
 
-## Chapter 2 — Editors
+## Unit 2 — Editors
 
 ### In this chapter, we will learn:
 
@@ -44,11 +44,11 @@ This module introduces students to web designing, even if they have no previous 
 7. [Multiple Tabs](#7-multiple-tabs)
 8. [Notepad++](#3-notepad)
 9. [Sublime Text](#4-sublime-text)
-10. [MCQ Question Chapter 2: Editors (Notepad++, Sublime Text Editor)](#mcq-question-chapter-2-editors-notepad-sublime-text-editor)
+10. [MCQ Question Unit 2: Editors (Notepad++, Sublime Text Editor)](#mcq-question-chapter-2-editors-notepad-sublime-text-editor)
 
 ---
 
-## Chapter 3 — Introduction to HTML
+## Unit 3 — Introduction to HTML
 
 ### In this chapter, we will learn:
 
@@ -154,8 +154,17 @@ This module introduces students to web designing, even if they have no previous 
    - [14. `range` Input Type](#14-range-input-type)
    - [15. Embedding Multimedia in HTML](#15-embedding-multimedia-in-html)
    
+## Unit 4 — CSS
 
----    
+1. [Introduction to CSS](#1-introduction-to-css)
+2. [Why Do We Use CSS?](#2-why-do-we-use-css)
+3. [History of CSS](#3-history-of-css)
+4. [Syntax of CSS](#4-syntax-of-css)
+5. [Types of CSS](#5-types-of-css)
+   - [5.1 Inline CSS](#51-inline-css)
+   - [5.2 Internal CSS](#52-internal-css)
+   - [5.3 External CSS](#53-external-css)
+6. [Difference Between the Three Types of CSS](#difference-between-the-three-types-of-css)
 
 ---
 
@@ -1505,7 +1514,7 @@ The website **automatically adjusts** itself for the smaller screen.
      ↓
 📱 Mobile
 ```
-# MCQ Question Chapter 1: Introduction to Web Design
+# MCQ Question Unit 1: Introduction to Web Design
 
 ## Internet, WWW, Website, Webpage Basics
 
@@ -1875,7 +1884,7 @@ The website **automatically adjusts** itself for the smaller screen.
 
 //Editors
 
-# Chapter 2: Editors
+# Unit 2: Editors
 
 ## 1. What is an Editor?
 
@@ -2289,7 +2298,7 @@ Used to change Sublime Text settings and appearance.
 
 Used to get help and information about Sublime Text.
 
-# MCQ Question Chapter 2: Editors (Notepad++, Sublime Text Editor)
+# MCQ Question Unit 2: Editors (Notepad++, Sublime Text Editor)
 
 ## Notepad++ Features and Shortcuts
 
@@ -7881,3 +7890,232 @@ The `<iframe>` tag is used to **embed another webpage or external content** insi
 ```
 
 > **Easy definition:** `<iframe>` = Display another webpage/document/content inside your webpage.
+
+---
+
+# Unit 4:  CSS
+
+## 1. Introduction to CSS
+
+**CSS** stands for **Cascading Style Sheets**.
+
+CSS is a **stylesheet language** used to describe the **presentation and design** of HTML webpages. It controls how HTML elements appear on a webpage, including **colors, fonts, spacing, borders and layout**.
+
+> **HTML provides the structure** of a webpage, while **CSS makes it attractive and visually organized**.
+
+### Example:
+
+- HTML creates a **heading**.
+- CSS changes the heading's **color, size and alignment**.
+
+---
+
+
+## 2. Why Do We Use CSS?
+
+CSS is used for the following purposes:
+
+1. **Color:** To change text and background colors.
+2. **Fonts:** To set font size, style and family.
+3. **Spacing:** To control margins, padding and spacing.
+4. **Borders:** To add borders around HTML elements.
+5. **Layout:** To arrange webpage elements properly.
+6. **Responsive Design:** To adjust webpages for mobile phones, tablets and computers.
+7. **Consistency:** To apply the same design across multiple webpages.
+8. **Easy Maintenance:** To change the design without rewriting the HTML content.
+
+---
+
+## 3. History of CSS
+
+CSS was developed to **separate the presentation** of a webpage from its **HTML structure**.
+```
+| Year | Development |
+|---|---|
+| 1994 | Håkon Wium Lie proposed CSS. |
+| 1996 | CSS Level 1 (CSS1) became a W3C Recommendation. |
+| 1998 | CSS Level 2 (CSS2) became a W3C Recommendation. |
+| 2011 | CSS 2.1 became a W3C Recommendation. |
+| 1999 onward | CSS Level 3 (CSS3) developed through separate modules, allowing different styling features to evolve independently. |
+```
+> 
+
+---
+
+## 4. Syntax of CSS
+
+CSS syntax defines how **styling rules** are written.
+
+### General Syntax:
+
+```css
+selector {
+    property: value;
+}
+```
+
+### Example:
+
+```css
+h1 {
+    color: blue;
+    font-size: 30px;
+}
+```
+
+### Explanation
+
+
+
+  - `h1` => Selector: selects all `<h1>` elements 
+ - `{ }` => Curly braces: enclose the CSS declarations 
+- `color` => Property: specifies the text color 
+ - `blue` => Value: specifies the color 
+- `font-size`=> Property: specifies the font size 
+- `30px`=> Value: specifies the size in pixels 
+ - `;` =>Semicolon: separates declarations 
+
+> **Remember:** A CSS declaration consists of a **property** and its **value**.
+
+---
+
+## 5. Types of CSS
+
+There are **three main types** of CSS:
+
+### 5.1 Inline CSS
+
+Inline CSS is written **directly inside an HTML element** using the `style` attribute.
+
+### Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1 style="color: red;">Welcome to CSS</h1>
+
+    <p style="font-size: 20px;">
+        CSS makes webpages attractive.
+    </p>
+
+</body>
+</html>
+```
+
+### Advantages:
+
+- Easy to apply to a **specific element**.
+- Useful for **quick styling**.
+
+### Disadvantages:
+
+- Difficult to **maintain** when used on many elements.
+- The same style must be **repeated** when needed elsewhere.
+
+---
+
+### 5.2 Internal CSS
+
+Internal CSS is written inside the `<style>` tag, usually within the `<head>` section of an HTML document.
+
+### Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal CSS</title>
+
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to CSS</h1>
+    <p>This is an example of internal CSS.</p>
+
+</body>
+</html>
+```
+
+### Advantages:
+
+- Styles **multiple elements** on one webpage.
+- **No separate CSS file** is required.
+
+### Disadvantages:
+
+- Styles are **not automatically shared** with other HTML pages.
+- Large stylesheets can make the HTML document **difficult to maintain**.
+
+---
+
+### 5.3 External CSS
+
+External CSS is written in a **separate file** with the `.css` extension. The HTML document connects to that file using the `<link>` tag.
+
+### HTML file (index.html):
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Welcome to CSS</h1>
+    <p>This is an example of external CSS.</p>
+
+</body>
+</html>
+```
+
+### CSS file (style.css):
+
+```css
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+p {
+    color: green;
+    font-size: 18px;
+}
+```
+
+### Advantages:
+
+- One CSS file can style **multiple webpages**.
+- Easy to **maintain and update**.
+- Keeps **HTML and CSS separate**.
+
+### Disadvantages:
+
+- Requires a **separate CSS file**.
+- If the stylesheet path is **incorrect**, the styles may not load.
+
+---
+
+## Difference Between the Three Types of CSS
+```
+| Feature         | Inline CSS             | Internal CSS     | External CSS 
+| **Location**    | Inside an HTML element | Inside `<style>` | Separate `.css` file |
+| **Scope**       | Specific element       | One HTML page    | Multiple HTML pages |
+| **Reusability** | Low                    | Limited          | High            |
+| **Maintenance** | Difficult for many elements | Moderate    | Easier          |
+| **Example**     | `style="color:red"`    | `<style>...</style | `style.css` |
