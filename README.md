@@ -165,6 +165,16 @@ This module introduces students to web designing, even if they have no previous 
    - [5.2 Internal CSS](#52-internal-css)
    - [5.3 External CSS](#53-external-css)
 6. [Difference Between the Three Types of CSS](#difference-between-the-three-types-of-css)
+7. [CSS Selectors](#6-css-selectors)
+   - [6.1 Introduction to CSS Selectors](#61-introduction-to-css-selectors)
+   - [6.2 Element Selector](#62-element-selector)
+   - [6.3 ID Selector](#63-id-selector)
+   - [6.4 Class Selector](#64-class-selector)
+   - [6.5 Universal Selector](#65-universal-selector)
+   - [6.6 Group Selector](#66-group-selector)
+   - [6.7 Attribute Selector](#67-attribute-selector)
+   - [6.8 Combinator Selector](#68-combinator-selector)
+      - [6.8.2 Child Selector (`>`)](#682-child-selector)
 
 ---
 
@@ -8119,3 +8129,551 @@ p {
 | **Reusability** | Low                    | Limited          | High            |
 | **Maintenance** | Difficult for many elements | Moderate    | Easier          |
 | **Example**     | `style="color:red"`    | `<style>...</style | `style.css` |
+
+---
+
+# 6. CSS Selectors
+
+## 6.1 Introduction to CSS Selectors
+
+A **CSS Selector** is a pattern used to **select HTML elements** that we want to style.
+
+CSS selectors help us apply styles such as **text color, background color, font size, borders and spacing** to specific HTML elements.
+
+### Syntax of CSS:
+
+```css
+selector {
+    property: value;
+}
+```
+
+### Example:
+
+```css
+p {
+    color: red;
+    font-size: 18px;
+}
+```
+
+### Explanation:
+
+- `p` — **Selector:** selects all paragraph elements.
+- `{ }` — **Curly braces:** contain CSS declarations.
+- `color` — **Property:** specifies the text color.
+- `red` — **Value:** sets the text color to red.
+- `font-size` — **Property:** specifies the text size.
+- `18px` — **Value:** sets the text size to 18 pixels.
+- `;` — **Semicolon:** separates CSS declarations.
+
+> This rule makes all paragraph text **red** and sets its font size to **18 pixels**.
+
+---
+
+## 6.2 Element Selector
+
+The **Element Selector** selects all HTML elements having the specified **tag name**.
+
+For example, the `p` selector selects all `<p>` elements, while the `h1` selector selects all `<h1>` elements.
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Element Selector</title>
+
+    <style>
+        /* Select all h1 elements */
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        /* Select all paragraph elements */
+        p {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to CSS</h1>
+
+    <h1>Element Selector</h1>
+
+    <p>This is the first paragraph.</p>
+
+    <p>This is the second paragraph.</p>
+
+</body>
+</html>
+```
+
+### Explanation of the example
+
+1. `<style>` contains the internal CSS rules.
+2. `h1` selects both heading elements.
+3. `color: blue;` makes both headings blue.
+4. `text-align: center;` aligns both headings to the center.
+5. `p` selects both paragraphs.
+6. `color: green;` makes the paragraph text green.
+7. `font-size: 18px;` sets the paragraph font size to 18 pixels.
+
+> **Output:** Both headings appear blue and centered, and both paragraphs appear green.
+
+> **Important point:** An element selector applies the specified styles to **every matching element** on the page.
+
+---
+
+## 6.3 ID Selector
+
+The **ID Selector** selects an HTML element using its `id` attribute. It is represented by the **hash symbol `#`**.
+
+An ID is intended to identify **one unique element** within an HTML document.
+
+### Syntax
+
+```css
+#id-name {
+    property: value;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ID Selector</title>
+
+    <style>
+        /* Select the element whose ID is heading */
+        #heading {
+            color: red;
+            text-align: center;
+        }
+
+        /* Select the element whose ID is description */
+        #description {
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This heading has the ID heading -->
+    <h1 id="heading">Welcome to CSS</h1>
+
+    <!-- This paragraph has the ID description -->
+    <p id="description">
+        CSS is used to style HTML webpages.
+    </p>
+
+    <!-- This paragraph has no ID -->
+    <p>This paragraph uses the browser's default styling.</p>
+
+</body>
+</html>
+```
+
+### Explanation of the example
+
+- `id="heading"` assigns the ID `heading` to the first heading.
+- `#heading` selects that heading and makes its text **red and centered**.
+- `id="description"` assigns the ID `description` to the first paragraph.
+- `#description` selects that paragraph and makes its text **blue with a font size of 20 pixels**.
+- The last paragraph is **not selected** by either ID rule.
+
+> **Output:** The heading is red and centered, the first paragraph is blue and larger, and the last paragraph retains its default styling.
+
+> **Remember:** `id="heading"` is written in **HTML**, while `#heading` is written in **CSS**.
+
+---
+
+## 6.4 Class Selector
+
+The **Class Selector** selects HTML elements using their `class` attribute. It is represented by the **dot symbol `.`**.
+
+Unlike an ID, the **same class can be assigned to multiple elements**.
+
+### Syntax
+
+```css
+.class-name {
+    property: value;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Selector</title>
+
+    <style>
+        /* Apply this style to every element with class info */
+        .info {
+            color: green;
+            font-size: 18px;
+        }
+
+        /* Apply this style to every element with class highlight */
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The paragraph belongs to the info class -->
+    <p class="info">HTML creates webpage structure.</p>
+
+    <!-- This paragraph also belongs to the info class -->
+    <p class="info">CSS styles the webpage.</p>
+
+    <!-- This paragraph belongs to both classes -->
+    <p class="info highlight">JavaScript adds interactivity.</p>
+
+    <!-- This paragraph has neither class -->
+    <p>This is a normal paragraph.</p>
+
+</body>
+</html>
+```
+
+### Explanation of the example
+
+1. `.info` selects every element having `class="info"`.
+2. Both the first and second paragraphs become **green with an 18-pixel font**.
+3. The third paragraph has two classes: `info` and `highlight`.
+4. `.highlight` gives the third paragraph a **yellow background**.
+5. The fourth paragraph has no matching class and is unaffected by these rules.
+
+> **Output:** The first three paragraphs have green text. The third paragraph also has a yellow background.
+
+### Remember:
+
+- HTML: `class="info"`
+- CSS: `.info`
+- **Multiple elements** can share the same class.
+- One element can have **multiple classes** separated by spaces.
+
+---
+
+## 6.5 Universal Selector
+
+The **Universal Selector** selects **all HTML elements**. It is represented by the **asterisk symbol `*`**.
+
+### Syntax
+
+```css
+* {
+    property: value;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Universal Selector</title>
+
+    <style>
+        /* Select all HTML elements */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Select the h1 element separately */
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to CSS</h1>
+
+    <p>This is the first paragraph.</p>
+
+    <h2>Introduction to HTML</h2>
+
+    <p>This is the second paragraph.</p>
+
+</body>
+</html>
+```
+
+### Explanation of the example
+
+- `*` selects **all HTML elements**.
+- `font-family: Arial, sans-serif;` specifies the font family for all elements.
+- The `h1` rule separately makes the main heading **blue**.
+- The universal selector does not mean that every property is inherited by every descendant; here, the font family is also applied directly to each selected element.
+
+> **Output:** The webpage uses the Arial font family, and the main heading appears blue.
+
+> **Remember:** The `*` selector is useful for applying **general styles** across a webpage.
+
+---
+
+## 6.6 Group Selector
+
+The **Group Selector** applies the same CSS declarations to **multiple selectors**. A **comma `,`** separates the selectors.
+
+It **reduces repeated CSS code**.
+
+### Syntax
+
+```css
+selector1, selector2, selector3 {
+    property: value;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Selector</title>
+
+    <style>
+        /* Apply the same style to h1, h2 and p */
+        h1, h2, p {
+            color: purple;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Apply a separate style to h1 */
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Web Designing</h1>
+
+    <h2>Introduction to CSS</h2>
+
+    <p>CSS is used to style HTML webpages.</p>
+
+    <p>It controls colors, fonts and layout.</p>
+
+</body>
+</html>
+```
+
+### Explanation of the example
+
+1. `h1, h2, p` selects all `<h1>`, `<h2>` and `<p>` elements.
+2. `color: purple;` makes all selected text **purple**.
+3. `font-family: Arial, sans-serif;` specifies their font family.
+4. The separate `h1` rule centers the main heading.
+
+> **Output:** Both headings and both paragraphs appear purple. The main heading is also centered.
+
+> **Remember:** A comma means **"apply the same rule to each listed selector."**
+
+---
+
+## 6.7 Attribute Selector
+
+The **Attribute Selector** selects HTML elements based on the **presence of an attribute** or the **value of an attribute**.
+
+Attribute selectors use **square brackets `[ ]`**.
+
+### Syntax
+
+```css
+[attribute] {
+    property: value;
+}
+```
+
+Or:
+
+```css
+[attribute="value"] {
+    property: value;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attribute Selector</title>
+
+    <style>
+        /* Select input elements whose type is text */
+        input[type="text"] {
+            border: 2px solid blue;
+            background-color: lightyellow;
+        }
+
+        /* Select input elements whose type is password */
+        input[type="password"] {
+            border: 2px solid red;
+        }
+
+        /* Select elements that have the required attribute */
+        [required] {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <!-- This input matches the text attribute selector -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name">
+    <br><br>
+
+    <!-- This input matches the password attribute selector -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter password">
+    <br><br>
+
+    <!-- This input matches both type=text and required selectors -->
+    <label for="email">Email:</label>
+    <input type="text" id="email" required placeholder="Enter email">
+
+</body>
+</html>
+```
+
+### Explanation of the example
+
+- `input[type="text"]` selects input elements whose `type` value is exactly `text`.
+- `input[type="password"]` selects password inputs and gives them a **red border**.
+- `[required]` selects any element with the `required` attribute.
+- The email field matches both `input[type="text"]` and `[required]`.
+- Both rules set a background color on the email field. Since the `background-color` declaration in `[required]` also applies to it, its background is **light pink**.
+
+> **Output:** Text inputs have a blue border and light-yellow background unless another matching rule changes the background. The password input has a red border, and the required email field has a light-pink background.
+
+### Common attribute selector patterns
+
+
+- `[required]`  Elements having the `required` attribute 
+- `[type="text"]`  Elements whose `type` is exactly `text` 
+- `[href^="https"]` Elements whose `href` **starts with** `https` 
+- `[src$=".png"]`  Elements whose `src` **ends with** `.png` 
+-  `[class~="info"]`  Elements whose class list **contains** the word `info`
+
+---
+
+## 6.8 Combinator Selector
+
+A **CSS Combinator Selector** describes the **relationship between selectors**. It allows us to select elements according to their **position** in the HTML document.
+
+There are **four common combinators**:
+
+1. **Descendant selector** — space
+2. **Child selector** — `>`
+3. **Adjacent sibling selector** — `+`
+4. **General sibling selector** — `~`
+
+### 6.8.1 Descendant Selector (Space)
+
+The **descendant selector** selects elements located **anywhere inside** another specified element, including nested descendants.
+
+#### Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descendant Selector</title>
+
+    <style>
+        /* Select every p element inside a div */
+        div p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>This paragraph is directly inside the div.</p>
+
+        <section>
+            <!-- This paragraph is nested inside section -->
+            <p>This paragraph is also inside the div.</p>
+        </section>
+    </div>
+
+    <p>This paragraph is outside the div.</p>
+
+</body>
+</html>
+```
+
+#### Explanation:
+
+- `div p` selects **every paragraph that is a descendant of a `<div>`**.
+- The first paragraph is selected.
+- The nested paragraph is also selected because it is **still inside the `<div>`**.
+- The last paragraph is **outside the `<div>`**, so it is not selected.
+
+> **Output:** The first two paragraphs have **red text**.
+
+---
+
+### 6.8.2 Child Selector (`>`)
+
+The **child selector** selects **only the direct children** of a specified element. It does **not** select matching elements nested deeper inside other elements.
+
+#### Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Selector</title>
+
+    <style>
+        /* Select only p elements that are direct children of div */
+        div > p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>This is a direct child paragraph.</p>
+
+        <section>
+            <!-- This paragraph is not a direct child of div -->
+            <p>This is a nested paragraph.</p>
+        </section>
+    </div>
+
+</body>
+</html>
+```
+
+#### Explanation:
+
+- `div > p` selects paragraphs that are **direct children** of `<div>`.
+- The first paragraph is selected.
+- The second paragraph is inside `<section>`, so it is **not a direct child** of `<div>`.
