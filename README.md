@@ -8129,7 +8129,7 @@ p {
 | **Reusability** | Low                    | Limited          | High            |
 | **Maintenance** | Difficult for many elements | Moderate    | Easier          |
 | **Example**     | `style="color:red"`    | `<style>...</style | `style.css` |
-
+```
 ---
 
 # 6. CSS Selectors
