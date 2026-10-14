@@ -175,6 +175,8 @@ This module introduces students to web designing, even if they have no previous 
    - [6.7 Attribute Selector](#67-attribute-selector)
    - [6.8 Combinator Selector](#68-combinator-selector)
       - [6.8.2 Child Selector (`>`)](#682-child-selector)
+      - [6.8.3 Adjacent Sibling Selector (`+`)](#683-adjacent-sibling-selector-)
+      - [6.8.4 General Sibling Selector (`~`)](#684-general-sibling-selector-)
 
 ---
 
@@ -8677,3 +8679,119 @@ The **child selector** selects **only the direct children** of a specified eleme
 - `div > p` selects paragraphs that are **direct children** of `<div>`.
 - The first paragraph is selected.
 - The second paragraph is inside `<section>`, so it is **not a direct child** of `<div>`.
+
+## 6.8.3 Adjacent Sibling Selector (`+`)
+
+The **Adjacent Sibling Selector** selects an HTML element that **immediately follows** another specified element and shares the **same parent**.
+
+### Syntax:
+
+```css
+element1 + element2 {
+    property: value;
+}
+```
+
+Here, **element2** is selected only when it comes **immediately after** element1 under the **same parent**.
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adjacent Sibling Selector</title>
+
+    <style>
+        /* Select the paragraph immediately after h2 */
+        h2 + p {
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Introduction to CSS</h2>
+
+    <!-- This paragraph is immediately after h2 -->
+    <p>This is the first paragraph.</p>
+
+    <!-- This paragraph is not immediately after h2 -->
+    <p>This is the second paragraph.</p>
+
+</body>
+</html>
+```
+
+### Explanation
+
+1. `h2 + p` selects a `<p>` element **immediately following** an `<h2>` element.
+2. The **first paragraph** is selected because it **immediately follows** `<h2>`.
+3. The **second paragraph** is **not selected** because another paragraph comes before it.
+4. `color: green;` makes the selected paragraph **green**.
+5. `font-size: 20px;` sets its font size to **20 pixels**.
+
+> **Output:** Only the first paragraph appears green and has a font size of 20 pixels.
+
+> **Remember:** `+` means **immediately following sibling**.
+
+---
+
+## 6.8.4 General Sibling Selector (`~`)
+
+The **General Sibling Selector** selects **all matching sibling elements** that appear **after** a specified element and share the **same parent**.
+
+### Syntax:
+
+```css
+element1 ~ element2 {
+    property: value;
+}
+```
+
+Here, **element2** elements are selected if they **follow** element1 and share the same parent. They do **not** need to be immediately adjacent.
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>General Sibling Selector</title>
+
+    <style>
+        /* Select all p siblings that follow h2 */
+        h2 ~ p {
+            color: orange;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Introduction to CSS</h2>
+
+    <!-- This paragraph follows h2 -->
+    <p>This is the first paragraph.</p>
+
+    <!-- This heading does not match the p selector -->
+    <h3>CSS Selectors</h3>
+
+    <!-- This paragraph also follows h2 -->
+    <p>This is the second paragraph.</p>
+
+    <!-- This paragraph also follows h2 -->
+    <p>This is the third paragraph.</p>
+
+</body>
+</html>
+```
+
+### Explanation
+
+1. `h2 ~ p` selects **all `<p>` elements** that follow `<h2>` and share the same parent.
+2. The **first paragraph** is selected because it follows `<h2>`.
+3. The `<h3>` heading does **not match** the `p` selector.
+4. The **second and third paragraphs** are also selected, even though they are **not immediately after** `<h2>`.
+5. All three paragraphs appear **orange with a font size of 20 pixels**.
