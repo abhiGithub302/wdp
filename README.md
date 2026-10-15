@@ -165,7 +165,7 @@ This module introduces students to web designing, even if they have no previous 
    - [5.2 Internal CSS](#52-internal-css)
    - [5.3 External CSS](#53-external-css)
 6. [Difference Between the Three Types of CSS](#difference-between-the-three-types-of-css)
-7. [CSS Selectors](#6-css-selectors)
+6.0 [CSS Selectors](#6-css-selectors)
    - [6.1 Introduction to CSS Selectors](#61-introduction-to-css-selectors)
    - [6.2 Element Selector](#62-element-selector)
    - [6.3 ID Selector](#63-id-selector)
@@ -8795,3 +8795,332 @@ Here, **element2** elements are selected if they **follow** element1 and share t
 3. The `<h3>` heading does **not match** the `p` selector.
 4. The **second and third paragraphs** are also selected, even though they are **not immediately after** `<h2>`.
 5. All three paragraphs appear **orange with a font size of 20 pixels**.
+
+# 7.0 CSS Properties
+
+## 7.1 Color Properties
+
+In CSS, colors are specified by using a **predefined color name** or with an **RGB, HEX, HSL, or RGBA** value.
+
+CSS color properties are used to set the colors of **text, backgrounds, borders**, and other HTML elements.
+
+---
+
+### 1. Color Name
+
+CSS allows us to use **predefined color names** such as `red`, `blue`, `green`, `black`, and `orange`.
+
+```css
+p {
+    color: red; /* Sets the text color to red */
+}
+```
+
+---
+
+### 2. RGB Value
+
+**RGB** stands for **Red, Green, Blue**. Each color value ranges from **0 to 255**.
+
+```css
+h1 {
+    color: rgb(255, 0, 0); /* Red color */
+}
+```
+
+---
+
+### 3. HEX Value
+
+**HEX** stands for **Hexadecimal**. It uses a **six-digit code** beginning with `#` to represent a color.
+
+```css
+h1 {
+    color: #0000FF; /* Blue color */
+}
+```
+
+---
+
+### 4. HSL Value
+
+**HSL** stands for **Hue, Saturation, Lightness**.
+
+```css
+p {
+    color: hsl(120, 100%, 50%); /* Green color */
+}
+```
+
+---
+
+### 5. RGBA Value
+
+**RGBA** stands for **Red, Green, Blue, Alpha**. The **alpha** value controls transparency and ranges from **0 (fully transparent)** to **1 (fully opaque)**.
+
+```css
+div {
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+}
+```
+
+---
+
+## Complete Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Color Properties</title>
+    <style>
+        /* Using a predefined color name */
+        .color-name {
+            color: red;
+        }
+
+        /* Using RGB value */
+        .rgb-color {
+            color: rgb(0, 128, 0);
+        }
+
+        /* Using HEX value */
+        .hex-color {
+            color: #0000FF;
+        }
+
+        /* Using HSL value */
+        .hsl-color {
+            color: hsl(300, 100%, 50%);
+        }
+
+        /* Using RGBA value */
+        .rgba-color {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h2 class="color-name">Color Name: Red</h2>
+    <h2 class="rgb-color">RGB: Green</h2>
+    <h2 class="hex-color">HEX: Blue</h2>
+    <h2 class="hsl-color">HSL: Purple</h2>
+    <p class="rgba-color">RGBA: Semi-transparent red background</p>
+</body>
+</html>
+```
+---
+# 7.0 CSS Comments
+
+## Definition:
+
+**CSS comments** are used to **explain CSS code**, provide information, and make the stylesheet **easier to understand**. Comments are **ignored by the browser** and do **not affect the output** of a webpage.
+
+---
+
+## Syntax:
+
+```css
+/* Write your comment here */
+```
+
+---
+
+## Example:
+
+```css
+/* This is a CSS comment */
+
+h1 {
+    color: blue; /* Sets the heading color to blue */
+}
+
+/*
+This is a multiline comment.
+It can contain multiple lines.
+*/
+p {
+    color: green;
+}
+```
+---
+
+# 8.0 CSS Properties
+
+CSS properties are used to control the **appearance and layout** of HTML elements. They define **colors, backgrounds, borders, fonts, spacing**, and other visual effects.
+
+
+---
+
+## 8.1 Color Properties
+
+-  CSS color properties are used to set the **color of text and other elements** on a webpage.
+
+- CSS supports different color formats, such as **color names, RGB, HEX, HSL, and RGBA**.
+
+### Common Color Properties
+
+
+-  `color`  Sets the text color. 
+-  `background-color`  Sets the background color of an element. 
+-  `border-color`  Sets the color of an element's border. 
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Color Properties</title>
+    <style>
+        h1 {
+            color: blue; /* Sets the heading text color */
+        }
+
+        p {
+            color: red; /* Sets the paragraph text color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+
+> **Output:** The heading appears in **blue**, and the paragraph appears in **red**.
+
+---
+
+## 8.2 Background Properties
+
+-  CSS background properties are used to set the **background color, image, position**, and other background effects of an HTML element.
+
+### Common Background Properties
+
+
+-  `background-color`  Sets the background color. 
+-  `background-image`  Sets an image as the background. 
+-  `background-repeat`  Controls whether the background image repeats. 
+- `background-position`  Sets the position of the background image. 
+-  `background-size`  Sets the size of the background image. 
+-  `background-attachment`  Specifies whether the background image scrolls with the page or stays fixed. 
+-  `background`  Shorthand property for setting multiple background values. 
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Background Properties</title>
+    <style>
+        body {
+            background-color: lightblue;
+            /* Sets the background color */
+        }
+
+        h1 {
+            background-color: yellow;
+            /* Sets the heading background */
+        }
+
+        p {
+            background-image: url("flower.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* Sets background image properties */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Background</h1>
+    <p>This paragraph has a background image.</p>
+</body>
+</html>
+```
+
+### Explanation:
+
+- `background-color` sets the background color.
+- `background-image` adds an image to the background.
+- `background-repeat: no-repeat` prevents the image from repeating.
+- `background-position` specifies the image's position.
+- `background-size: cover` scales the image to cover the element.
+
+> **Note:** Keep `flower.jpg` in the correct folder or provide its correct path.
+
+---
+
+## 8.3 Border Properties
+
+-  CSS border properties are used to set the **style, width, and color** of an element's border.
+
+### Common Border Properties
+
+
+-  `border-style`  Sets the style of the border. 
+-  `border-width`  Sets the thickness of the border. 
+-  `border-color`  Sets the color of the border. 
+-  `border`  Shorthand property for width, style, and color. 
+-  `border-radius`  Makes the corners rounded. 
+-  `border-top`  Sets the top border. 
+-  `border-bottom`  Sets the bottom border. 
+-  `border-left`  Sets the left border. 
+-  `border-right`  Sets the right border. 
+
+### Common Border Styles
+
+- **solid** – A continuous line.
+- **dotted** – A border made of dots.
+- **dashed** – A border made of dashes.
+- **double** – A double-line border.
+- **none** – No border.
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Border Properties</title>
+    <style>
+        h1 {
+            border-style: solid;
+            border-width: 3px;
+            border-color: blue;
+            /* Sets a blue solid border */
+        }
+
+        p {
+            border: 2px dashed red;
+            /* Sets a red dashed border */
+            border-radius: 10px;
+            /* Rounds the corners */
+            padding: 10px;
+        }
+
+        h2 {
+            border-bottom: 3px double green;
+            /* Sets only the bottom border */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Border</h1>
+    <p>This paragraph has a dashed border.</p>
+    <h2>Bottom Border Example</h2>
+</body>
+</html>
+```
+
+### Explanation:
+
+- `border-style: solid` creates a continuous border.
+- `border-width: 3px` sets the border thickness to 3 pixels.
+- `border-color: blue` sets the border color to blue.
+- `border: 2px dashed red` creates a red dashed border.
+- `border-radius: 10px` rounds the corners.
+- `border-bottom` applies a border only to the bottom side.
