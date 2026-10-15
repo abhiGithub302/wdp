@@ -177,6 +177,7 @@ This module introduces students to web designing, even if they have no previous 
       - [6.8.2 Child Selector (`>`)](#682-child-selector)
       - [6.8.3 Adjacent Sibling Selector (`+`)](#683-adjacent-sibling-selector-)
       - [6.8.4 General Sibling Selector (`~`)](#684-general-sibling-selector-)
+
 7.0 [CSS Comments](#70-css-comments)
 8.0 [CSS Properties](#80-css-properties)
    - [8.1 Color Properties](#81-color-properties)
