@@ -177,6 +177,11 @@ This module introduces students to web designing, even if they have no previous 
       - [6.8.2 Child Selector (`>`)](#682-child-selector)
       - [6.8.3 Adjacent Sibling Selector (`+`)](#683-adjacent-sibling-selector-)
       - [6.8.4 General Sibling Selector (`~`)](#684-general-sibling-selector-)
+7.0 [CSS Comments](#70-css-comments)
+8.0 [CSS Properties](#80-css-properties)
+   - [8.1 Color Properties](#81-color-properties)
+   - [8.2 Background Properties](#82-background-properties)
+   - [8.3 Border Properties](#83-border-properties)
 
 ---
 
@@ -8796,16 +8801,60 @@ Here, **element2** elements are selected if they **follow** element1 and share t
 4. The **second and third paragraphs** are also selected, even though they are **not immediately after** `<h2>`.
 5. All three paragraphs appear **orange with a font size of 20 pixels**.
 
-# 7.0 CSS Properties
 
-## 7.1 Color Properties
 
-In CSS, colors are specified by using a **predefined color name** or with an **RGB, HEX, HSL, or RGBA** value.
 
-CSS color properties are used to set the colors of **text, backgrounds, borders**, and other HTML elements.
+
+
+
+---
+# 7.0 CSS Comments
+
+## Definition:
+
+**CSS comments** are used to **explain CSS code**, provide information, and make the stylesheet **easier to understand**. Comments are **ignored by the browser** and do **not affect the output** of a webpage.
 
 ---
 
+## Syntax:
+
+```css
+/* Write your comment here */
+```
+
+---
+
+## Example:
+
+```css
+/* This is a CSS comment */
+
+h1 {
+    color: blue; /* Sets the heading color to blue */
+}
+
+/*
+This is a multiline comment.
+It can contain multiple lines.
+*/
+p {
+    color: green;
+}
+```
+---
+
+# 8.0 CSS Properties
+
+CSS properties are used to control the **appearance and layout** of HTML elements. They define **colors, backgrounds, borders, fonts, spacing**, and other visual effects.
+
+
+---
+
+## 8.1 Color Properties
+
+-  CSS color properties are used to set the **color of text and other elements** on a webpage.
+
+- CSS supports different color formats, such as **color names, RGB, HEX, HSL, and RGBA**.
 ### 1. Color Name
 
 CSS allows us to use **predefined color names** such as `red`, `blue`, `green`, `black`, and `orange`.
@@ -8866,7 +8915,14 @@ div {
 
 ---
 
-## Complete Example
+### Common Color Properties
+
+
+-  `color`  Sets the text color. 
+-  `background-color`  Sets the background color of an element. 
+-  `border-color`  Sets the color of an element's border. 
+
+### Example
 
 ```html
 <!DOCTYPE html>
@@ -8906,85 +8962,6 @@ div {
     <h2 class="hex-color">HEX: Blue</h2>
     <h2 class="hsl-color">HSL: Purple</h2>
     <p class="rgba-color">RGBA: Semi-transparent red background</p>
-</body>
-</html>
-```
----
-# 7.0 CSS Comments
-
-## Definition:
-
-**CSS comments** are used to **explain CSS code**, provide information, and make the stylesheet **easier to understand**. Comments are **ignored by the browser** and do **not affect the output** of a webpage.
-
----
-
-## Syntax:
-
-```css
-/* Write your comment here */
-```
-
----
-
-## Example:
-
-```css
-/* This is a CSS comment */
-
-h1 {
-    color: blue; /* Sets the heading color to blue */
-}
-
-/*
-This is a multiline comment.
-It can contain multiple lines.
-*/
-p {
-    color: green;
-}
-```
----
-
-# 8.0 CSS Properties
-
-CSS properties are used to control the **appearance and layout** of HTML elements. They define **colors, backgrounds, borders, fonts, spacing**, and other visual effects.
-
-
----
-
-## 8.1 Color Properties
-
--  CSS color properties are used to set the **color of text and other elements** on a webpage.
-
-- CSS supports different color formats, such as **color names, RGB, HEX, HSL, and RGBA**.
-
-### Common Color Properties
-
-
--  `color`  Sets the text color. 
--  `background-color`  Sets the background color of an element. 
--  `border-color`  Sets the color of an element's border. 
-
-### Example
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS Color Properties</title>
-    <style>
-        h1 {
-            color: blue; /* Sets the heading text color */
-        }
-
-        p {
-            color: red; /* Sets the paragraph text color */
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to CSS</h1>
-    <p>This is a paragraph.</p>
 </body>
 </html>
 ```
