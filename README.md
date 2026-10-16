@@ -177,13 +177,14 @@ This module introduces students to web designing, even if they have no previous 
       - [6.8.2 Child Selector (`>`)](#682-child-selector)
       - [6.8.3 Adjacent Sibling Selector (`+`)](#683-adjacent-sibling-selector-)
       - [6.8.4 General Sibling Selector (`~`)](#684-general-sibling-selector-)
+      - [6.8.5  CSS Selectors — Quick Reference Table](#685--css-selectors--quick-reference-table)
 
 7.0 [CSS Comments](#70-css-comments)
 8.0 [CSS Properties](#80-css-properties)
    - [8.1 Color Properties](#81-color-properties)
    - [8.2 Background Properties](#82-background-properties)
    - [8.3 Border Properties](#83-border-properties)
-
+## 
 ---
 
 ## 1. Internet
@@ -8804,8 +8805,26 @@ Here, **element2** elements are selected if they **follow** element1 and share t
 
 
 
+## 6.8.5  CSS Selectors — Quick Reference Table
+
+## 1. Basic CSS Selectors
 
 
+-  **Element Selector**  `p { }`  Selects all HTML elements of a specified type. 
+-  **ID Selector**  `#header { }`  Selects an element with a specific ID. 
+-  **Class Selector**  `.box { }`  Selects all elements with a specific class. 
+-  **Universal Selector**  `* { }`  Selects all HTML elements. 
+-  **Group Selector**  `h1, p { }`  Applies the same styles to multiple selectors. 
+-  **Attribute Selector**  `input[type="text"] { }`  Selects elements based on their attributes. 
+
+---
+
+## 2. Combinator Selectors
+
+-  **Descendant Selector**  `div p`  Selects all `<p>` elements inside a `<div>`, at any nesting level. 
+-  **Child Selector**  `div > p`  Selects `<p>` elements that are direct children of a `<div>`. 
+- **Adjacent Sibling Selector** `h2 + p`  Selects the `<p>` element immediately following an `<h2>` with the same parent. 
+- **General Sibling Selector**  `h2 ~ p`  Selects all matching `<p>` siblings that follow an `<h2>` with the same parent. 
 
 
 ---
