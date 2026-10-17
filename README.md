@@ -182,8 +182,12 @@ This module introduces students to web designing, even if they have no previous 
 7.0 [CSS Comments](#70-css-comments)
 8.0 [CSS Properties](#80-css-properties)
    - [8.1 Color Properties](#81-color-properties)
-   - [8.2 Background Properties](#82-background-properties)
-   - [8.3 Border Properties](#83-border-properties)
+   - [8.1 CSS Background Properties](#81-css-background-properties)
+   - [8.2 CSS Border Properties](#82-css-border-properties)
+   - [8.3 CSS Units](#83-css-units)
+   - [8.4 CSS Height and Width Properties](#84-css-height-and-width-properties)
+9.0 [CSS Margin and CSS Padding](#90-css-margin-and-css-padding)
+10.0 [CSS Box Model](#100-css-box-model)
 ## 
 ---
 
@@ -8990,134 +8994,1116 @@ div {
 
 ---
 
-## 8.2 Background Properties
+# 8.1 CSS Background Properties
 
--  CSS background properties are used to set the **background color, image, position**, and other background effects of an HTML element.
+## 8.1.1 `background-color`
 
-### Common Background Properties
+**Definition:** Sets the background color of an HTML element.
+
+### Syntax:
+```css
+selector {
+    background-color: color;
+}
+```
+
+### Example:
+```css
+body {
+    background-color: yellow;
+}
+```
+
+### Common Values:
+- `red` — sets the background to red.
+- `blue` — sets the background to blue.
+- `lightblue` — sets the background to light blue.
+- `transparent` — makes the background transparent.
+- `#FF0000` — sets the background to red using HEX notation.
+- `rgb(255, 0, 0)` — sets the background to red using RGB notation.
+
+---
+
+## 8.1.2 `background-image`
+
+**Definition:** Sets an image as the background of an HTML element.
+
+### Syntax:
+```css
+selector {
+    background-image: url("image.jpg");
+}
+```
+
+### Example:
+```css
+body {
+    background-image: url("flower.jpg");
+}
+```
+
+### Common Values:
+- `url("flower.jpg")` — displays an image as the background.
+- `none` — displays no background image.
 
 
--  `background-color`  Sets the background color. 
--  `background-image`  Sets an image as the background. 
--  `background-repeat`  Controls whether the background image repeats. 
-- `background-position`  Sets the position of the background image. 
--  `background-size`  Sets the size of the background image. 
--  `background-attachment`  Specifies whether the background image scrolls with the page or stays fixed. 
--  `background`  Shorthand property for setting multiple background values. 
+---
 
-### Example
+## 8.1.3 `background-repeat`
+
+**Definition:** Controls whether a background image repeats.
+
+### Syntax:
+```css
+selector {
+    background-repeat: value;
+}
+```
+
+### Example:
+```css
+body {
+    background-image: url("flower.jpg");
+    background-repeat: no-repeat;
+}
+```
+
+### Common Values:
+- `repeat` — repeats the image horizontally and vertically.
+- `repeat-x` — repeats the image horizontally.
+- `repeat-y` — repeats the image vertically.
+- `no-repeat` — displays the image only once.
+
+
+---
+
+## 8.1.4 `background-position`
+
+**Definition:** Specifies the position of a background image.
+
+### Syntax:
+```css
+selector {
+    background-position: value;
+}
+```
+
+### Example:
+```css
+body {
+    background-image: url("flower.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+```
+
+### Common Values:
+- `left` — positions the image toward the left.
+- `right` — positions the image toward the right.
+- `top` — positions the image toward the top.
+- `bottom` — positions the image toward the bottom.
+- `center` — positions the image in the center.
+- `left top` — positions the image at the top-left.
+- `right bottom` — positions the image at the bottom-right.
+- `20px 30px` — positions the image 20px from the left and 30px from the top of the positioning area.
+
+---
+
+## 8.1.5 `background-size`
+
+**Definition:** Specifies the size of a background image.
+
+### Syntax:
+```css
+selector {
+    background-size: value;
+}
+```
+
+### Example:
+```css
+body {
+    background-image: url("flower.jpg");
+    background-size: cover;
+}
+```
+
+### Common Values:
+- `auto` — uses the image's natural dimensions where applicable.
+- `cover` — scales the image to cover the entire background area; some parts may be cropped.
+- `contain` — scales the image to fit inside the background area without cropping, preserving its proportions.
+- `100% 100%` — sets the image width and height to 100% of the background area; the image may be distorted.
+- `200px 100px` — sets the image width to 200px and height to 100px.
+
+---
+
+## 8.1.6 `background-attachment`
+
+**Definition:** Specifies how a background image behaves when the page or element scrolls.
+
+### Syntax:
+```css
+selector {
+    background-attachment: value;
+}
+```
+
+### Example:
+```css
+body {
+    background-image: url("flower.jpg");
+    background-attachment: fixed;
+}
+```
+
+### Common Values:
+- `scroll` — the background scrolls with the element's content.
+- `fixed` — the background remains fixed relative to the viewport.
+
+
+---
+
+
+## 8.1.7 `background` — Shorthand Property
+
+**Definition:** Sets multiple background properties in a single declaration.
+
+### Syntax:
+```css
+selector {
+    background: color image repeat position / size attachment;
+}
+```
+
+### Example:
+```css
+body {
+    background: lightblue url("flower.jpg") no-repeat center / cover fixed;
+}
+```
+
+### Common Values:
+- `lightblue` — background color.
+- `url("flower.jpg")` — background image.
+- `no-repeat` — prevents image repetition.
+- `center` — background position.
+- `cover` — background size.
+- `fixed` — background attachment.
+
+---
+
+# 8.1.8 Complete Example: CSS background Properties
+
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
     <title>CSS Background Properties</title>
+
     <style>
+        /* Background properties applied to the body */
         body {
-            background-color: lightblue;
-            /* Sets the background color */
-        }
-
-        h1 {
-            background-color: yellow;
-            /* Sets the heading background */
-        }
-
-        p {
+            background-color: #f0f8ff;
             background-image: url("flower.jpg");
             background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            /* Sets background image properties */
+            background-position: right top;
+            background-size: 150px 150px;
+            background-attachment: scroll;
+        }
+
+        /* Background origin and clip properties */
+        .background-box {
+            width: 400px;
+            padding: 20px;
+            border: 10px dashed gray;
+
+            background-color: lightyellow;
+            background-origin: padding-box;
+            background-clip: padding-box;
+        }
+
+        /* Background shorthand property */
+        .shorthand-box {
+            width: 400px;
+            padding: 20px;
+            margin-top: 20px;
+
+            background: lightblue url("flower.jpg")
+                        no-repeat center / cover;
         }
     </style>
 </head>
+
 <body>
-    <h1>CSS Background</h1>
-    <p>This paragraph has a background image.</p>
+
+    <h1>CSS Background Properties</h1>
+
+    <div class="background-box">
+        <h2>Background Origin and Clip</h2>
+        <p>
+            This box demonstrates background-color,
+            background-origin, and background-clip.
+        </p>
+    </div>
+
+    <div class="shorthand-box">
+        <h2>Background Shorthand</h2>
+        <p>
+            This box uses multiple background properties
+            in a single declaration.
+        </p>
+    </div>
+
 </body>
 </html>
 ```
 
-### Explanation:
+> **Important:** Keep `flower.jpg` in the same folder as the HTML file, or change the image path to its correct location.
 
-- `background-color` sets the background color.
-- `background-image` adds an image to the background.
-- `background-repeat: no-repeat` prevents the image from repeating.
-- `background-position` specifies the image's position.
-- `background-size: cover` scales the image to cover the element.
-
-> **Note:** Keep `flower.jpg` in the correct folder or provide its correct path.
+### Expected Output
+- The webpage has a **light blue** background color.
+- A flower image appears at the **top-right** of the page.
+- The first box has a **light yellow** background and a **dashed gray** border.
+- The second box demonstrates the **background shorthand** property.
 
 ---
 
-## 8.3 Border Properties
 
--  CSS border properties are used to set the **style, width, and color** of an element's border.
+# 8.2 CSS Border Properties
 
-### Common Border Properties
+## 8.2.1 `border-style`
+
+**Definition:** Specifies the style of an element's border.
+
+### Syntax:
+```css
+selector {
+    border-style: value;
+}
+```
+
+### Example:
+```css
+p {
+    border-style: solid;
+}
+```
+
+### Common Values:
+- `none` — no border is displayed.
+- `solid` — displays a continuous line.
+- `dotted` — displays a dotted line.
+- `dashed` — displays a dashed line.
+- `double` — displays two solid lines.
+- `groove` — gives the border a carved appearance.
 
 
--  `border-style`  Sets the style of the border. 
--  `border-width`  Sets the thickness of the border. 
--  `border-color`  Sets the color of the border. 
--  `border`  Shorthand property for width, style, and color. 
--  `border-radius`  Makes the corners rounded. 
--  `border-top`  Sets the top border. 
--  `border-bottom`  Sets the bottom border. 
--  `border-left`  Sets the left border. 
--  `border-right`  Sets the right border. 
+---
 
-### Common Border Styles
+## 8.2.2 `border-width`
 
-- **solid** – A continuous line.
-- **dotted** – A border made of dots.
-- **dashed** – A border made of dashes.
-- **double** – A double-line border.
-- **none** – No border.
+**Definition:** Specifies the thickness of an element's border.
 
-### Example
+### Syntax:
+```css
+selector {
+    border-width: value;
+}
+```
+
+### Example:
+```css
+p {
+    border-style: solid;
+    border-width: 3px;
+}
+```
+
+### Common Values:
+- `thin` — a thin border.
+- `medium` — a medium-width border.
+- `thick` — a thick border.
+- `1px` — a border 1 pixel wide.
+- `5px` — a border 5 pixels wide.
+
+### Multiple values:
+```css
+div {
+    border-style: solid;
+    border-width: 2px 4px 6px 8px;
+}
+```
+
+- `2px` — top border.
+- `4px` — right border.
+- `6px` — bottom border.
+- `8px` — left border.
+
+---
+
+## 8.2.3 `border-color`
+
+**Definition:** Specifies the color of an element's border.
+
+### Syntax:
+```css
+selector {
+    border-color: color;
+}
+```
+
+### Example:
+```css
+p {
+    border-style: solid;
+    border-color: red;
+}
+```
+
+### Common Values:
+- `red` — red border.
+- `blue` — blue border.
+- `green` — green border.
+- `black` — black border.
+- `#FF0000` — red using HEX notation.
+- `rgb(255, 0, 0)` — red using RGB notation.
+- `transparent` — transparent border color.
+
+---
+
+## 8.2.4 `border` — Shorthand Property
+
+**Definition:** Sets the border width, style, and color in one declaration.
+
+### Syntax:
+```css
+selector {
+    border: width style color;
+}
+```
+
+### Example:
+```css
+p {
+    border: 2px solid blue;
+}
+```
+
+### Common Values:
+- `2px` — border width.
+- `solid` — border style.
+- `blue` — border color.
+
+### Equivalent longhand properties:
+```css
+p {
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+}
+```
+
+---
+
+## 8.2.5 `border-top`
+
+**Definition:** Sets the border on the top side of an element.
+
+### Syntax:
+```css
+selector {
+    border-top: width style color;
+}
+```
+
+### Example:
+```css
+p {
+    border-top: 3px solid red;
+}
+```
+
+### Common Values:
+- `3px` — border width.
+- `solid` — border style.
+- `red` — border color.
+
+---
+
+## 8.2.6 `border-right`
+
+**Definition:** Sets the border on the right side of an element.
+
+### Syntax:
+```css
+selector {
+    border-right: width style color;
+}
+```
+
+### Example:
+```css
+p {
+    border-right: 3px dashed blue;
+}
+```
+
+### Common Values:
+- `3px` — border width.
+- `dashed` — border style.
+- `blue` — border color.
+
+---
+
+## 8.2.7 `border-bottom`
+
+**Definition:** Sets the border on the bottom side of an element.
+
+### Syntax:
+```css
+selector {
+    border-bottom: width style color;
+}
+```
+
+### Example:
+```css
+p {
+    border-bottom: 2px solid green;
+}
+```
+
+### Common Values:
+- `2px` — border width.
+- `solid` — border style.
+- `green` — border color.
+
+---
+
+## 8.2.8 `border-left`
+
+**Definition:** Sets the border on the left side of an element.
+
+### Syntax:
+```css
+selector {
+    border-left: width style color;
+}
+```
+
+### Example:
+```css
+p {
+    border-left: 5px solid orange;
+}
+```
+
+### Common Values:
+- `5px` — border width.
+- `solid` — border style.
+- `orange` — border color.
+
+---
+
+## 8.2.9 `border-radius`
+
+**Definition:** Rounds the corners of an element's border.
+
+### Syntax:
+```css
+selector {
+    border-radius: value;
+}
+```
+
+### Example:
+```css
+div {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+```
+
+### Common Values:
+- `0` — square corners.
+- `5px` — slightly rounded corners.
+- `15px` — more rounded corners.
+- `50%` — can create a circle if the element's width and height are equal.
+
+---
+
+
+# 8.2.10  Complete Example: CSS Border Properties
+
+
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
     <title>CSS Border Properties</title>
+
     <style>
-        h1 {
+        /* Border style, width, and color */
+        .basic-border {
             border-style: solid;
             border-width: 3px;
             border-color: blue;
-            /* Sets a blue solid border */
+
+            padding: 15px;
+            margin-bottom: 20px;
         }
 
-        p {
-            border: 2px dashed red;
-            /* Sets a red dashed border */
-            border-radius: 10px;
-            /* Rounds the corners */
-            padding: 10px;
+        /* Border shorthand and rounded corners */
+        .border-box {
+            border: 3px solid blue;
+            border-radius: 15px;
+
+            padding: 15px;
+            margin-bottom: 20px;
         }
 
-        h2 {
+        /* Different border on each side */
+        .individual-border {
+            border-top: 3px solid red;
+            border-right: 3px dashed blue;
             border-bottom: 3px double green;
-            /* Sets only the bottom border */
+            border-left: 5px solid orange;
+
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Different radius for each corner */
+        .rounded-box {
+            border: 2px solid black;
+
+            border-top-left-radius: 20px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 30px;
+
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Border Properties</h1>
+
+    <div class="basic-border">
+        <h2>Basic Border</h2>
+        <p>This box has a 3px solid blue border.</p>
+    </div>
+
+    <div class="border-box">
+        <h2>Border Shorthand</h2>
+        <p>This box has a blue border with rounded corners.</p>
+    </div>
+
+    <div class="individual-border">
+        <h2>Individual Borders</h2>
+        <p>Each side has a different border style or color.</p>
+    </div>
+
+    <div class="rounded-box">
+        <h2>Individual Rounded Corners</h2>
+        <p>Each corner has a different border radius.</p>
+    </div>
+
+</body>
+</html>
+```
+---
+# 8.3 CSS Units
+
+## 8.3.1 Introduction to CSS Units
+
+**Definition:** CSS units are used to define the **size, length, spacing, and position** of elements on a webpage. 
+
+
+CSS units are mainly divided into **two types**:
+1. **Absolute units**
+2. **Relative units**
+
+---
+
+## 8.3.2 Absolute Units
+
+**Definition:** Absolute units represent **fixed physical or screen-related measurements**. They **do not change** according to the size of a parent element.
+
+### Common Absolute Units
+
+
+-  `px`  Pixels  Commonly used for borders, spacing, and font sizes. 
+ - `cm`  Centimeters  Measures length in centimeters. 
+ - `mm`  Millimeters  Measures length in millimeters. 
+ - `in`  Inches  One inch equals 2.54 centimeters. 
+-  `pt`  Points  One point equals 1/72 of an inch. 
+
+
+### Example: Absolute Units
+
+```css
+h1 {
+    font-size: 30px;
+}
+
+.box {
+    width: 5cm;
+    height: 2in;
+    border: 2px solid black;
+}
+
+
+```
+
+### Explanation:
+- `30px` sets the heading size.
+- `5cm` sets the box width to 5 centimeters.
+- `2in` sets the box height to 2 inches.
+- `2px` sets the border width to 2 pixels.
+
+
+> **Note:** Pixels (`px`) are commonly used in web design. Physical units such as `cm`, `mm`, and `in` are more useful when physical measurements are important, such as in **print styles**.
+
+---
+
+## 8.3.3 Relative Units
+
+**Definition:** Relative units define a size in **relation to another value**, such as the font size of an element, the font size of its parent, or the dimensions of the viewport.
+
+### 1. `em`
+
+The `em` unit is relative to the **font size of the element's parent** for properties such as `font-size`. For other properties, it is generally relative to the element's **own computed font size**.
+
+#### Syntax:
+```css
+selector {
+    font-size: 2em;
+}
+```
+
+#### Example:
+```css
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 1.5em;
+}
+```
+
+#### Explanation:
+- The parent font size is `20px`.
+- The child font size is **1.5 × 20px = 30px**.
+
+---
+
+### 2. `rem`
+
+The `rem` unit means **root em**. It is relative to the **font size of the root element**, usually the `<html>` element.
+
+#### Syntax:
+```css
+selector {
+    font-size: 2rem;
+}
+```
+
+#### Example:
+```css
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+```
+
+#### Explanation:
+- The root font size is `16px`.
+- `2rem` equals **2 × 16px = 32px**.
+
+---
+
+### 3. `%` (Percentage)
+
+The percentage unit defines a value **relative to another value** determined by the CSS property. For example, an element's width percentage is generally relative to its **containing block**.
+
+#### Syntax:
+```css
+selector {
+    width: 50%;
+}
+```
+
+#### Example:
+```css
+.container {
+    width: 800px;
+}
+
+.box {
+    width: 50%;
+}
+```
+
+#### Explanation:
+- The container width is `800px`.
+- The box width is **50% of the container**, which equals `400px`.
+
+---
+
+### 4. `vw` (Viewport Width)
+
+The `vw` unit is relative to the **width of the viewport**.
+
+- `1vw` = 1% of the viewport width.
+- `50vw` = 50% of the viewport width.
+- `100vw` = 100% of the viewport width.
+
+#### Example:
+```css
+.banner {
+    width: 100vw;
+}
+```
+
+> This sets the banner width to **100% of the viewport width**. Depending on the page layout, `100vw` may cause horizontal scrolling because it can include the width occupied by a scrollbar.
+
+---
+
+### 5. `vh` (Viewport Height)
+
+The `vh` unit is relative to the **viewport height**.
+
+- `1vh` = 1% of the viewport height.
+- `50vh` = 50% of the viewport height.
+- `100vh` = 100% of the viewport height.
+
+#### Example:
+```css
+.hero {
+    height: 100vh;
+}
+```
+
+> This sets the element's height to **100% of the viewport height**. On mobile browsers, viewport height behavior can vary as browser controls appear and disappear.
+
+---
+
+# 8.4 CSS Height and Width Properties
+
+## 8.4.1 `height`
+Sets the **height** of an element.
+
+```css
+div {
+    height: 200px;
+}
+```
+
+---
+
+## 8.4.2 `min-height`
+Sets the **minimum height** of an element.
+
+```css
+div {
+    min-height: 100px;
+}
+```
+
+---
+
+## 8.4.3 `max-height`
+Sets the **maximum height** of an element.
+
+```css
+div {
+    max-height: 200px;
+    overflow: auto;
+}
+```
+
+---
+
+## 8.4.4 `width`
+Sets the **width** of an element.
+
+```css
+div {
+    width: 300px;
+}
+```
+
+---
+
+## 8.4.5 `min-width`
+Sets the **minimum width** of an element.
+
+```css
+div {
+    min-width: 200px;
+}
+```
+
+---
+
+## 8.4.6 `max-width`
+Sets the **maximum width** of an element.
+
+```css
+div {
+    max-width: 800px;
+}
+```
+
+---
+
+## Complete HTML Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Height and Width</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            min-width: 200px;
+            max-width: 400px;
+            min-height: 100px;
+            max-height: 150px;
+            overflow: auto;
+            background-color: lightblue;
+            border: 2px solid blue;
         }
     </style>
 </head>
 <body>
-    <h1>CSS Border</h1>
-    <p>This paragraph has a dashed border.</p>
-    <h2>Bottom Border Example</h2>
+
+    <h1>CSS Height and Width</h1>
+
+    <div>
+        This example demonstrates height, width,
+        min-height, max-height, min-width and max-width.
+    </div>
+
 </body>
 </html>
 ```
+---
+# 9.0 CSS Margin and CSS Padding
 
-### Explanation:
+## 9.1 CSS Margin
 
-- `border-style: solid` creates a continuous border.
-- `border-width: 3px` sets the border thickness to 3 pixels.
-- `border-color: blue` sets the border color to blue.
-- `border: 2px dashed red` creates a red dashed border.
-- `border-radius: 10px` rounds the corners.
-- `border-bottom` applies a border only to the bottom side.
+**Definition:** The `margin` property creates space **outside** an HTML element's border.
+
+### Syntax:
+```css
+selector {
+    margin: value;
+}
+```
+
+### Example:
+```css
+div {
+    margin: 20px;
+}
+```
+
+### Individual Margin Properties:
+- `margin-top` – Space **above** the element.
+- `margin-right` – Space to the **right**.
+- `margin-bottom` – Space **below** the element.
+- `margin-left` – Space to the **left**.
+
+### Common values:
+- `10px` – Sets 10 pixels of margin.
+- `auto` – Lets the browser calculate the margin, often used to **center a fixed-width block** horizontally.
+- `0` – Removes the margin.
+
+---
+
+## 9.2 CSS Padding
+
+**Definition:** The `padding` property creates space **inside** an element, between its **content and border**.
+
+### Syntax:
+```css
+selector {
+    padding: value;
+}
+```
+
+### Example:
+```css
+div {
+    padding: 20px;
+}
+```
+
+### Individual Padding Properties:
+- `padding-top` – Space **above** the content.
+- `padding-right` – Space to the **right** of the content.
+- `padding-bottom` – Space **below** the content.
+- `padding-left` – Space to the **left** of the content.
+
+### Common values:
+- `10px` – Sets 10 pixels of padding.
+- `20px` – Sets 20 pixels of padding.
+- `0` – Removes the padding.
+
+---
+
+
+## 9.3 Complete HTML Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Margin and Padding</title>
+
+    <style>
+        .box1 {
+            margin: 20px;
+            padding: 15px;
+            border: 2px solid blue;
+            background-color: lightblue;
+        }
+
+        .box2 {
+            margin-top: 30px;
+            margin-left: 20px;
+            padding: 20px;
+            border: 2px solid green;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Margin and Padding</h1>
+
+    <div class="box1">
+        This box uses margin and padding.
+    </div>
+
+    <div class="box2">
+        This box uses individual margin properties
+        and padding.
+    </div>
+
+</body>
+</html>
+```
+---
+# 10.0 CSS Box Model
+
+## 10.1 Definition
+
+The **CSS Box Model** describes how every HTML element is represented as a **rectangular box**. It consists of **four parts**:
+
+1. **Content** – The text, image, or other content inside the element.
+2. **Padding** – Space between the content and border.
+3. **Border** – The boundary surrounding the padding and content.
+4. **Margin** – Space outside the border.
+
+### Visual Diagram
+
+```
+┌─────────────────────────────────────────┐
+│                MARGIN                   │
+│  ┌───────────────────────────────────┐  │
+│  │             BORDER                │  │
+│  │  ┌─────────────────────────────┐  │  │
+│  │  │          PADDING            │  │  │
+│  │  │  ┌───────────────────────┐  │  │  │
+│  │  │  │       CONTENT         │  │  │  │
+│  │  │  └───────────────────────┘  │  │  │
+│  │  └─────────────────────────────┘  │  │
+│  └───────────────────────────────────┘  │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 10.2 CSS Box Model Properties
+
+- **`width`** – Sets the content width by default.
+- **`height`** – Sets the content height by default.
+- **`padding`** – Adds space inside the border.
+- **`border`** – Creates a boundary around the element.
+- **`margin`** – Adds space outside the border.
+
+---
+
+## 10.3 `box-sizing` Property
+
+The `box-sizing` property defines how the **total width and height** of an element are calculated.
+
+### Common values:
+
+- **`content-box`** – Width and height apply to the **content only**. This is the **default**.
+- **`border-box`** – Width and height **include** the content, padding, and border.
+
+### Syntax:
+```css
+selector {
+    box-sizing: border-box;
+}
+```
+
+---
+
+## 10.4 Complete HTML Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model</title>
+
+    <style>
+        .box {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid blue;
+            margin: 20px;
+            background-color: lightblue;
+        }
+
+        .box2 {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid green;
+            margin: 20px;
+            box-sizing: border-box;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Box Model</h1>
+
+    <div class="box">
+        This box uses the default content-box model.
+    </div>
+
+    <div class="box2">
+        This box uses the border-box model.
+    </div>
+
+</body>
+</html>
+```
