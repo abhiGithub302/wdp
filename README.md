@@ -164,7 +164,7 @@ This module introduces students to web designing, even if they have no previous 
    - [5.1 Inline CSS](#51-inline-css)
    - [5.2 Internal CSS](#52-internal-css)
    - [5.3 External CSS](#53-external-css)
-6. [Difference Between the Three Types of CSS](#difference-between-the-three-types-of-css)
+
 6.0 [CSS Selectors](#6-css-selectors)
    - [6.1 Introduction to CSS Selectors](#61-introduction-to-css-selectors)
    - [6.2 Element Selector](#62-element-selector)
@@ -179,15 +179,15 @@ This module introduces students to web designing, even if they have no previous 
       - [6.8.4 General Sibling Selector (`~`)](#684-general-sibling-selector-)
       - [6.8.5  CSS Selectors — Quick Reference Table](#685--css-selectors--quick-reference-table)
 
-7.0 [CSS Comments](#70-css-comments)
-8.0 [CSS Properties](#80-css-properties)
-   - [8.1 Color Properties](#81-color-properties)
-   - [8.1 CSS Background Properties](#81-css-background-properties)
-   - [8.2 CSS Border Properties](#82-css-border-properties)
-   - [8.3 CSS Units](#83-css-units)
-   - [8.4 CSS Height and Width Properties](#84-css-height-and-width-properties)
-9.0 [CSS Margin and CSS Padding](#90-css-margin-and-css-padding)
-10.0 [CSS Box Model](#100-css-box-model)
+- 7.0 [CSS Comments](#70-css-comments)
+- 8.0 [CSS Properties](#80-css-properties)
+  - [8.1 Color Properties](#81-color-properties)
+  - [8.1 CSS Background Properties](#81-css-background-properties)
+  - [8.2 CSS Border Properties](#82-css-border-properties)
+  - [8.3 CSS Units](#83-css-units)
+  - [8.4 CSS Height and Width Properties](#84-css-height-and-width-properties)
+- 9.0 [CSS Margin and CSS Padding](#90-css-margin-and-css-padding)
+- 10.0 [CSS Box Model](#100-css-box-model)
 ## 
 ---
 
