@@ -9226,8 +9226,8 @@ body {
         /* Background shorthand property */
         .shorthand-box {
             width: 400px;
-            padding: 20px;
-            margin-top: 20px;
+            
+            
 
             background: lightblue url("flower.jpg")
                         no-repeat center / cover;
@@ -9550,18 +9550,13 @@ div {
             border-style: solid;
             border-width: 3px;
             border-color: blue;
-
-            padding: 15px;
-            margin-bottom: 20px;
+        
         }
 
         /* Border shorthand and rounded corners */
         .border-box {
             border: 3px solid blue;
-            border-radius: 15px;
-
-            padding: 15px;
-            margin-bottom: 20px;
+            border-radius: 15px;            
         }
 
         /* Different border on each side */
@@ -9570,22 +9565,10 @@ div {
             border-right: 3px dashed blue;
             border-bottom: 3px double green;
             border-left: 5px solid orange;
-
-            padding: 15px;
-            margin-bottom: 20px;
+            
         }
 
-        /* Different radius for each corner */
-        .rounded-box {
-            border: 2px solid black;
-
-            border-top-left-radius: 20px;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 30px;
-
-            padding: 15px;
-        }
+       
     </style>
 </head>
 
@@ -9608,10 +9591,7 @@ div {
         <p>Each side has a different border style or color.</p>
     </div>
 
-    <div class="rounded-box">
-        <h2>Individual Rounded Corners</h2>
-        <p>Each corner has a different border radius.</p>
-    </div>
+    
 
 </body>
 </html>
