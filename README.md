@@ -191,7 +191,34 @@ This module introduces students to web designing, even if they have no previous 
 - 10.5 [CSS Text Properties](#105-css-text-properties)
 - 10.6 [CSS Font Properties](#106-css-font-properties)
 - 10.7 [Complete HTML Example: CSS Text and Font Properties](#107-complete-html-example-css-text-and-font-properties)
-## 
+- 11.0 [Block-Level and Inline Elements](#110-block-level-and-inline-elements)
+  - [11.1 Block-Level Elements](#111-block-level-elements)
+  - [11.2 Inline Elements](#112-inline-elements)
+  - [11.3 CSS `display` Property](#113-css-display-property)
+  - [11.5 Complete HTML Example](#115-complete-html-example)
+- 12.0 [CSS List Properties](#120-css-list-properties)
+  - [12.1 `list-style-type`](#121-list-style-type-property)
+  - [12.2 `list-style-position`](#122-list-style-position-property)
+  - [12.3 `list-style-image`](#123-list-style-image-property)
+  - [12.4 Complete HTML Example](#124-complete-html-example-of-css-list-properties)
+- 13.0 [CSS Tables](#130-css-tables)
+  - [13.1–13.10 Table Properties](#131-border-property)
+  - [13.11 Complete HTML Example](#1311-complete-html-example-of-css-table-properties)
+- 14.0 [CSS Menu Design](#140-css-menu-design)
+  - [14.1 Types of CSS Menus](#141-types-of-css-menus)
+  - [14.2 HTML Structure of a Menu](#142-html-structure-of-a-menu)
+  - [14.3 CSS Properties Used in Menu Design](#143-important-css-properties-used-in-menu-design)
+  - [14.4 Complete HTML Example](#144-complete-html-example-horizontal-menu)
+- 15.0 [CSS Dropdown Menu](#150-css-dropdown-menu)
+  - [15.1 How a Dropdown Menu Works](#151-how-a-dropdown-menu-works)
+  - [15.2 Important CSS Properties](#152-important-css-properties)
+  - [15.3 Complete HTML Example](#153-complete-html-example-of-a-css-dropdown-menu)
+  - [15.4 Online Practical](#154-online-practical)
+- 16.0 [CSS Image Gallery](#160-css-image-gallery)
+  - [16.1 CSS Properties Used in an Image Gallery](#161-important-css-properties-used-in-image-gallery)
+  - [16.2 Complete HTML Example](#162-complete-html-example-of-css-image-gallery)
+  - [16.3 Online Practical Platforms](#163-online-practical-platforms)
+
 ---
 
 ## 1. Internet
@@ -10385,3 +10412,1442 @@ p {
 ```
 
 ---
+
+# 11.0 Block-Level and Inline Elements
+
+## 11.1 Block-Level Elements
+
+ Block-level elements **start on a new line** and generally occupy the **available width** of their parent container.
+
+**Examples:** `<div>`, `<p>`, `<h1> <h6>`, `<section>` `<table>` `<ul>` `<footer>` `<form>` `<header>`.
+
+### Example:
+```html
+<div style="background-color: lightblue;">Block 1</div>
+<div style="background-color: lightgreen;">Block 2</div>
+```
+
+> **Output:** Both elements appear on **separate lines**.
+
+---
+
+## 11.2 Inline Elements
+ Inline elements **do not normally start on a new line** and occupy only the **space required** by their content.
+
+**Examples:** `<br>`, `<a>`, `<strong>`, `<em>` `<img>` `<input>` `<sub>` `<sup>` `<u>`.
+
+### Example:
+```html
+<span style="background-color: yellow;">Inline 1</span>
+<span style="background-color: pink;">Inline 2</span>
+```
+
+> **Output:** Both elements appear on the **same line** if sufficient space is available.
+
+---
+
+
+
+## 11.3 CSS `display` Property
+
+ The CSS `display` property specifies **how an HTML element is displayed** in the webpage layout.
+
+### Syntax:
+```css
+selector {
+    display: value;
+}
+```
+
+### 11.4.1 `display: block`
+
+Displays an element as a **block-level element**.
+
+```css
+span {
+    display: block;
+}
+```
+
+### 11.4.2 `display: inline`
+
+Displays an element **inline** without starting a new line.
+
+```css
+div {
+    display: inline;
+}
+```
+
+### 11.4.3 `display: inline-block`
+
+Displays elements **inline** while allowing **width and height** to be set.
+
+```css
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+}
+```
+
+### 11.4.4 `display: none`
+
+**Hides** an element and **removes its space** from the layout.
+
+```css
+.hide {
+    display: none;
+}
+```
+
+---
+
+## 11.5 Complete HTML Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Display Properties</title>
+
+    <style>
+        /* Block elements */
+        .block {
+            display: block;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+
+        /* Inline elements */
+        .inline {
+            display: inline;
+            background-color: lightgreen;
+        }
+
+        /* Inline-block elements */
+        .inline-block {
+            display: inline-block;
+            width: 150px;
+            height: 60px;
+            background-color: lightyellow;
+            margin: 5px;
+        }
+
+        /* Hidden element */
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Display Property</h1>
+
+    <h2>Block Elements</h2>
+    <div class="block">Block 1</div>
+    <div class="block">Block 2</div>
+
+    <h2>Inline Elements</h2>
+    <span class="inline">Inline 1</span>
+    <span class="inline">Inline 2</span>
+
+    <h2>Inline-Block Elements</h2>
+    <div class="inline-block">Box 1</div>
+    <div class="inline-block">Box 2</div>
+
+    <p class="hide">This paragraph is hidden.</p>
+
+</body>
+</html>
+```
+---
+# 12.0 CSS List Properties
+
+**CSS List Properties** are used to control the appearance of HTML lists. They allow us to change **bullet styles**, **numbering styles**, and the **position of list markers**.
+
+HTML provides three main types of lists:
+- **Ordered List (`<ol>`)** – Displays items using numbers or letters.
+- **Unordered List (`<ul>`)** – Displays items using bullets.
+- **Description List (`<dl>`)** – Displays terms and their descriptions.
+
+---
+
+## 12.1 `list-style-type` Property
+
+**Definition:** The `list-style-type` property specifies the **type of bullet or numbering** used for list items.
+
+### Syntax:
+```css
+selector {
+    list-style-type: value;
+}
+```
+
+### Example:
+```css
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+```
+
+### Common values:
+- `disc` – Displays filled circular bullets.
+- `circle` – Displays hollow circular bullets.
+- `square` – Displays square bullets.
+- `none` – Removes bullets or numbering.
+- `decimal` – Displays numbers such as 1, 2, 3.
+- `decimal-leading-zero` – Displays numbers such as 01, 02, 03.
+- `lower-alpha` – Displays lowercase letters: a, b, c.
+- `upper-alpha` – Displays uppercase letters: A, B, C.
+- `lower-roman` – Displays lowercase Roman numerals: i, ii, iii.
+- `upper-roman` – Displays uppercase Roman numerals: I, II, III.
+
+---
+## 🔗 Practice Links
+
+1. **CSS List Style Type**
+   👉 [Try CSS List Style Type Online](https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-type_ex)
+
+
+## 12.2 `list-style-position` Property
+
+**Definition:** The `list-style-position` property specifies **where the bullet or number appears** relative to the list item's content.
+
+### Syntax:
+```css
+selector {
+    list-style-position: value;
+}
+```
+
+### Example:
+```css
+ul {
+    list-style-position: inside;
+}
+```
+
+### Common values:
+- `outside` – The marker appears **outside** the main content area of the list item. This is the **default** value.
+- `inside` – The marker appears **inside** the list item's content area.
+
+---
+## 🔗 Practice Links
+ **CSS List Style Position**
+   👉 [Try CSS List Style Position Online](https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-position)
+
+
+## 12.3 `list-style-image` Property
+
+**Definition:** The `list-style-image` property uses an **image instead of the default bullet marker**.
+
+### Syntax:
+```css
+selector {
+    list-style-image: url("image.png");
+}
+```
+
+### Example:
+```css
+ul {
+    list-style-image: url("bullet.png");
+}
+```
+
+### Common values:
+- `url("bullet.png")` – Uses the specified image as the list marker.
+- `none` – Does not specify an image marker; the browser can use the marker defined by `list-style-type`.
+
+> **Note:** Keep `bullet.png` in the correct folder or provide its correct path.
+
+---
+## 🔗 Practice Links
+# CSS List Properties — Online Practice Links
+
+Yahan aap **CSS List Properties** ko online try kar sakte ho:
+
+## 🔗 Practice Links
+
+
+**CSS List Style Image**
+   👉 [Try CSS List Style Image Online](https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-image)
+
+
+---
+
+## 12.4 Complete HTML Example of CSS List Properties
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS List Properties</title>
+
+    <style>
+        /* Unordered list with square bullets */
+        .list1 {
+            list-style-type: square;
+        }
+
+        /* Ordered list with uppercase Roman numerals */
+        .list2 {
+            list-style-type: upper-roman;
+        }
+
+        /* List markers placed inside */
+        .list3 {
+            list-style-position: inside;
+        }
+
+        /* Custom image as the list marker */
+        .list4 {
+            list-style-image: url("bullet.png");
+        }
+
+        /* Shorthand property */
+        .list5 {
+            list-style: circle inside;
+        }
+
+        /* Remove list markers */
+        .list6 {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS List Properties</h1>
+
+    <h2>1. List Style Type</h2>
+    <ul class="list1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>2. Roman Numbering</h2>
+    <ol class="list2">
+        <li>Computer Fundamentals</li>
+        <li>Web Designing</li>
+        <li>Programming</li>
+    </ol>
+
+    <h2>3. List Style Position</h2>
+    <ul class="list3">
+        <li>Inside marker</li>
+        <li>Another list item</li>
+    </ul>
+
+    <h2>4. List Style Image</h2>
+    <ul class="list4">
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+
+    <h2>5. List Shorthand</h2>
+    <ul class="list5">
+        <li>PHP</li>
+        <li>Python</li>
+    </ul>
+
+    <h2>6. Remove List Markers</h2>
+    <ul class="list6">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+    </ul>
+
+</body>
+</html>
+```
+
+
+---
+# 13.0 CSS Tables
+
+**CSS Table Properties** are used to control the **appearance and layout** of HTML tables. CSS can change table borders, cell spacing, cell padding, text alignment, width, and other visual properties.
+
+
+---
+
+## 13.1 `border` Property
+
+ The `border` property adds a **border** around a table and its cells.
+
+### Syntax:
+```css
+table, th, td {
+    border: width style color;
+}
+```
+
+### Example:
+```css
+table, th, td {
+    border: 1px solid black;
+}
+```
+
+### Common values:
+- `1px` – Sets the border thickness.
+- `solid` – Displays a continuous line.
+- `dotted` – Displays a dotted line.
+- `dashed` – Displays a dashed line.
+- `black`, `red`, `blue` – Specify the border color.
+
+---
+
+## 13.2 `border-collapse` Property
+
+ Specifies whether adjacent table cell borders are **separated or combined** into a single border.
+
+### Syntax:
+```css
+table {
+    border-collapse: value;
+}
+```
+
+### Example:
+```css
+table {
+    border-collapse: collapse;
+}
+```
+
+### Common values:
+- `separate` – Displays separate borders around cells. This is the **default**.
+- `collapse` – Combines adjacent borders into a **single border**.
+
+---
+
+## 13.3 `border-spacing` Property
+
+ Specifies the **distance between the borders** of adjacent table cells when `border-collapse: separate` is used.
+
+### Syntax:
+```css
+table {
+    border-spacing: value;
+}
+```
+
+### Example:
+```css
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+```
+
+### Common values:
+- `0` – No space between adjacent cell borders.
+- `5px` – Sets a 5-pixel gap horizontally and vertically.
+- `10px 20px` – Sets 10px horizontal spacing and 20px vertical spacing.
+
+> **Note:** `border-spacing` does **not** work when `border-collapse: collapse` is applied.
+
+---
+
+## 13.4 `width` Property
+
+ Specifies the **width** of a table.
+
+### Syntax:
+```css
+table {
+    width: value;
+}
+```
+
+### Example:
+```css
+table {
+    width: 80%;
+}
+```
+
+### Common values:
+- `500px` – Sets a fixed width of 500 pixels.
+- `80%` – Sets the width to 80% of the containing block.
+- `100%` – Makes the table occupy the full available width.
+
+---
+
+## 13.5 `height` Property
+
+ Specifies the **height** of a table or table cell.
+
+### Syntax:
+```css
+table {
+    height: value;
+}
+```
+
+### Example:
+```css
+table {
+    height: 200px;
+}
+```
+
+### Common values:
+- `100px` – Specifies a height of 100 pixels.
+- `200px` – Specifies a height of 200 pixels.
+- `auto` – Allows the browser to calculate the height based on content and layout.
+
+> The rendered height may grow if the content requires more space.
+
+---
+
+## 13.6 `padding` Property
+
+ Adds **space between the content** of a table cell and its border.
+
+### Syntax:
+```css
+th, td {
+    padding: value;
+}
+```
+
+### Example:
+```css
+th, td {
+    padding: 10px;
+}
+```
+
+### Common values:
+- `5px` – Adds 5 pixels of space on each side.
+- `10px` – Adds 10 pixels of space on each side.
+- `10px 20px` – Adds 10px vertically and 20px horizontally.
+
+---
+
+## 13.7 `text-align` Property
+
+ Specifies the **horizontal alignment** of text inside table cells.
+
+### Syntax:
+```css
+th, td {
+    text-align: value;
+}
+```
+
+### Example:
+```css
+th, td {
+    text-align: center;
+}
+```
+
+### Common values:
+- `left` – Aligns text to the left.
+- `center` – Centers the text.
+- `right` – Aligns text to the right.
+
+---
+
+## 13.8 `vertical-align` Property
+
+ Specifies the **vertical alignment** of content inside table cells.
+
+### Syntax:
+```css
+td {
+    vertical-align: value;
+}
+```
+
+### Example:
+```css
+td {
+    vertical-align: middle;
+}
+```
+
+### Common values:
+- `top` – Aligns content to the top.
+- `middle` – Aligns content to the middle.
+- `bottom` – Aligns content to the bottom.
+
+---
+
+## 13.9 `background-color` Property
+
+**Definition:** Sets the **background color** of a table, row, header, or cell.
+
+### Syntax:
+```css
+selector {
+    background-color: value;
+}
+```
+
+### Example:
+```css
+th {
+    background-color: lightblue;
+}
+```
+
+### Common values:
+- `lightblue` – Light blue background.
+- `lightgreen` – Light green background.
+- `yellow` – Yellow background.
+- `#f2f2f2` – A light gray color specified using hexadecimal notation.
+
+---
+
+## 13.10 `caption-side` Property
+
+ Specifies the **position of a table caption**.
+
+### Syntax:
+```css
+caption {
+    caption-side: value;
+}
+```
+
+### Example:
+```css
+caption {
+    caption-side: top;
+}
+```
+
+### Common values:
+- `top` – Places the caption **above** the table.
+- `bottom` – Places the caption **below** the table.
+
+---
+
+## 13.11 Complete HTML Example of CSS Table Properties
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Positioning Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Static positioning */
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        /* Relative positioning */
+        .relative-box {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        /* Absolute positioning */
+        .container {
+            position: relative;
+            height: 100px;
+            border: 2px solid black;
+            margin-top: 30px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: orange;
+            padding: 10px;
+        }
+
+        /* Fixed positioning */
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        /* Sticky positioning */
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Positioning Properties</h1>
+
+    <h2>1. Static Positioning</h2>
+    <div class="static-box">
+        This box uses static positioning.
+    </div>
+
+    <h2>2. Relative Positioning</h2>
+    <div class="relative-box">
+        This box moves from its normal position.
+    </div>
+
+    <h2>3. Absolute Positioning</h2>
+    <div class="container">
+        Container
+        <div class="absolute-box">
+            Absolute Box
+        </div>
+    </div>
+
+    <h2>4. Sticky Positioning</h2>
+    <div class="sticky-box">
+        Sticky Box: Scroll to observe.
+    </div>
+
+    <p>CSS positioning controls the placement of elements.</p>
+    <p>Scroll down to observe the sticky box.</p>
+    <p>Positioning is useful for web layouts.</p>
+    <p>Keep scrolling to see how sticky positioning works.</p>
+    <p>This is additional content for scrolling.</p>
+    <p>CSS helps create flexible webpage designs.</p>
+
+    <div class="fixed-box">
+        Fixed Box
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+# 14.0 CSS Menu Design
+
+**CSS Menu Design** is used to create attractive and user-friendly **navigation menus** on a website. A menu helps users move from one webpage or section to another, such as **Home**, **About Us**, **Courses**, and **Contact Us**.
+
+> HTML creates the menu structure using links and list elements, while CSS controls its colors, layout, spacing, borders, and hover effects.
+
+---
+
+## 14.1 Types of CSS Menus
+
+### 14.1.1 Horizontal Menu
+
+Menu items appear **side by side** in a horizontal row.
+
+Commonly used at the **top** of a website.
+
+```
+Home | About Us | Courses | Contact Us
+```
+
+---
+
+### 14.1.2 Vertical Menu
+
+Menu items appear **one below another**.
+
+Commonly used in **sidebars** and navigation panels.
+
+```
+Home
+About Us
+Courses
+Contact Us
+```
+
+---
+
+### 14.1.3 Dropdown Menu
+
+Displays additional menu items when the user **hovers over or activates** a menu item.
+
+```
+Home
+Courses ▼
+  - Web Designing
+  - Programming
+Contact Us
+```
+
+---
+
+## 14.2 HTML Structure of a Menu
+
+**Definition:** HTML elements create the **basic structure** of a navigation menu.
+
+### Example:
+```html
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+```
+
+### Explanation:
+- `<nav>` – Defines a **navigation section**.
+- `<ul>` – Creates an **unordered list**.
+- `<li>` – Defines each **menu item**.
+- `<a>` – Creates a **clickable link**.
+
+---
+
+## 14.3 Important CSS Properties Used in Menu Design
+
+### 14.3.1 `list-style-type`
+
+**Definition:** Removes the **default bullets** from the list items used in a menu.
+
+### Syntax:
+```css
+ul {
+    list-style-type: none;
+}
+```
+
+### Common value:
+- `none` – Removes the list markers.
+
+---
+
+### 14.3.2 `margin` and `padding`
+
+**Definition:** `margin` controls the space **outside** an element, while `padding` controls the space **inside** an element.
+
+### Example:
+```css
+ul {
+    margin: 0;
+    padding: 0;
+}
+```
+
+### Explanation:
+- `margin: 0;` – Removes the default outer margin.
+- `padding: 0;` – Removes the default inner padding.
+
+---
+
+### 14.3.3 `display`
+
+**Definition:** Controls **how menu items are displayed**.
+
+### Example:
+```css
+li {
+    display: inline-block;
+}
+```
+
+### Common values:
+- `block` – Displays an item on a new line.
+- `inline` – Displays items in the same line.
+- `inline-block` – Displays items in the same line and allows width and height settings.
+
+---
+
+### 14.3.4 `background-color`
+
+**Definition:** Sets the **background color** of the menu or menu items.
+
+### Example:
+```css
+nav {
+    background-color: #333333;
+}
+```
+
+### Common values:
+- `black` – Black background.
+- `navy` – Dark blue background.
+- `#333333` – Dark gray background.
+- `lightblue` – Light blue background.
+
+---
+
+### 14.3.5 `color`
+
+**Definition:** Sets the **text color** of menu links.
+
+### Example:
+```css
+a {
+    color: white;
+}
+```
+
+### Common values:
+- `white` – White text.
+- `black` – Black text.
+- `yellow` – Yellow text.
+
+---
+
+### 14.3.6 `text-decoration`
+
+**Definition:** Controls **decorative lines** on text, such as underlines.
+
+### Example:
+```css
+a {
+    text-decoration: none;
+}
+```
+
+### Common values:
+- `none` – Removes the underline.
+- `underline` – Adds an underline.
+- `overline` – Adds a line above the text.
+- `line-through` – Adds a line through the text.
+
+---
+
+### 14.3.7 `:hover` Effect
+
+**Definition:** The `:hover` pseudo-class applies CSS styles when the user **points the mouse over an element**.
+
+### Example:
+```css
+a:hover {
+    background-color: yellow;
+    color: black;
+}
+```
+
+### Explanation:
+- `a:hover` – Selects a link when the mouse pointer is over it.
+- `background-color: yellow;` – Changes the background to yellow.
+- `color: black;` – Changes the text to black.
+
+---
+
+## 14.4 Complete HTML Example: Horizontal Menu
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Horizontal Menu</title>
+
+    <style>
+        /* Remove default list spacing and bullets */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            overflow: hidden;
+        }
+
+        /* Display menu items horizontally */
+        li {
+            display: inline-block;
+        }
+
+        /* Style the menu links */
+        li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+
+        /* Apply hover effect */
+        li a:hover {
+            background-color: lightblue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Menu Design</h1>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <h2 id="home">Home</h2>
+    <p>Welcome to our website.</p>
+
+    <h2 id="about">About Us</h2>
+    <p>Learn more about our institute.</p>
+
+    <h2 id="courses">Courses</h2>
+    <p>Explore our available courses.</p>
+
+    <h2 id="contact">Contact Us</h2>
+    <p>Contact us for more information.</p>
+
+</body>
+</html>
+```
+
+---
+# 15.0 CSS Dropdown Menu
+
+A **CSS Dropdown Menu** is a navigation menu that displays additional options when the user **hovers over or activates** a main menu item.
+
+For example, when the user moves the mouse over **Courses**, a submenu may display **HTML, CSS, JavaScript**, and **PHP**.
+
+---
+
+## 15.1 How a Dropdown Menu Works
+
+1. **HTML** creates the main menu and submenu items.
+2. **CSS** styles the menu using colors, spacing, and borders.
+3. The **`:hover`** pseudo-class displays the dropdown when the mouse pointer moves over the parent item.
+4. The **`position`** property controls where the submenu appears.
+
+---
+
+## 15.2 Important CSS Properties
+
+### 1. `position: relative`
+
+Sets the parent menu item as the **positioning reference** for its dropdown.
+
+```css
+.dropdown {
+    position: relative;
+}
+```
+
+---
+
+### 2. `position: absolute`
+
+Positions the dropdown submenu **relative to its positioned parent**.
+
+```css
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+```
+
+- `top: 100%` – Places the submenu **immediately below** the parent.
+- `left: 0` – Aligns the submenu with the **parent's left edge**.
+
+---
+
+### 3. `display: none`
+
+**Hides** the submenu initially.
+
+```css
+.dropdown-content {
+    display: none;
+}
+```
+
+---
+
+### 4. `display: block`
+
+**Displays** the submenu when the parent item is hovered over.
+
+```css
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+```
+
+---
+
+### 5. `:hover`
+
+Applies styles when the mouse pointer is **over an element**.
+
+```css
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+```
+
+---
+
+## 15.3 Complete HTML Example of a CSS Dropdown Menu
+
+Copy this complete code into an online HTML editor to run it.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Dropdown Menu</title>
+
+    <style>
+        /* Main navigation menu */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        /* Display main menu items horizontally */
+        .menu > li {
+            display: inline-block;
+        }
+
+        /* Style all menu links */
+        li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+
+        /* Hover effect for menu links */
+        li a:hover {
+            background-color: green;
+        }
+
+        /* Dropdown parent */
+        .dropdown {
+            position: relative;
+        }
+
+        /* Hide the submenu initially */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 160px;
+            background-color: #f1f1f1;
+        }
+
+        /* Style submenu links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+        }
+
+        /* Submenu hover effect */
+        .dropdown-content a:hover {
+            background-color: lightblue;
+        }
+
+        /* Display submenu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Dropdown Menu</h1>
+
+    <ul class="menu">
+        <li><a href="#home">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#courses">Courses ▼</a>
+
+            <div class="dropdown-content">
+                <a href="#html">HTML</a>
+                <a href="#css">CSS</a>
+                <a href="#javascript">JavaScript</a>
+                <a href="#php">PHP</a>
+            </div>
+        </li>
+
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <h2 id="home">Home</h2>
+    <p>Welcome to our website.</p>
+
+    <h2 id="courses">Courses</h2>
+    <p id="html">HTML: Structure of web pages.</p>
+    <p id="css">CSS: Styling of web pages.</p>
+    <p id="javascript">JavaScript: Interactive web pages.</p>
+    <p id="php">PHP: Server-side programming.</p>
+
+    <h2 id="about">About Us</h2>
+    <p>Learn more about our institute.</p>
+
+    <h2 id="contact">Contact Us</h2>
+    <p>Contact us for more information.</p>
+
+</body>
+</html>
+```
+
+---
+
+
+## 15.4 Online Practical
+
+**W3Schools — CSS Dropdowns**
+
+Learn and test dropdown menus using an online editor.
+
+👉 [Open CSS Dropdown Tutorial](https://www.w3schools.com/css/css_dropdowns.asp)
+---
+# 16.0 CSS Image Gallery
+
+A **CSS Image Gallery** is a collection of images displayed in an organized layout on a webpage. CSS is used to control the **image size, spacing, borders, alignment, and hover effects**.
+
+> Image galleries are commonly used on **photography websites**, **institute websites**, **product pages**, **travel websites**, and **portfolios**.
+
+---
+
+## 16.1 Important CSS Properties Used in Image Gallery
+
+### 16.1.1 `width` and `height`
+
+**Definition:** These properties specify the **width and height** of an image or its container.
+
+### Syntax:
+```css
+img {
+    width: 200px;
+    height: 150px;
+}
+```
+
+### Common values:
+- `200px` – Sets a fixed width of 200 pixels.
+- `150px` – Sets a fixed height of 150 pixels.
+- `100%` – Makes the image fill the width of its container.
+
+---
+
+### 16.1.2 `object-fit`
+
+**Definition:** Controls **how an image fits** inside its specified width and height.
+
+### Syntax:
+```css
+img {
+    object-fit: cover;
+}
+```
+
+### Common values:
+- `cover` – Fills the image area while preserving aspect ratio; some parts may be cropped.
+- `contain` – Displays the complete image while preserving aspect ratio; empty space may remain.
+- `fill` – Stretches the image to fill the specified dimensions, potentially distorting it.
+- `none` – Displays the image at its natural size.
+
+---
+
+### 16.1.3 `border`
+
+**Definition:** Adds a **border** around an image or gallery item.
+
+### Example:
+```css
+img {
+    border: 2px solid black;
+}
+```
+
+- `2px` – Border thickness.
+- `solid` – Continuous border line.
+- `black` – Border color.
+
+---
+
+### 16.1.4 `padding`
+
+**Definition:** Adds space **between the content and the border** of an element.
+
+### Example:
+```css
+.gallery-item {
+    padding: 8px;
+}
+```
+
+---
+
+### 16.1.5 `margin`
+
+**Definition:** Adds space **outside** an element, separating gallery items from one another.
+
+### Example:
+```css
+.gallery-item {
+    margin: 10px;
+}
+```
+
+---
+
+### 16.1.6 `float`
+
+**Definition:** Positions an element to the **left or right**, allowing surrounding content to flow around it. It is sometimes used in basic image gallery examples.
+
+### Example:
+```css
+.gallery-item {
+    float: left;
+}
+```
+
+---
+
+### 16.1.7 `opacity`
+
+**Definition:** Controls the **transparency** of an image or element.
+
+### Example:
+```css
+img {
+    opacity: 0.7;
+}
+```
+
+### Common values:
+- `1` – Fully visible.
+- `0.7` – Partially transparent.
+- `0.5` – 50% opacity.
+- `0` – Fully transparent.
+
+---
+
+### 16.1.8 `:hover`
+
+**Definition:** Applies CSS styles when the **mouse pointer moves over** an element.
+
+### Example:
+```css
+.gallery-item:hover {
+    border-color: green;
+}
+```
+
+---
+
+## 16.2 Complete HTML Example of CSS Image Gallery
+
+This example creates a simple image gallery with three images, borders, spacing, and a hover effect.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Image Gallery</title>
+
+    <style>
+        /* Style the webpage */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        /* Gallery container */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Individual gallery items */
+        .gallery-item {
+            width: 250px;
+            padding: 8px;
+            margin: 5px;
+            border: 2px solid #cccccc;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        /* Images inside gallery items */
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        /* Image hover effect */
+        .gallery-item:hover {
+            border-color: green;
+        }
+
+        .gallery-item:hover img {
+            opacity: 1;
+        }
+
+        /* Image description */
+        .description {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Image Gallery</h1>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="flower.jpg" alt="Flowers">
+            <div class="description">Beautiful Flowers</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="mountain.jpg" alt="Mountains">
+            <div class="description">Mountain View</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="nature.jpg" alt="Nature">
+            <div class="description">Green Nature</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
+
+> **Note:** Save `flower.jpg`, `mountain.jpg`, and `nature.jpg` in the same folder as the HTML file, or change the image paths to match their actual locations.
+
+---
+
+
+
+## 16.3 Online Practical Platforms
+
+**W3Schools — CSS Image Gallery**
+
+Follow a beginner-friendly example and experiment with gallery styling.
+
+👉 [Open Image Gallery Tutorial](https://www.w3schools.com/css/css_image_gallery.asp)
