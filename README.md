@@ -10074,3 +10074,311 @@ selector {
 </body>
 </html>
 ```
+
+---
+# 10.5 CSS Text Properties
+
+## 10.5.1 `color`
+
+Sets the **text color**.
+
+```css
+p {
+    color: blue;
+}
+```
+
+---
+
+## 10.5.2 `text-align`
+
+Aligns text **horizontally**.
+
+### Common values:
+- `left` – Aligns text to the left.
+- `right` – Aligns text to the right.
+- `center` – Centers text.
+- `justify` – Spreads text evenly across the line.
+
+```css
+p {
+    text-align: center;
+}
+```
+
+---
+
+## 10.5.3 `text-decoration`
+
+Adds or removes **decorative lines** on text.
+
+### Common values:
+- `none` – Removes decoration.
+- `underline` – Adds a line below text.
+- `overline` – Adds a line above text.
+- `line-through` – Adds a line through text.
+
+```css
+a {
+    text-decoration: none;
+}
+```
+
+---
+
+## 10.5.4 `text-transform`
+
+Changes the **capitalization** of text.
+
+### Common values:
+- `uppercase` – Converts text to uppercase.
+- `lowercase` – Converts text to lowercase.
+- `capitalize` – Capitalizes the first letter of each word.
+- `none` – Keeps the original capitalization.
+
+```css
+h2 {
+    text-transform: uppercase;
+}
+```
+
+---
+
+## 10.5.5 `text-indent`
+
+Sets the **indentation** of the first line of text.
+
+```css
+p {
+    text-indent: 30px;
+}
+```
+
+---
+
+## 10.5.6 `letter-spacing`
+
+Sets the **space between characters**.
+
+```css
+h1 {
+    letter-spacing: 3px;
+}
+```
+
+---
+
+## 10.5.7 `word-spacing`
+
+Sets the **space between words**.
+
+```css
+p {
+    word-spacing: 8px;
+}
+```
+
+---
+
+## 10.5.8 `line-height`
+
+Sets the **space between lines** of text.
+
+```css
+p {
+    line-height: 1.8;
+}
+```
+
+---
+
+## 10.5.9 `text-shadow`
+
+Adds a **shadow behind text**.
+
+### Syntax:
+```css
+selector {
+    text-shadow: horizontal vertical blur color;
+}
+```
+
+### Example:
+```css
+h1 {
+    text-shadow: 2px 2px 4px gray;
+}
+```
+
+---
+
+# 10.6 CSS Font Properties
+
+## 10.6.1 `font-family`
+
+Specifies the **font type**.
+
+```css
+p {
+    font-family: Arial, sans-serif;
+}
+```
+
+---
+
+## 10.6.2 `font-size`
+
+Sets the **size of the text**.
+
+### Common values: `16px`, `20px`, `1em`, `1.5rem`.
+
+```css
+p {
+    font-size: 18px;
+}
+```
+
+---
+
+## 10.6.3 `font-weight`
+
+Sets the **thickness of the text**.
+
+### Common values:
+- `normal` – Normal thickness.
+- `bold` – Bold text.
+- `100` to `900` – Numeric font weights, where supported by the font.
+
+```css
+h1 {
+    font-weight: bold;
+}
+```
+
+---
+
+## 10.6.4 `font-style`
+
+Specifies the **style of the text**.
+
+### Common values:
+- `normal` – Normal text.
+- `italic` – Italic text.
+- `oblique` – Slanted text.
+
+```css
+p {
+    font-style: italic;
+}
+```
+
+---
+
+## 10.6.5 `font-variant`
+
+Displays text using **small capital letters** when supported.
+
+### Common values:
+- `normal` – Normal text.
+- `small-caps` – Displays lowercase letters as smaller capital letters.
+
+```css
+p {
+    font-variant: small-caps;
+}
+```
+
+---
+
+## 10.6.6 `font` Shorthand Property
+
+Combines multiple font properties into **one declaration**.
+
+```css
+p {
+    font: italic bold 18px Arial, sans-serif;
+}
+```
+
+> This specifies **italic style**, **bold weight**, **18px size**, and the **Arial font family**.
+
+---
+
+## 10.7 Complete HTML Example: CSS Text and Font Properties
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Text and Font Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px lightgray;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        p {
+            color: darkgreen;
+            text-align: justify;
+            text-indent: 30px;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .small-caps {
+            font-variant: small-caps;
+        }
+
+        .strike {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Text and Font</h1>
+
+    <h2>Text Properties</h2>
+
+    <p>
+        CSS text properties control text alignment, color,
+        spacing, decoration, and transformation.
+    </p>
+
+    <p class="small-caps">
+        This paragraph uses small capital letters.
+    </p>
+
+    <p class="strike">
+        This text has a line through it.
+    </p>
+
+    <a href="#">Visit Website</a>
+
+</body>
+</html>
+```
+
+---
