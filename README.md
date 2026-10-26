@@ -188,6 +188,9 @@ This module introduces students to web designing, even if they have no previous 
   - [8.4 CSS Height and Width Properties](#84-css-height-and-width-properties)
 - 9.0 [CSS Margin and CSS Padding](#90-css-margin-and-css-padding)
 - 10.0 [CSS Box Model](#100-css-box-model)
+- 10.5 [CSS Text Properties](#105-css-text-properties)
+- 10.6 [CSS Font Properties](#106-css-font-properties)
+- 10.7 [Complete HTML Example: CSS Text and Font Properties](#107-complete-html-example-css-text-and-font-properties)
 ## 
 ---
 
