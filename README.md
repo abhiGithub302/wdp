@@ -188,6 +188,7 @@ This module introduces students to web designing, even if they have no previous 
   - [8.4 CSS Height and Width Properties](#84-css-height-and-width-properties)
 - 9.0 [CSS Margin and CSS Padding](#90-css-margin-and-css-padding)
 - 10.0 [CSS Box Model](#100-css-box-model)
+  - [Understanding Width and Height Calculation (Box Sizing)](#understanding-width-and-height-calculation-box-sizing)
 - 10.5 [CSS Text Properties](#105-css-text-properties)
 - 10.6 [CSS Font Properties](#106-css-font-properties)
 - 10.7 [Complete HTML Example: CSS Text and Font Properties](#107-complete-html-example-css-text-and-font-properties)
@@ -202,7 +203,16 @@ This module introduces students to web designing, even if they have no previous 
   - [12.3 `list-style-image`](#123-list-style-image-property)
   - [12.4 Complete HTML Example](#124-complete-html-example-of-css-list-properties)
 - 13.0 [CSS Tables](#130-css-tables)
-  - [13.1–13.10 Table Properties](#131-border-property)
+  - [13.1 `border`](#131-border-property)
+  - [13.2 `border-collapse`](#132-border-collapse-property)
+  - [13.3 `border-spacing`](#133-border-spacing-property)
+  - [13.4 `width`](#134-width-property)
+  - [13.5 `height`](#135-height-property)
+  - [13.6 `padding`](#136-padding-property)
+  - [13.7 `text-align`](#137-text-align-property)
+  - [13.8 `vertical-align`](#138-vertical-align-property)
+  - [13.9 `background-color`](#139-background-color-property)
+  - [13.10 `caption-side`](#1310-caption-side-property)
   - [13.11 Complete HTML Example](#1311-complete-html-example-of-css-table-properties)
 - 14.0 [CSS Menu Design](#140-css-menu-design)
   - [14.1 Types of CSS Menus](#141-types-of-css-menus)
@@ -10059,7 +10069,55 @@ selector {
     box-sizing: border-box;
 }
 ```
+# Understanding Width and Height Calculation (Box Sizing)
 
+## 1. When `box-sizing: content-box` is used
+
+The given **width** and **height** apply **only to the content**.
+```
+| Property               | Width   |    Height |
+| Content                | 300px   |    150px  |
+| Padding (both sides)   | 40px    |    40px   |
+| Border (both sides)    | 10px    |    10px   |
+| Total size             | 350px   |    200px  |
+```
+### Calculation:
+- **Total width** = 300 + 40 + 10 = **350px**
+- **Total height** = 150 + 40 + 10 = **200px**
+
+---
+
+## 2. When `box-sizing: border-box` is used
+
+The given **width** and **height** **include** the content, padding, and border.
+```
+| Property               | Width   | Height |
+| Total size             | 300px   | 150px  |
+| Padding (both sides)   | 40px    | 40px   |
+| Border (both sides)    | 10px    | 10px   |
+| Actual content size    | 250px   | 100px  |
+```
+### Calculation:
+- **Content width** = 300 − 40 − 10 = **250px**
+- **Content height** = 150 − 40 − 10 = **100px**
+
+---
+
+## Visual Comparison
+
+### `content-box` — Total width: 350px
+
+![Content Box Model](content-box.png)
+
+### `border-box` — Total width: 300px
+
+![Border Box Model](border-box.png)
+---
+
+## Important Point
+
+- **`content-box`**: The **total size increases** when padding and border are added.
+- **`border-box`**: The **total size remains fixed** at the specified width and height; the content area adjusts to accommodate padding and border.
 ---
 
 ## 10.4 Complete HTML Example
