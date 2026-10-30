@@ -196,6 +196,8 @@ This module introduces students to web designing, even if they have no previous 
   - [11.1 Block-Level Elements](#111-block-level-elements)
   - [11.2 Inline Elements](#112-inline-elements)
   - [11.3 CSS `display` Property](#113-css-display-property)
+  - [11.4.5 `display: flex` Property](#1145-display-flex-property)
+  - [11.4.6 `display: grid` Property](#1146-display-grid-property)
   - [11.5 Complete HTML Example](#115-complete-html-example)
 - 12.0 [CSS List Properties](#120-css-list-properties)
   - [12.1 `list-style-type`](#121-list-style-type-property)
@@ -10560,6 +10562,321 @@ Displays elements **inline** while allowing **width and height** to be set.
 ```
 
 ---
+# 11.4.5 `display: flex` Property
+
+The CSS `display: flex` property is used to arrange elements in a **flexible layout**. It makes an element a **flex container** and arranges its direct child elements along a **row by default**.
+
+It is useful for creating navigation menus, card layouts, and aligning items horizontally or vertically.
+
+### Syntax
+```css
+.container {
+    display: flex;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Flex Example</title>
+
+    <style>
+        /* Flex container */
+        .container {
+            display: flex;
+            background-color: lightgray;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        /* Flex items */
+        .box {
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Flex Layout</h2>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+</html>
+```
+
+> **Output explanation:** The three boxes appear **side by side in a row** because `display: flex` arranges the direct children horizontally by default.
+
+---
+
+## Common Flex Properties
+
+### 1. `flex-direction`
+
+Specifies the **direction** in which flex items are arranged.
+
+```css
+.container {
+    display: flex;
+    flex-direction: row;
+}
+```
+
+**Common values:**
+- `row` – Arranges items horizontally from left to right (default).
+- `row-reverse` – Arranges items horizontally in reverse order.
+- `column` – Arranges items vertically.
+- `column-reverse` – Arranges items vertically in reverse order.
+
+---
+
+### 2. `justify-content`
+
+Controls the **distribution of flex items along the main axis**.
+
+```css
+.container {
+    display: flex;
+    justify-content: center;
+}
+```
+
+**Common values:**
+- `flex-start` – Places items at the beginning.
+- `flex-end` – Places items at the end.
+- `center` – Places items in the center.
+- `space-between` – Places equal space between items.
+- `space-around` – Places space around each item.
+- `space-evenly` – Distributes space evenly between items and the container edges.
+
+---
+
+### 3. `align-items`
+
+Controls the **alignment of flex items along the cross axis**.
+
+```css
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+**Common values:**
+- `stretch` – Stretches items by default when their cross size is automatic.
+- `flex-start` – Aligns items at the beginning of the cross axis.
+- `flex-end` – Aligns items at the end of the cross axis.
+- `center` – Centers items along the cross axis.
+
+---
+
+### 4. `flex-wrap`
+
+Controls whether flex items **stay on one line** or **move to additional lines**.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+
+**Common values:**
+- `nowrap` – Keeps items on one line (default).
+- `wrap` – Allows items to move onto multiple lines.
+- `wrap-reverse` – Wraps items onto multiple lines in reverse cross-axis order.
+
+---
+
+### 5. `gap`
+
+Specifies the **space between flex items**.
+
+```css
+.container {
+    display: flex;
+    gap: 20px;
+}
+```
+
+- `10px` – Adds a 10-pixel gap.
+- `20px` – Adds a 20-pixel gap.
+- `0` – Removes the gap.
+
+---
+
+# 11.4.6 `display: grid` Property
+
+The CSS `display: grid` property is used to arrange elements in a **two-dimensional layout**, using **rows and columns**.
+
+It is useful for creating image galleries, product grids, dashboards, and webpage layouts.
+
+### Syntax
+```css
+.container {
+    display: grid;
+}
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Example</title>
+
+    <style>
+        /* Grid container */
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        /* Grid items */
+        .box {
+            background-color: seagreen;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Grid Layout</h2>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+    </div>
+
+</body>
+</html>
+```
+
+> **Output explanation:** The six boxes are arranged in **three columns and two rows** because `grid-template-columns: auto auto auto` creates three columns.
+
+---
+
+## Common Grid Properties
+
+### 1. `grid-template-columns`
+
+Specifies the **number and width of grid columns**.
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+}
+```
+
+**Common values:**
+- `auto auto auto` – Creates three columns sized automatically.
+- `100px 200px 100px` – Creates three columns with specified widths.
+- `1fr 1fr 1fr` – Creates three equal-width columns.
+- `repeat(3, 1fr)` – Creates three equal-width columns using shorthand.
+
+---
+
+### 2. `grid-template-rows`
+
+Specifies the **height of grid rows**.
+
+```css
+.container {
+    display: grid;
+    grid-template-rows: 100px 150px;
+}
+```
+
+**Common values:**
+- `100px 150px` – Sets two row heights.
+- `auto auto` – Lets the browser determine the row heights based on content and layout.
+- `1fr 1fr` – Gives two rows equal shares of the available grid space when that space is available.
+
+---
+
+### 3. `gap`
+
+Specifies the **space between rows and columns**.
+
+```css
+.container {
+    display: grid;
+    gap: 15px;
+}
+```
+
+**Common values:**
+- `10px` – Adds a 10-pixel gap.
+- `20px` – Adds a 20-pixel gap.
+- `0` – Removes the gap.
+
+You can also specify row and column gaps separately:
+
+```css
+.container {
+    row-gap: 10px;
+    column-gap: 20px;
+}
+```
+
+---
+
+### 4. `justify-items`
+
+Controls the **alignment of grid items within their grid areas along the inline axis**.
+
+```css
+.container {
+    display: grid;
+    justify-items: center;
+}
+```
+
+**Common values:**
+- `stretch` – Stretches items by default when their size is automatic.
+- `start` – Aligns items at the start.
+- `end` – Aligns items at the end.
+- `center` – Centers items within their grid areas.
+
+---
+
+### 5. `align-items`
+
+Controls the **alignment of grid items within their grid areas along the block axis**.
+
+```css
+.container {
+    display: grid;
+    align-items: center;
+}
+```
+
+**Common values:**
+- `stretch` – Stretches items by default when their size is automatic.
+- `start` – Aligns items at the top in the usual horizontal writing mode.
+- `end` – Aligns items at the bottom in the usual horizontal writing mode.
+- `center` – Centers items vertically in the usual horizontal writing mode.
 
 ## 11.5 Complete HTML Example
 
