@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+height:100vh;
+width:100vw;
+}
+.container{
+border:5px solid red;
+ height: 100vh;
+display:grid;
+row-gap:1rem;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+
+
+
+}
+.box{
+
+border:2px solid blue;
+background-color:gray;
+
+
+
+}
+.header,.footer
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.section{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.box3{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+</style>
+</head>
+<body>
+
+<h2>css grid layout</h2>
+
+<div class="container">
+    <div class="box header">Header</div>
+    <div class="box  section">section</div>
+    <div class="box box3">Box 3</div>
+	<div class="box">Box 4</div>
+	<div class="box">Box 5</div>
+	<div class="box footer">Footer</div>
+</div>
+
+</body>
+</html>

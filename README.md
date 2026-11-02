@@ -10638,6 +10638,8 @@ Specifies the **direction** in which flex items are arranged.
 - `column` – Arranges items vertically.
 - `column-reverse` – Arranges items vertically in reverse order.
 
+![Flex Direction](flex_direction.png)
+
 ---
 
 ### 2. `justify-content`
@@ -10659,6 +10661,8 @@ Controls the **distribution of flex items along the main axis**.
 - `space-around` – Places space around each item.
 - `space-evenly` – Distributes space evenly between items and the container edges.
 
+![Justify Content](justify_content.png)
+
 ---
 
 ### 3. `align-items`
@@ -10678,6 +10682,8 @@ Controls the **alignment of flex items along the cross axis**.
 - `flex-end` – Aligns items at the end of the cross axis.
 - `center` – Centers items along the cross axis.
 
+![Main Axis and Cross Axis](cross_main.png)
+
 ---
 
 ### 4. `flex-wrap`
@@ -10695,6 +10701,8 @@ Controls whether flex items **stay on one line** or **move to additional lines**
 - `nowrap` – Keeps items on one line (default).
 - `wrap` – Allows items to move onto multiple lines.
 - `wrap-reverse` – Wraps items onto multiple lines in reverse cross-axis order.
+
+![Flex Wrap](flex_wrap.png)
 
 ---
 
@@ -10774,6 +10782,8 @@ It is useful for creating image galleries, product grids, dashboards, and webpag
 
 > **Output explanation:** The six boxes are arranged in **three columns and two rows** because `grid-template-columns: auto auto auto` creates three columns.
 
+![CSS Grid Layout](grid.png)
+
 ---
 
 ## Common Grid Properties
@@ -10812,6 +10822,8 @@ Specifies the **height of grid rows**.
 - `100px 150px` – Sets two row heights.
 - `auto auto` – Lets the browser determine the row heights based on content and layout.
 - `1fr 1fr` – Gives two rows equal shares of the available grid space when that space is available.
+
+![Grid Template Rows](grid_templete_row.png)
 
 ---
 
