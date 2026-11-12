@@ -1,63 +1,511 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-body{
-height:100vh;
-width:100vw;
-}
-.container{
-border:5px solid red;
- height: 100vh;
-display:grid;
-row-gap:1rem;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>NIELIT Gorakhpur | Official Website</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-}
-.box{
+    <style>
+        /* Universal Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-border:2px solid blue;
-background-color:gray;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.6;
+        }
 
+        /* Navbar */
+        .navbar {
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
 
-}
-.header,.footer
-{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-.section{
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-.box3{
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #173b8f;
+            white-space: nowrap;
+        }
 
-</style>
+        .logo span {
+            color: #f59e0b;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links .contact-btn {
+            background: #173b8f;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 6px;
+        }
+
+        .nav-links .contact-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #173b8f;
+            background: none;
+            border: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #102c70, #2563eb);
+            color: white;
+            padding: 100px 7%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 52px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+            color: #e0eaff;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #f59e0b;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #d97706;
+            transform: translateY(-3px);
+        }
+
+        /* Common Section */
+        .section {
+            padding: 75px 7%;
+            scroll-margin-top: 70px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #173b8f;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #64748b;
+            line-height: 1.9;
+        }
+
+        /* Services Section */
+        .services {
+            background: #f5f7fb;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #173b8f;
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            background: #f5f7fb;
+            padding: 40px 25px;
+            border-radius: 12px;
+        }
+
+        .contact-box p {
+            color: #64748b;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #10234d;
+            color: white;
+            padding: 30px 7%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        /* Tablet Responsive */
+        @media (max-width: 992px) {
+
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                width: 100%;
+                padding-top: 15px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 13px 10px;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .nav-links .contact-btn {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .section {
+                padding: 55px 6%;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Small Mobile */
+        @media (max-width: 380px) {
+            .logo {
+                font-size: 18px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
 
-<h2>css grid layout</h2>
+    <!-- Navigation -->
+    <nav class="navbar">
 
-<div class="container">
-    <div class="box header">Header</div>
-    <div class="box  section">section</div>
-    <div class="box box3">Box 3</div>
-	<div class="box">Box 4</div>
-	<div class="box">Box 5</div>
-	<div class="box footer">Footer</div>
-</div>
+        <div class="logo">
+            NIELIT <span>Gorakhpur</span>
+        </div>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact" class="contact-btn">Contact Us</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <h1>Welcome to NIELIT Gorakhpur</h1>
+
+        <p>
+            Empowering students with digital skills, technology,
+            innovation and quality IT education for a better future.
+        </p>
+
+        <a href="#about" class="hero-btn">Explore More</a>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Learn more about our institution</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                NIELIT Gorakhpur is dedicated to providing quality
+                education and professional training in Information
+                Technology and Electronics. Our objective is to
+                develop technical skills, promote digital literacy
+                and prepare students for emerging technologies.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Explore our major training and technology areas</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>IT Training</h3>
+                <p>
+                    Professional IT training programs to develop
+                    practical technical skills.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>
+                    Learn modern web technologies and build
+                    real-world applications.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔐</div>
+                <h3>Cyber Security</h3>
+                <p>
+                    Develop knowledge of cybersecurity, network
+                    security and digital protection.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you</p>
+        </div>
+
+        <div class="contact-box">
+
+            <h3>NIELIT Gorakhpur</h3>
+
+            <p>Gorakhpur, Uttar Pradesh, India</p>
+
+            <p>For course and training-related enquiries,
+               please contact our institute.</p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 NIELIT Gorakhpur.
+            Designed and developed by OLT Division.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+            const isExpanded = navLinks.classList.contains("active");
+
+            menuToggle.setAttribute("aria-expanded", isExpanded);
+
+            menuToggle.innerHTML = isExpanded ? "✕" : "☰";
+
+        });
+
+        // Close menu after clicking a link
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+                menuToggle.innerHTML = "☰";
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>

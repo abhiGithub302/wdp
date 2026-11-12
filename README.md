@@ -12238,3 +12238,246 @@ This example creates a simple image gallery with three images, borders, spacing,
 Follow a beginner-friendly example and experiment with gallery styling.
 
 👉 [Open Image Gallery Tutorial](https://www.w3schools.com/css/css_image_gallery.asp)
+
+
+---
+# 17.0 CSS Positioning Properties
+
+**CSS Positioning Properties** are used to control the **placement of HTML elements** on a webpage. They specify **where an element should appear** and **how it behaves when the webpage is scrolled**.
+
+CSS provides **five main positioning values**:
+1. `static`
+2. `relative`
+3. `absolute`
+4. `fixed`
+5. `sticky`
+
+---
+
+## 17.1 CSS `position` Property
+
+**Definition:** The `position` property specifies the **positioning method** used for an HTML element.
+
+### Syntax:
+```css
+selector {
+    position: value;
+}
+```
+
+
+---
+
+## 17.2 `position: static`
+
+**Definition:** Static positioning is the **default** positioning method. Elements appear in their **normal document flow**.
+
+### Syntax:
+```css
+.box {
+    position: static;
+}
+```
+
+
+
+### Key points:
+- It is the **default** position of HTML elements.
+- Elements appear in their **normal order**.
+- `top`, `right`, `bottom`, and `left` do **not** reposition static elements.
+
+---
+
+## 17.3 `position: relative`
+
+**Definition:** Relative positioning moves an element from its **original position** without removing its original space from the document flow.
+
+### Syntax:
+```css
+.box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+```
+
+
+
+### Key points:
+- The element moves relative to its **original position**.
+- `top: 20px` moves the element **20px down**.
+- `left: 30px` moves the element **30px right**.
+- Its original space **remains reserved**.
+
+---
+
+## 17.4 `position: absolute`
+
+**Definition:** Absolute positioning **removes an element from the normal document flow** and positions it relative to its **nearest positioned ancestor**. If no such ancestor exists, it uses the initial containing block.
+
+### Syntax:
+```css
+.container {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+```
+
+
+
+### Key points:
+- The element is **removed from normal document flow**.
+- It is positioned relative to its **nearest positioned ancestor**.
+- `top`, `right`, `bottom`, and `left` control its position.
+- A parent with `position: relative` is commonly used as its positioning reference.
+
+---
+
+## 17.5 `position: fixed`
+
+**Definition:** Fixed positioning places an element relative to the **viewport** in normal browser layouts. It generally remains in the **same position** when the page is scrolled.
+
+### Syntax:
+```css
+.box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+```
+
+
+
+### Key points:
+- The element is **removed from normal document flow**.
+- It generally stays in the **same viewport position** during scrolling.
+- It is useful for fixed navigation bars, floating buttons, and help buttons.
+- Certain ancestor properties, such as `transform`, can change its containing block.
+
+---
+
+## 17.6 `position: sticky`
+
+**Definition:** Sticky positioning allows an element to behave like a **relatively positioned element** until it reaches a specified scrolling position. After reaching that position, it **sticks** within its scrolling container.
+
+### Syntax:
+```css
+.box {
+    position: sticky;
+    top: 0;
+}
+```
+
+
+
+### Key points:
+- Initially, the element appears in its **normal position**.
+- When scrolling reaches the specified threshold, it **sticks**.
+- `top: 0` makes it stick to the **top** of its scrolling container.
+- It remains **constrained by its containing block**.
+- It is useful for sticky headers and navigation menus.
+
+---
+
+## 17.7 CSS Offset Properties
+
+The `top`, `right`, `bottom`, and `left` properties specify the **position of an element** when it is positioned.
+
+### Syntax:
+```css
+selector {
+    top: value;
+    right: value;
+    bottom: value;
+    left: value;
+}
+```
+
+### Example:
+```css
+.box {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+```
+
+### Common values:
+- `10px` – Sets an offset of 10 pixels.
+- `20px` – Sets an offset of 20 pixels.
+- `0` – Aligns the corresponding edge with the reference edge.
+- `auto` – Allows the browser to calculate the offset.
+- `10%` – Specifies an offset as a percentage of the relevant containing block dimension.
+
+### Remember:
+```
+| Property | Direction |
+|---|---|
+| `top: 20px` | Moves **down** |
+| `bottom: 20px` | Moves **up** |
+| `left: 20px` | Moves **right** |
+| `right: 20px` | Moves **left** |
+```
+---
+
+## 17.8 Complete HTML Example: 
+
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Position in CSS</title>
+
+    <style>
+        /* Parent container */
+        .container {
+            border: 3px solid red;
+        }
+
+        /* Common styling for all images */
+        img {
+            margin: 20px;
+        }
+
+        /* Apply relative positioning to second image */
+        .img2 {
+            position: relative;
+            top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Relative Positioning</h1>
+
+    <div class="container">
+
+        <img src="msd.jpg" alt="MS Dhoni"
+             width="300" height="300" class="img1">
+
+        <img src="rohit.jpg" alt="Rohit Sharma"
+             width="300" height="300" class="img2">
+
+        <img src="sky.jpg" alt="Suryakumar Yadav"
+             width="300" height="300" class="img3">
+
+        <img src="virat.jpg" alt="Virat Kohli"
+             width="300" height="300" class="img4">
+
+    </div>
+
+</body>
+</html>
+```
+
