@@ -9,6 +9,8 @@ This module introduces students to web designing, even if they have no previous 
 
 # 📚 Table of Contents
 
+
+
 ## Unit 1 — Introduction to Web Designing
 
 ### In this chapter, we will learn:
@@ -230,6 +232,17 @@ This module introduces students to web designing, even if they have no previous 
   - [16.1 CSS Properties Used in an Image Gallery](#161-important-css-properties-used-in-image-gallery)
   - [16.2 Complete HTML Example](#162-complete-html-example-of-css-image-gallery)
   - [16.3 Online Practical Platforms](#163-online-practical-platforms)
+ 
+
+- [17.0 CSS Positioning Properties](#170-css-positioning-properties)
+- [17.1 CSS `position` Property](#171-css-position-property)
+- [17.2 `position: static`](#172-position-static)
+- [17.3 `position: relative`](#173-position-relative)
+- [17.4 `position: absolute`](#174-position-absolute)
+- [17.5 `position: fixed`](#175-position-fixed)
+- [17.6 `position: sticky`](#176-position-sticky)
+- [17.7 CSS Offset Properties](#177-css-offset-properties)
+- [17.8 Complete HTML Example](#178-complete-html-example)
 
 ---
 
