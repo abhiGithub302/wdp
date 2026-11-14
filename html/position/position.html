@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css position</title>
+    <style>
+        .container{
+            border: 3px solid red;
+            margin: 20px;
+            padding: 20px;
+            height: 5000px;
+            /* position: relative; */
+            background-color: aqua;
+        }
+        /* .img2{
+            position: relative;
+            top: 50px;
+            left: 30px;
+        } */
+         /* .img2{
+            position:absolute;
+            top: 40px;
+         } */
+          /* .img3{
+            position: fixed;
+            top: 30px;
+          } */
+           .img4{
+            position: sticky;
+            top: 30px;
+           }
+           .box{
+            border: 4px solid green;
+            background-color: yellow;
+            height: 500px;
+           }
+        
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="msd.jpg" 
+           alt="msd pic" 
+           height="300px"
+           width="300px"
+           class="img1" />
+      <img src="virat.jpg" alt="virat pic" height="300px" width="300px" class="img2"/>
+      <img src="rohit.jpg" alt="rohit pic" height="300px" width="300px" class="img3" />
+      <img src="sky.jpg" alt="sky pic" height="300px" width="300px"  class="img4"/>
+    </div>
+    <div class="box">
+
+    </div>
+  </body>
+</html>

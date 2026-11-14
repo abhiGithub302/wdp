@@ -244,6 +244,98 @@ This module introduces students to web designing, even if they have no previous 
 - [17.7 CSS Offset Properties](#177-css-offset-properties)
 - [17.8 Complete HTML Example](#178-complete-html-example)
 
+## Unit 5 — CSS Framework (W3.CSS)
+
+1. [5.1 W3.CSS Framework](#51-w3css-framework)
+   - [5.1.1 Introduction to CSS Framework](#511-introduction-to-css-framework)
+   - [5.1.2 What is W3.CSS?](#512-what-is-w3css)
+   - [5.1.3 Features of W3.CSS](#513-features-of-w3css)
+   - [5.1.4 What is Responsive Design?](#514-what-is-responsive-design)
+2. [5.2 W3.CSS Introduction](#52-w3css-introduction)
+   - [5.2.1 How to Add W3.CSS?](#521-how-to-add-w3css)
+   - [5.2.2 Using CDN](#522-using-cdn)
+   - [5.2.3 Using a Downloaded W3.CSS File](#523-using-a-downloaded-w3css-file)
+3. [5.3 W3.CSS Colors](#53-w3css-colors)
+   - [5.3.1 Common W3.CSS Colors](#531-common-w3css-colors)
+   - [5.3.2 Important Color Classes](#532-important-color-classes)
+   - [5.3.3 Background Color Using `w3-color`](#533-background-color-using-w3-color)
+   - [5.3.4 Text Color Using `w3-text-color`](#534-text-color-using-w3-text-color)
+   - [5.3.5 Background Hover Color Using `w3-hover-color`](#535-background-hover-color-using-w3-hover-color)
+   - [5.3.6 Text Hover Color Using `w3-hover-text-color`](#536-text-hover-color-using-w3-hover-text-color)
+4. [5.4 W3.CSS Containers](#54-w3css-containers)
+   - [5.4.1 What is a Container?](#541-what-is-a-container)
+   - [5.4.2 HTML Tags That Can Use W3.CSS Containers](#542-html-tags-that-can-use-w3css-containers)
+   - [5.4.3 Basic Container Syntax](#543-basic-container-syntax)
+   - [5.4.4 Combining Multiple Classes in a Container](#544-combining-multiple-classes-in-a-container)
+   - [5.4.5 Using Containers with Different HTML Tags](#545-using-containers-with-different-html-tags)
+   - [5.4.6 Important Properties of W3.CSS Containers](#546-important-properties-of-w3css-containers)
+5. [5.5 W3.CSS Panels](#55-w3css-panels)
+   - [5.5.1 What is a Panel?](#551-what-is-a-panel)
+   - [5.5.2 Difference Between Container and Panel](#552-difference-between-container-and-panel)
+   - [5.5.3 Basic Panel Syntax](#553-basic-panel-syntax)
+   - [5.5.4 Panel as a Quote](#554-panel-as-a-quote)
+   - [5.5.5 Panel with Card Effect](#555-panel-with-card-effect)
+   - [5.5.6 Panel with Rounded Corners](#556-panel-with-rounded-corners)
+6. [5.6 W3.CSS Borders](#56-w3css-borders)
+   - [5.6.1 Introduction to W3.CSS Borders](#561-introduction-to-w3css-borders)
+   - [5.6.2 Border Classes](#562-border-classes)
+   - [5.6.3 Border Color Classes](#563-border-color-classes)
+   - [5.6.4 Hover Border Color](#564-hover-border-color)
+   - [5.6.5 Thick Border Classes](#565-thick-border-classes)
+   - [5.6.6 Rounded Border Example](#566-rounded-border-example)
+7. [5.7 W3.CSS Fonts](#57-w3css-fonts)
+   - [5.7.1 Introduction to W3.CSS Fonts](#571-introduction-to-w3css-fonts)
+   - [5.7.2 Default Heading Styles](#572-default-heading-styles)
+   - [5.7.3 Font Size Classes](#573-font-size-classes)
+   - [5.7.4 Example of Font Size Classes](#574-example-of-font-size-classes)
+   - [5.7.5 Overriding W3.CSS Font Styles](#575-overriding-w3css-font-styles)
+8. [5.8 W3.CSS Text](#58-w3css-text)
+   - [5.8.1 Introduction to W3.CSS Text](#581-introduction-to-w3css-text)
+   - [5.8.2 Text Alignment Classes](#582-text-alignment-classes)
+   - [5.8.3 Wide Text – `w3-wide`](#583-wide-text--w3-wide)
+   - [5.8.4 Text Opacity – `w3-opacity`](#584-text-opacity--w3-opacity)
+   - [5.8.5 Additional Text Effects Using CSS Properties](#585-additional-text-effects-using-css-properties)
+9. [5.9 W3.CSS Tables](#59-w3css-tables)
+   - [5.9.1 Introduction to W3.CSS Tables](#591-introduction-to-w3css-tables)
+   - [5.9.2 Important W3.CSS Table Classes](#592-important-w3css-table-classes)
+   - [5.9.3 Basic Table Using `w3-table`](#593-basic-table-using-w3-table)
+   - [5.9.4 Striped Table – `w3-striped`](#594-striped-table--w3-striped)
+   - [5.9.5 Bordered Table – `w3-bordered` and `w3-border`](#595-bordered-table--w3-bordered-and-w3-border)
+   - [5.9.6 Using `w3-table-all`](#596-using-w3-table-all)
+   - [5.9.7 Centered Table – `w3-centered`](#597-centered-table--w3-centered)
+   - [5.9.8 Hoverable Table – `w3-hoverable`](#598-hoverable-table--w3-hoverable)
+   - [5.9.9 Colored Hover Effect](#599-colored-hover-effect)
+   - [5.9.10 Table with Card Effect](#5910-table-with-card-effect)
+   - [5.9.11 Responsive Table – `w3-responsive`](#5911-responsive-table--w3-responsive)
+   - [5.9.12 Table Size Classes](#5912-table-size-classes)
+10. [5.10 W3.CSS Lists](#510-w3css-lists)
+    - [5.10.1 Introduction to W3.CSS Lists](#5101-introduction-to-w3css-lists)
+    - [5.10.2 Designer List – `w3-ul`](#5102-designer-list--w3-ul)
+    - [5.10.3 Bordered List – `w3-border`](#5103-bordered-list--w3-border)
+    - [5.10.4 List with Card Effect – `w3-card-4`](#5104-list-with-card-effect--w3-card-4)
+    - [5.10.5 Centered and Colored List](#5105-centered-and-colored-list)
+    - [5.10.6 Hoverable List – `w3-hoverable`](#5106-hoverable-list--w3-hoverable)
+    - [5.10.7 List with Images](#5107-list-with-images)
+    - [5.10.8 List Width Using Inline CSS](#5108-list-width-using-inline-css)
+    - [5.10.9 List Size Classes](#5109-list-size-classes)
+11. [5.11 W3.CSS Images](#511-w3css-images)
+    - [5.11.1 Introduction to W3.CSS Images](#5111-introduction-to-w3css-images)
+    - [5.11.2 Rounded Image – `w3-round`](#5112-rounded-image--w3-round)
+    - [5.11.3 Circular Image – `w3-circle`](#5113-circular-image--w3-circle)
+    - [5.11.4 Image with Border and Padding](#5114-image-with-border-and-padding)
+    - [5.11.5 Image with Card Effect](#5115-image-with-card-effect)
+    - [5.11.6 Text Display on Images](#5116-text-display-on-images)
+    - [5.11.7 Responsive Images](#5117-responsive-images)
+    - [5.11.8 Image Opacity Classes](#5118-image-opacity-classes)
+    - [5.11.9 Grayscale Image Effects](#5119-grayscale-image-effects)
+    - [5.11.10 Sepia Image Effects](#51110-sepia-image-effects)
+    - [5.11.11 Image Hover Effects](#51111-image-hover-effects)
+    - [5.11.12 Removing Opacity on Hover](#51112-removing-opacity-on-hover)
+12. [5.12 W3.CSS Grid](#512-w3css-grid)
+    - [5.12.1 Introduction to W3.CSS Grid](#5121-introduction-to-w3css-grid)
+    - [5.12.2 Understanding the 12-Column Grid System](#5122-understanding-the-12-column-grid-system)
+
+
 ---
 
 ## 1. Internet
@@ -12494,3 +12586,1148 @@ selector {
 </html>
 ```
 
+
+
+# UNIT 5: CSS FRAMEWORK – W3.CSS
+
+
+
+## 5.1 W3.CSS Framework
+
+### 5.1.1 Introduction to CSS Framework
+
+A **CSS Framework** is a collection of **predefined CSS rules and classes** that helps developers design webpages quickly and easily.
+
+Instead of writing CSS code for every element, developers can use predefined classes provided by a framework.
+
+**Examples of CSS Frameworks:**
+1. W3.CSS
+2. Bootstrap
+3. Foundation
+4. Bulma
+5. Tailwind CSS
+
+### 5.1.2 What is W3.CSS?
+
+**W3.CSS** is a CSS framework that enables programmers to develop fully styled webpages with **minimum effort**.
+
+Initially, it was aimed at providing an alternative to **Bootstrap**, another popular CSS framework.
+
+### 5.1.3 Features of W3.CSS
+
+1. **Responsive Design:** Supports different display sizes, such as computers, tablets and mobile phones.
+2. **Faster Loading:** It is lightweight and helps webpages load quickly.
+3. **Less Coding:** Provides predefined classes, reducing the amount of CSS code required.
+4. **High-quality Design:** Provides ready-made styles for HTML elements.
+5. **CSS Based:** It is based only on CSS. Basic W3.CSS styling does not require a JavaScript file.
+
+### 5.1.4 What is Responsive Design?
+
+**Responsive Design** refers to the ability of a webpage to **automatically adjust its layout and content** according to the screen size of the device.
+
+For example:
+- On a **desktop**, three columns may appear side by side.
+- On a **tablet**, the columns may become narrower.
+- On a **mobile phone**, the columns may appear one below another.
+
+---
+
+## 5.2 W3.CSS Introduction
+
+### 5.2.1 How to Add W3.CSS?
+
+W3.CSS can be added to an HTML webpage in **two ways**:
+1. Using **CDN** (Content Delivery Network).
+2. Using a **downloaded** W3.CSS file.
+
+### 5.2.2 Using CDN
+
+**CDN** stands for **Content Delivery Network**.
+
+A CDN delivers required files through a network of servers. We can use the W3.CSS file hosted by W3Schools by adding its stylesheet link in the HTML document.
+
+**Syntax:**
+```html
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+```
+
+**Example:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3.CSS CDN Example</title>
+
+    <link rel="stylesheet"
+    href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+    <div class="w3-container w3-indigo">
+        <h2>Welcome to W3.CSS</h2>
+        <p>This webpage uses W3.CSS through CDN.</p>
+    </div>
+
+</body>
+</html>
+```
+
+> **Important:** An internet connection is required to load the stylesheet from the CDN.
+
+### 5.2.3 Using a Downloaded W3.CSS File
+
+We can also download the W3.CSS file and use it **locally**.
+
+**Steps:**
+1. Open the W3.CSS download page.
+2. Download the `w3.css` file.
+3. Copy the file into the same folder where your HTML file is stored.
+4. Link the downloaded file inside the `<head>` section.
+
+**Syntax:**
+```html
+<link rel="stylesheet" href="w3.css">
+```
+
+**Folder Structure:**
+```
+MyWebsite/
+│
+├── index.html
+└── w3.css
+```
+
+### Difference Between CDN and Downloaded File
+```
+| CDN                                         | Downloaded File 
+
+| Uses an online stylesheet                   | Uses a local stylesheet 
+| Internet is required to load the stylesheet | Internet is not required after downloading 
+| Uses an online URL                          | Uses a local file path 
+| No need to store the CSS file locally       | CSS file must be stored with the project 
+```
+---
+
+## 5.3 W3.CSS Colors
+
+W3.CSS provides **predefined color classes** that can be used directly in HTML elements.
+
+These classes help us change the **background color, text color** and **hover color** without writing separate CSS rules.
+
+### 5.3.1 Common W3.CSS Colors
+```
+| Color  | Class             | Color       | Class                |
+|--------|-------------------|-------------|----------------------|
+| Red    | `w3-red`          | Purple      | `w3-purple`          |
+| Indigo | `w3-indigo`       | Light Blue  | `w3-light-blue`      |
+| Aqua   | `w3-aqua`         | Green       | `w3-green`           |
+| Lime   | `w3-lime`         | Khaki       | `w3-khaki`           |
+| Amber  | `w3-amber`        | Deep Orange | `w3-deep-orange`     |
+| Brown  | `w3-brown`        | Grey        | `w3-grey`            |
+| Pink   | `w3-pink`         | Deep Purple | `w3-deep-purple`     |
+| Blue   | `w3-blue`         | Cyan        | `w3-cyan`            |
+| Teal   | `w3-teal`         | Light Green | `w3-light-green`     |
+| Yellow | `w3-yellow`       | Orange      | `w3-orange`          |
+```
+### 5.3.2 Important Color Classes
+
+W3.CSS provides **four important classes** for coloring HTML elements.
+```
+| Class                  | Purpose                              |
+|------------------------|--------------------------------------|
+| `w3-color`             | Changes background color             |
+| `w3-text-color`        | Changes text or foreground color     |
+| `w3-hover-color`       | Changes background color on hover    |
+| `w3-hover-text-color`  | Changes text color on hover           |
+```
+> Here, `color` represents the name of the color, such as `red`, `blue`, `green` or `orange`.
+
+### 5.3.3 Background Color Using `w3-color`
+
+```html
+<div class="w3-orange">
+    <h2>India</h2>
+    <p>India is a great country.</p>
+</div>
+```
+
+- `w3-orange` applies an **orange background**.
+
+### 5.3.4 Text Color Using `w3-text-color`
+
+```html
+<div class="w3-orange w3-text-teal">
+    <h2>India</h2>
+    <p>India is a great country.</p>
+</div>
+```
+
+- `w3-orange` applies an orange background.
+- `w3-text-teal` changes the text color to **teal**.
+
+### 5.3.5 Background Hover Color Using `w3-hover-color`
+
+```html
+<div class="w3-orange w3-hover-green">
+    <h2>India</h2>
+    <p>Move your mouse over this section.</p>
+</div>
+```
+
+- Initially, the background is **orange**.
+- When the mouse pointer moves over the element, the background becomes **green**.
+
+### 5.3.6 Text Hover Color Using `w3-hover-text-color`
+
+```html
+<div class="w3-orange w3-text-teal w3-hover-text-orange">
+    <h2>India</h2>
+    <p>Move your mouse over this text.</p>
+</div>
+```
+
+- Initially, the text color is **teal**.
+- On mouse hover, the text color becomes **orange**.
+
+### Remember:
+- `w3-blue` – Blue **background**.
+- `w3-text-blue` – Blue **text**.
+- `w3-hover-blue` – Blue background **on hover**.
+- `w3-hover-text-blue` – Blue text **on hover**.
+
+---
+
+## 5.4 W3.CSS Containers
+
+### 5.4.1 What is a Container?
+
+In W3.CSS, a **container** is a simple box that can contain any HTML content, such as:
+- Text
+- Images
+- Tables
+- Links
+- Lists
+- Forms
+
+The `w3-container` class is used to create a W3.CSS container.
+
+### 5.4.2 HTML Tags That Can Use W3.CSS Containers
+```
+| HTML Tag    | Purpose                       |
+|-------------|-------------------------------|
+| `<div>`     | General-purpose container     |
+| `<header>`  | Header section                |
+| `<footer>`  | Footer section                |
+| `<article>`| Independent content           |
+| `<section>` | Separate webpage section      |
+```
+---
+### 5.4.3 Basic Container Syntax
+
+```html
+<div class="w3-container">
+    Content goes here
+</div>
+```
+
+We can combine `w3-container` with color classes.
+
+**Example:**
+```html
+<div class="w3-container w3-indigo">
+    <h2>India</h2>
+    <p>India is a great country.</p>
+</div>
+```
+
+- `w3-container` creates a container.
+- `w3-indigo` applies an indigo background.
+
+### 5.4.4 Combining Multiple Classes in a Container
+
+```html
+<div class="w3-container w3-indigo w3-text-red
+w3-hover-orange w3-hover-text-green">
+
+    <h2>India</h2>
+    <p>India is a great country.</p>
+
+</div>
+```
+
+**Explanation:**
+1. `w3-container` – Adds container styling.
+2. `w3-indigo` – Applies indigo background.
+3. `w3-text-red` – Applies red text.
+4. `w3-hover-orange` – Changes background to orange on hover.
+5. `w3-hover-text-green` – Changes text to green on hover.
+
+### 5.4.5 Using Containers with Different HTML Tags
+
+```html
+<header class="w3-container w3-indigo">
+    <h2>India</h2>
+</header>
+
+<article class="w3-container w3-light-grey">
+    <h2>Culture</h2>
+    <p>India has a rich cultural heritage.</p>
+</article>
+
+<section class="w3-container w3-pale-yellow">
+    <h2>History</h2>
+    <p>India has a long and rich history.</p>
+</section>
+
+<footer class="w3-container w3-orange">
+    <h5>Footer Section</h5>
+</footer>
+```
+
+### 5.4.6 Important Properties of W3.CSS Containers
+
+1. A container adds **16px padding** on the left and right.
+2. A container **does not add its own top and bottom margin**.
+3. Multiple containers placed one after another appear **attached** to each other unless spacing is added separately.
+4. Containers can be used with **different HTML tags**.
+
+---
+
+## 5.5 W3.CSS Panels
+
+### 5.5.1 What is a Panel?
+
+A **panel** is similar to a container, but the main difference is that a panel provides **additional spacing** around the content.
+
+The `w3-panel` class is used to create a panel.
+
+### 5.5.2 Difference Between Container and Panel
+```
+| Container                                      | Panel                                           |
+|------------------------------------------------|-------------------------------------------------|
+| Uses `w3-container`                            | Uses `w3-panel`                                 |
+| Adds **16px left and right padding**           | Adds **16px top and bottom margin**             |
+| Does not add its own top and bottom margin     | Provides additional vertical spacing            |
+| Used to group content                          | Used to display separate content sections      |
+```
+---
+### 5.5.3 Basic Panel Syntax
+
+```html
+<div class="w3-panel">
+    Content goes here
+</div>
+```
+
+**Example:**
+```html
+<div class="w3-panel w3-indigo">
+    <h2>India</h2>
+    <p>India is a great country.</p>
+</div>
+```
+
+### 5.5.4 Panel as a Quote
+
+```html
+<div class="w3-panel w3-pale-pink
+w3-leftbar w3-xlarge w3-serif">
+
+    <p><i>Love for all, hatred for none.</i></p>
+
+</div>
+```
+
+**Explanation:**
+- `w3-panel` – Creates a panel.
+- `w3-pale-pink` – Applies a pale pink background.
+- `w3-leftbar` – Adds a thick left border.
+- `w3-xlarge` – Increases text size.
+- `w3-serif` – Applies a serif font style.
+
+### 5.5.5 Panel with Card Effect
+
+```html
+<div class="w3-panel w3-orange w3-card-4">
+    <h2>India</h2>
+    <p>India is a great country.</p>
+</div>
+```
+
+> **Important:**
+> - `w3-card` – Adds a card-like shadow.
+> - `w3-card-2` – Adds a smaller shadow.
+> - `w3-card-4` – Adds a stronger shadow.
+
+### 5.5.6 Panel with Rounded Corners
+
+```html
+<div class="w3-panel w3-pink w3-round-xlarge">
+    <h2>India</h2>
+    <p>India is a great country.</p>
+</div>
+```
+
+**Common Classes:**
+| Class | Description |
+|---|---|
+| `w3-round-small` | Small rounded corners |
+| `w3-round-large` | Large rounded corners |
+| `w3-round-xlarge` | Extra-large rounded corners |
+| `w3-round-xxlarge` | Very large rounded corners |
+
+---
+
+## 5.6 W3.CSS Borders
+
+### 5.6.1 Introduction to W3.CSS Borders
+
+W3.CSS provides predefined classes for **adding borders** to HTML elements.
+
+### 5.6.2 Border Classes
+```
+| Class               | Description                       |
+|---------------------|-----------------------------------|
+| `w3-border`         | Adds borders on all four sides    |
+| `w3-border-top`     | Adds a top border                 |
+| `w3-border-right`   | Adds a right border               |
+| `w3-border-bottom`  | Adds a bottom border              |
+| `w3-border-left`    | Adds a left border                |
+| `w3-border-0`       | Removes all borders               |
+```
+**Example:**
+```html
+<div class="w3-panel w3-border">
+    <p>Border on all four sides.</p>
+</div>
+
+<div class="w3-panel w3-border-bottom">
+    <p>Only bottom border.</p>
+</div>
+
+<div class="w3-panel w3-border-right">
+    <p>Only right border.</p>
+</div>
+```
+
+### 5.6.3 Border Color Classes
+
+```html
+<div class="w3-panel w3-border w3-border-red">
+    <p>Red border.</p>
+</div>
+
+<div class="w3-panel w3-border w3-border-blue">
+    <p>Blue border.</p>
+</div>
+
+<div class="w3-panel w3-border w3-border-green">
+    <p>Green border.</p>
+</div>
+```
+
+### 5.6.4 Hover Border Color
+
+```html
+<div class="w3-panel w3-border w3-border-red
+w3-hover-border-green">
+
+    <p>Move your mouse over this panel.</p>
+
+</div>
+```
+
+> Initially, the border is **red**. On mouse hover, it becomes **green**.
+
+### 5.6.5 Thick Border Classes
+```
+| Class           | Description          |
+|-----------------|----------------------|
+| `w3-topbar`     | Thick top border     |
+| `w3-bottombar`  | Thick bottom border  |
+| `w3-leftbar`    | Thick left border    |
+| `w3-rightbar`   | Thick right border   |
+```
+**Example:**
+```html
+<div class="w3-panel w3-yellow w3-leftbar w3-border-blue">
+    <p>Blue thick left border.</p>
+</div>
+
+<div class="w3-panel w3-pale-green w3-bottombar w3-border-green">
+    <p>Green thick bottom border.</p>
+</div>
+```
+
+### 5.6.6 Rounded Border Example
+
+```html
+<div class="w3-panel w3-border w3-round-xlarge">
+    <p>This panel has rounded corners.</p>
+</div>
+```
+
+---
+
+## 5.7 W3.CSS Fonts
+
+### 5.7.1 Introduction to W3.CSS Fonts
+
+W3.CSS provides predefined **font styles** and **font-size classes**.
+
+**Default font settings:**
+```
+| Property      | Default Value |
+|---------------|---------------|
+| Font size     | `15px`        |
+| Font family   | `Verdana`     |
+| Line spacing  | `1.5`         |
+```
+> W3.CSS uses the **Verdana** font, which gives text a clean and relatively thin appearance.
+
+### 5.7.2 Default Heading Styles
+
+```html
+<h1>India</h1>
+<h2>India</h2>
+<h3>India</h3>
+<h4>India</h4>
+<h5>India</h5>
+<h6>India</h6>
+```
+
+### 5.7.3 Font Size Classes
+```
+| Class          | Description                 |
+|----------------|-----------------------------|
+| `w3-tiny`      | Very small text             |
+| `w3-small`     | Small text                  |
+| `w3-medium`    | Medium text                 |
+| `w3-large`     | Large text                  |
+| `w3-xlarge`    | Extra-large text            |
+| `w3-xxlarge`   | Double extra-large text     |
+| `w3-xxxlarge`  | Triple extra-large text     |
+| `w3-jumbo`     | Very large text             |
+```
+### 5.7.4 Example of Font Size Classes
+
+```html
+<p class="w3-tiny">India is a great country.</p>
+<p class="w3-small">India is a great country.</p>
+<p class="w3-medium">India is a great country.</p>
+<p class="w3-large">India is a great country.</p>
+<p class="w3-xlarge">India is a great country.</p>
+<p class="w3-xxlarge">India is a great country.</p>
+<p class="w3-xxxlarge">India is a great country.</p>
+<p class="w3-jumbo">India is a great country.</p>
+```
+
+### 5.7.5 Overriding W3.CSS Font Styles
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font Override</title>
+
+    <link rel="stylesheet"
+    href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        h1 {
+            font-size: 64px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to W3.CSS</h1>
+
+</body>
+</html>
+```
+
+> **Important Point:** Write your custom CSS **after** the W3.CSS stylesheet link so that your custom rules can override the framework's styles.
+
+---
+
+## 5.8 W3.CSS Text
+
+### 5.8.1 Introduction to W3.CSS Text
+
+W3.CSS provides predefined classes to change **text alignment**, **letter spacing** and **transparency**.
+
+### 5.8.2 Text Alignment Classes
+```
+| Class             | Description                  |
+|-------------------|------------------------------|
+| `w3-left-align`   | Aligns text to the left      |
+| `w3-right-align`  | Aligns text to the right     |
+| `w3-center`       | Aligns text to the center    |
+```
+**Example:**
+```html
+<div class="w3-panel w3-pale-red">
+    <p class="w3-left-align">Left Aligned Text</p>
+    <p class="w3-center">Center Aligned Text</p>
+    <p class="w3-right-align">Right Aligned Text</p>
+</div>
+```
+
+### 5.8.3 Wide Text – `w3-wide`
+
+The `w3-wide` class increases the spacing between letters.
+
+```html
+<div class="w3-panel w3-pale-red">
+    <p class="w3-wide">India is a great country.</p>
+</div>
+```
+
+### 5.8.4 Text Opacity – `w3-opacity`
+
+The `w3-opacity` class makes text or an element appear transparent.
+
+```html
+<div class="w3-panel w3-pink">
+    <h2 class="w3-opacity">Text Opacity</h2>
+</div>
+```
+
+### 5.8.5 Additional Text Effects Using CSS Properties
+```
+| CSS Property       | Purpose                             |
+|--------------------|-------------------------------------|
+| `letter-spacing`   | Controls space between letters      |
+| `line-height`      | Controls space between lines        |
+| `word-spacing`     | Controls space between words        |
+| `text-shadow`      | Adds shadow to text                 |
+```
+---
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Effects</title>
+    <link rel="stylesheet"
+    href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        .text1 { letter-spacing: 5px; }
+        .text2 { line-height: 2; }
+        .text3 { word-spacing: 10px; }
+        .text4 { text-shadow: 2px 2px 4px grey; }
+    </style>
+</head>
+<body>
+
+    <p class="text1">Letter Spacing Example</p>
+    <p class="text2">Line height example.<br>This is the second line.</p>
+    <p class="text3">Word spacing example.</p>
+    <h2 class="text4">Text Shadow Example</h2>
+
+</body>
+</html>
+```
+
+---
+
+## 5.9 W3.CSS Tables
+
+### 5.9.1 Introduction to W3.CSS Tables
+
+W3.CSS provides predefined classes to **style HTML tables**.
+
+### 5.9.2 Important W3.CSS Table Classes
+```
+| Class                                      | Description                                      |
+|--------------------------------------------|--------------------------------------------------|
+| `w3-table`                                 | Basic styled table                              |
+| `w3-striped`                               | Adds alternate row backgrounds                  |
+| `w3-border`                                | Adds a border around the table                   |
+| `w3-bordered`                              | Adds horizontal borders between rows            |
+| `w3-centered`                              | Centers table content                            |
+| `w3-hoverable`                             | Adds hover effect to table rows                  |
+| `w3-table-all`                             | Combines common table styling                    |
+| `w3-responsive`                            | Makes a table horizontally scrollable on small screens |
+| `w3-card-4`                                | Adds a card-like shadow                          |
+| `w3-tiny`, `w3-small`, `w3-large`          | Changes table text size                          |
+```
+### 5.9.3 Basic Table Using `w3-table`
+
+```html
+<table class="w3-table">
+    <tr>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Mother Name</th>
+    </tr>
+    <tr>
+        <td>Suresh</td>
+        <td>Sunil</td>
+        <td>Poonam</td>
+    </tr>
+    <tr>
+        <td>Prateek</td>
+        <td>Devendra</td>
+        <td>Shivalika</td>
+    </tr>
+</table>
+```
+
+### 5.9.4 Striped Table – `w3-striped`
+
+```html
+<table class="w3-table w3-striped">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+    <tr>
+        <td>Amit</td>
+        <td>A Level</td>
+    </tr>
+    <tr>
+        <td>Priya</td>
+        <td>B Level</td>
+    </tr>
+</table>
+```
+
+### 5.9.5 Bordered Table – `w3-bordered` and `w3-border`
+
+```html
+<table class="w3-table w3-striped w3-bordered w3-border">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+    <tr>
+        <td>Amit</td>
+        <td>A Level</td>
+    </tr>
+</table>
+```
+
+### 5.9.6 Using `w3-table-all`
+
+```html
+<table class="w3-table-all">
+    <thead>
+        <tr class="w3-green">
+            <th>Name</th>
+            <th>Father Name</th>
+            <th>Mother Name</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Suresh</td>
+        <td>Sunil</td>
+        <td>Poonam</td>
+    </tr>
+    <tr>
+        <td>Prateek</td>
+        <td>Devendra</td>
+        <td>Shivalika</td>
+    </tr>
+</table>
+```
+
+### 5.9.7 Centered Table – `w3-centered`
+
+```html
+<table class="w3-table-all w3-centered">
+    <tr class="w3-green">
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+    <tr>
+        <td>Amit</td>
+        <td>A Level</td>
+    </tr>
+</table>
+```
+
+### 5.9.8 Hoverable Table – `w3-hoverable`
+
+```html
+<table class="w3-table-all w3-hoverable">
+    <tr class="w3-green">
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+    <tr>
+        <td>Amit</td>
+        <td>A Level</td>
+    </tr>
+</table>
+```
+
+### 5.9.9 Colored Hover Effect
+
+```html
+<table class="w3-table-all">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+    <tr class="w3-hover-blue">
+        <td>Amit</td>
+        <td>A Level</td>
+    </tr>
+</table>
+```
+
+### 5.9.10 Table with Card Effect
+
+```html
+<table class="w3-table-all w3-card-4">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+    <tr>
+        <td>Amit</td>
+        <td>A Level</td>
+    </tr>
+</table>
+```
+
+### 5.9.11 Responsive Table – `w3-responsive`
+
+```html
+<div class="w3-responsive">
+    <table class="w3-table-all">
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>City</th>
+            <th>Mobile</th>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>O Level</td>
+            <td>Gorakhpur</td>
+            <td>9876543210</td>
+        </tr>
+    </table>
+</div>
+```
+
+### 5.9.12 Table Size Classes
+
+```html
+<table class="w3-table-all w3-large">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>O Level</td>
+    </tr>
+</table>
+```
+
+---
+
+## 5.10 W3.CSS Lists
+
+### 5.10.1 Introduction to W3.CSS Lists
+
+W3.CSS provides predefined classes to design HTML lists.
+
+### 5.10.2 Designer List – `w3-ul`
+
+The `w3-ul` class creates a designer list. It removes the default bullets and adds borders between list items.
+
+```html
+<ul class="w3-ul">
+    <li>India</li>
+    <li>Pakistan</li>
+    <li>Sri Lanka</li>
+</ul>
+```
+
+### 5.10.3 Bordered List – `w3-border`
+
+```html
+<ul class="w3-ul w3-border">
+    <li>India</li>
+    <li>Pakistan</li>
+    <li>Sri Lanka</li>
+</ul>
+```
+
+### 5.10.4 List with Card Effect – `w3-card-4`
+
+```html
+<div class="w3-panel">
+    <ul class="w3-ul w3-border w3-card-4">
+        <li>India</li>
+        <li>Pakistan</li>
+        <li>Sri Lanka</li>
+    </ul>
+</div>
+```
+
+### 5.10.5 Centered and Colored List
+
+```html
+<ul class="w3-ul w3-border w3-center w3-green">
+    <li>India</li>
+    <li>Pakistan</li>
+    <li>Sri Lanka</li>
+</ul>
+```
+
+```html
+<ul class="w3-ul">
+    <li class="w3-red">India</li>
+    <li class="w3-blue">Pakistan</li>
+    <li class="w3-green">Sri Lanka</li>
+</ul>
+```
+
+### 5.10.6 Hoverable List – `w3-hoverable`
+
+```html
+<ul class="w3-ul w3-hoverable">
+    <li>India</li>
+    <li>Pakistan</li>
+    <li>Sri Lanka</li>
+</ul>
+```
+
+```html
+<ul class="w3-ul">
+    <li class="w3-hover-red">India</li>
+    <li class="w3-hover-blue">Pakistan</li>
+    <li class="w3-hover-green">Sri Lanka</li>
+</ul>
+```
+
+### 5.10.7 List with Images
+
+```html
+<ul class="w3-ul">
+    <li class="w3-bar">
+        <img src="india.jpg"
+        class="w3-bar-item w3-circle"
+        style="width:85px"
+        alt="India">
+        <div class="w3-bar-item">
+            <span class="w3-large">India</span><br>
+            <span>A great nation</span>
+        </div>
+    </li>
+</ul>
+```
+
+### 5.10.8 List Width Using Inline CSS
+
+```html
+<ul class="w3-ul w3-border" style="width:50%;">
+    <li>India</li>
+    <li>Pakistan</li>
+    <li>Sri Lanka</li>
+</ul>
+```
+
+### 5.10.9 List Size Classes
+
+```html
+<ul class="w3-ul w3-large">
+    <li>India</li>
+    <li>Pakistan</li>
+    <li>Sri Lanka</li>
+</ul>
+```
+
+---
+
+## 5.11 W3.CSS Images
+
+### 5.11.1 Introduction to W3.CSS Images
+
+W3.CSS provides predefined classes to style images and create different visual effects.
+
+### 5.11.2 Rounded Image – `w3-round`
+
+```html
+<img src="penguins.jpg" class="w3-round" alt="Penguins">
+```
+
+Different sizes: `w3-round-small`, `w3-round`, `w3-round-large`, `w3-round-xlarge`, `w3-round-xxlarge`.
+
+### 5.11.3 Circular Image – `w3-circle`
+
+```html
+<img src="penguins.jpg"
+class="w3-circle"
+width="200"
+height="200"
+alt="Penguins">
+```
+
+### 5.11.4 Image with Border and Padding
+
+```html
+<img src="penguins.jpg"
+class="w3-border w3-padding"
+alt="Penguins">
+```
+
+### 5.11.5 Image with Card Effect
+
+```html
+<img src="penguins.jpg"
+class="w3-card-4"
+alt="Penguins">
+```
+
+### 5.11.6 Text Display on Images
+
+```html
+<div class="w3-display-container w3-text-white">
+
+    <img src="desert.jpg"
+    class="w3-card-4"
+    style="width:100%"
+    alt="Desert">
+
+    <div class="w3-display-topleft w3-container">India 1</div>
+    <div class="w3-display-topmiddle w3-container">India 2</div>
+    <div class="w3-display-topright w3-container">India 3</div>
+    <div class="w3-display-left w3-container">India 4</div>
+    <div class="w3-display-middle w3-container">India 5</div>
+    <div class="w3-display-right w3-container">India 6</div>
+    <div class="w3-display-bottomleft w3-container">India 7</div>
+    <div class="w3-display-bottommiddle w3-container">India 8</div>
+    <div class="w3-display-bottomright w3-container">India 9</div>
+
+</div>
+```
+
+### 5.11.7 Responsive Images
+
+**Method 1: Using `w3-image`**
+```html
+<img src="penguins.jpg" class="w3-image" alt="Penguins">
+```
+
+**Method 2: Using `max-width`**
+```html
+<img src="penguins.jpg" style="max-width:500px; width:100%;" alt="Penguins">
+```
+
+**Method 3: Using `width:100%`**
+```html
+<img src="penguins.jpg" style="width:100%;" alt="Penguins">
+```
+
+### 5.11.8 Image Opacity Classes
+```
+| Class              | Description              |
+|--------------------|--------------------------|
+| `w3-opacity-min`   | Lower opacity effect     |
+| `w3-opacity`       | Medium opacity effect    |
+| `w3-opacity-max`   | Higher opacity effect    |
+```
+---
+```html
+<img src="penguins.jpg" alt="Original Image">
+<img src="penguins.jpg" class="w3-opacity-min" alt="Low opacity">
+<img src="penguins.jpg" class="w3-opacity" alt="Medium opacity">
+<img src="penguins.jpg" class="w3-opacity-max" alt="High opacity">
+```
+
+### 5.11.9 Grayscale Image Effects
+```
+| Class                | Description                  |
+|----------------------|------------------------------|
+| `w3-grayscale-min`   | Minimum grayscale effect     |
+| `w3-grayscale`       | Normal grayscale effect      |
+| `w3-grayscale-max`   | Maximum grayscale effect     |
+```
+---
+```html
+<img src="penguins.jpg" alt="Original">
+<img src="penguins.jpg" class="w3-grayscale-min" alt="Minimum grayscale">
+<img src="penguins.jpg" class="w3-grayscale" alt="Grayscale">
+<img src="penguins.jpg" class="w3-grayscale-max" alt="Maximum grayscale">
+```
+
+### 5.11.10 Sepia Image Effects
+
+```html
+<img src="penguins.jpg" class="w3-sepia-min" alt="Minimum sepia">
+<img src="penguins.jpg" class="w3-sepia" alt="Sepia">
+<img src="penguins.jpg" class="w3-sepia-max" alt="Maximum sepia">
+```
+
+### 5.11.11 Image Hover Effects
+```
+| Class                  | Description                    |
+|------------------------|--------------------------------|
+| `w3-hover-opacity`     | Applies opacity on hover       |
+| `w3-hover-grayscale`   | Applies grayscale on hover    |
+| `w3-hover-sepia`       | Applies sepia on hover         |
+```
+---
+```html
+<img src="penguins.jpg" class="w3-hover-opacity" alt="Opacity on hover">
+<img src="penguins.jpg" class="w3-hover-grayscale" alt="Grayscale on hover">
+<img src="penguins.jpg" class="w3-hover-sepia" alt="Sepia on hover">
+```
+
+### 5.11.12 Removing Opacity on Hover
+
+```html
+<img src="penguins.jpg"
+class="w3-opacity w3-hover-opacity-off"
+alt="Hover opacity effect">
+```
+
+---
+
+## 5.12 W3.CSS Grid
+
+### 5.12.1 Introduction to W3.CSS Grid
+
+A **grid** is a layout system used to arrange different elements into **rows and columns**.
+
+### 5.12.2 Understanding the 12-Column Grid System
+
+W3.CSS divides the available screen width into **12 equal-width columns**.
+
+A row can contain a **maximum of 12 column units**.
+
+**Examples:**
+- 12 equal-width columns: `1, 2, 3, 4, 5, 6, 7, 8
