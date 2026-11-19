@@ -12875,7 +12875,7 @@ w3-hover-orange w3-hover-text-green">
     <p>India has a rich cultural heritage.</p>
 </article>
 
-<section class="w3-container w3-pale-yellow">
+<section class="w3-container w3-yellow">
     <h2>History</h2>
     <p>India has a long and rich history.</p>
 </section>
@@ -12931,7 +12931,7 @@ The `w3-panel` class is used to create a panel.
 ### 5.5.4 Panel as a Quote
 
 ```html
-<div class="w3-panel w3-pale-pink
+<div class="w3-panel w3 -pink
 w3-leftbar w3-xlarge w3-serif">
 
     <p><i>Love for all, hatred for none.</i></p>
@@ -12941,7 +12941,7 @@ w3-leftbar w3-xlarge w3-serif">
 
 **Explanation:**
 - `w3-panel` – Creates a panel.
-- `w3-pale-pink` – Applies a pale pink background.
+- `w3 -pink` – Applies a pale pink background.
 - `w3-leftbar` – Adds a thick left border.
 - `w3-xlarge` – Increases text size.
 - `w3-serif` – Applies a serif font style.
@@ -13055,7 +13055,7 @@ w3-hover-border-green">
     <p>Blue thick left border.</p>
 </div>
 
-<div class="w3-panel w3-pale-green w3-bottombar w3-border-green">
+<div class="w3-panel w3 -green w3-bottombar w3-border-green">
     <p>Green thick bottom border.</p>
 </div>
 ```
@@ -13169,7 +13169,7 @@ W3.CSS provides predefined classes to change **text alignment**, **letter spacin
 ```
 **Example:**
 ```html
-<div class="w3-panel w3-pale-red">
+<div class="w3-panel w3 -red">
     <p class="w3-left-align">Left Aligned Text</p>
     <p class="w3-center">Center Aligned Text</p>
     <p class="w3-right-align">Right Aligned Text</p>
@@ -13181,7 +13181,7 @@ W3.CSS provides predefined classes to change **text alignment**, **letter spacin
 The `w3-wide` class increases the spacing between letters.
 
 ```html
-<div class="w3-panel w3-pale-red">
+<div class="w3-panel w3 -red">
     <p class="w3-wide">India is a great country.</p>
 </div>
 ```
