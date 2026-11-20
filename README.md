@@ -13637,50 +13637,65 @@ alt="Penguins">
 
 ### 5.11.7 Responsive Images
 
+A **Responsive Image** is an image that automatically adjusts its size according to the **screen size or available space**.
 
-A Responsive Image is an image that automatically adjusts its size according to the screen size or available space.
+It ensures that images display properly on different devices, such as **mobile phones, tablets, laptops, and desktops**.
 
-It ensures that images display properly on different devices, such as mobile phones, tablets, laptops, and desktops.
-Method 1: Using w3-image
+---
+
+### Method 1: Using `w3-image`
+
+```html
 <img src="penguins.jpg" class="w3-image" alt="Penguins">
+```
 
+**Explanation:**
+- `w3-image` is a predefined **W3.CSS class**.
+- It makes an image **responsive**.
+- The image adjusts according to the **available width** of its parent container.
+- It maintains the image's **original aspect ratio**.
+- It prevents the image from becoming **distorted**.
 
-Explanation:
-- w3-image is a predefined W3.CSS class.
-- It makes an image responsive.
-- The image adjusts according to the available width of its parent container.
-- It maintains the image's original aspect ratio.
-- It prevents the image from becoming distorted.
-Method 2: Using max-width
+---
+
+### Method 2: Using `max-width`
+
+```html
 <img src="penguins.jpg"
      style="max-width:500px; width:100%;"
      alt="Penguins">
+```
 
+**Explanation:**
 
-Explanation:
+This method uses **two CSS properties**.
 
-This method uses two CSS properties.
-
-1. width: 100%;
-- Makes the image occupy 100% of its parent container's available width.
+**1. `width: 100%;`**
+- Makes the image occupy **100%** of its parent container's available width.
 - If the parent container is 300px wide, the image becomes 300px wide.
 - If the parent container is 500px wide, the image becomes 500px wide.
-2. max-width: 500px;
-- Sets the maximum width of the image to 500px.
-- The image cannot become wider than 500px.
-- On smaller screens, the image automatically reduces its size.
-Method 3: Using width: 100%
+
+**2. `max-width: 500px;`**
+- Sets the **maximum width** of the image to **500px**.
+- The image **cannot become wider** than 500px.
+- On smaller screens, the image automatically **reduces its size**.
+
+---
+
+### Method 3: Using `width: 100%`
+
+```html
 <img src="penguins.jpg"
      style="width:100%;"
      alt="Penguins">
+```
 
-
-Explanation:
-- width: 100% makes the image occupy the full available width of its parent container.
-- The image automatically adjusts according to the parent container's width.
-- It is useful when we want an image to fill the entire available space.
-- There is no maximum width limit, so the image can become very large on desktop screens.
-- The image maintains its aspect ratio by default when its height is set to auto.
+**Explanation:**
+- `width: 100%` makes the image occupy the **full available width** of its parent container.
+- The image automatically **adjusts** according to the parent container's width.
+- It is useful when we want an image to **fill the entire available space**.
+- There is **no maximum width limit**, so the image can become very large on desktop screens.
+- The image maintains its **aspect ratio** by default when its height is set to `auto`.
 
 ### 5.11.8 Image Opacity Classes
 ```
