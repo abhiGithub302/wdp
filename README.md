@@ -334,6 +334,16 @@ This module introduces students to web designing, even if they have no previous 
 12. [5.12 W3.CSS Grid](#512-w3css-grid)
     - [5.12.1 Introduction to W3.CSS Grid](#5121-introduction-to-w3css-grid)
     - [5.12.2 Understanding the 12-Column Grid System](#5122-understanding-the-12-column-grid-system)
+    - [5.12.3 `w3-row`](#5123-w3-row)
+    - [5.12.4 `w3-col`](#5124-w3-col)
+    - [5.12.5 Creating Three Equal Columns](#5125-creating-three-equal-columns)
+    - [5.12.6 Responsive Columns](#5126-responsive-columns)
+    - [5.12.7 Understanding Grid Classes](#5127-understanding-grid-classes)
+    - [5.12.8 Creating Unequal Columns](#5128-creating-unequal-columns)
+    - [5.12.9 `w3-row-padding`](#5129-w3-row-padding)
+    - [5.12.10 Using Percentage Widths](#51210-using-percentage-widths)
+    - [5.12.11 `w3-rest`](#51211-w3-rest)
+    - [5.12.12 Important W3.CSS Grid Classes](#51212-important-w3css-grid-classes)
 
 
 ---
@@ -13776,3 +13786,186 @@ A row can contain a **maximum of 12 column units**.
 
 **Examples:**
 - 12 equal-width columns: `1, 2, 3, 4, 5, 6, 7, 8
+
+---
+# 5.12 W3.CSS Grid
+
+## 5.12.1 Introduction to Grid Layout
+
+**W3.CSS Grid** is used to arrange webpage content into **columns**. It helps organize text, images, cards, and other elements into a **structured and responsive layout**.
+
+**Uses:**
+- Arrange content side by side.
+- Create sidebar and main content layouts.
+- Display cards and images in columns.
+- Design responsive webpages.
+
+---
+
+## 5.12.2 Understanding the 12-Column Grid System
+
+W3.CSS divides a row into **12 equal parts**. We can combine these parts to create different layouts.
+```
+| Grid Units          | Width       |
+|--------------------|-------------|
+| `1`                | `8.33%`     |
+| `2`                | `16.66%`    |
+| `3`                | `25%`       |
+| `4`                | `33.33%`    |
+| `6`                | `50%`       |
+| `8`                | `66.66%`    |
+| `9`                | `75%`       |
+| `12`               | `100%`      |
+```
+**Examples:**
+- `6 + 6` (two columns)
+- `4 + 4 + 4` (three columns)
+- `3 + 9` (sidebar and content)
+
+---
+
+## 5.12.3 `w3-row`
+
+The `w3-row` class creates a **row** that acts as a container for grid columns.
+
+```html
+<div class="w3-row">
+    <!-- Columns -->
+</div>
+```
+
+---
+
+## 5.12.4 `w3-col`
+
+The `w3-col` class defines a **column**. Size classes control its width.
+```
+| Class | Device |
+| `s` | Small – Mobile |
+| `m` | Medium – Tablet |
+| `l` | Large – Desktop |
+```
+> **Example:** `w3-col s4` occupies **4 out of 12 units** (33.33%) on small screens.
+
+---
+
+## 5.12.5 Creating Three Equal Columns
+
+To create **three equal columns**, each column occupies **4 grid units**.
+
+```html
+<div class="w3-row">
+    <div class="w3-col s4 w3-red">Column 1</div>
+    <div class="w3-col s4 w3-green">Column 2</div>
+    <div class="w3-col s4 w3-blue">Column 3</div>
+</div>
+```
+
+---
+
+## 5.12.6 Responsive Columns
+
+Responsive columns adjust their width according to **screen size**.
+
+```html
+<div class="w3-row">
+    <div class="w3-col s12 m6 l4">Column 1</div>
+    <div class="w3-col s12 m6 l4">Column 2</div>
+    <div class="w3-col s12 m12 l4">Column 3</div>
+</div>
+```
+
+- **Mobile:** Columns appear vertically.
+- **Tablet:** First two columns appear side by side.
+- **Desktop:** All three columns appear side by side.
+
+---
+
+## 5.12.7 Understanding Grid Classes
+
+W3.CSS follows a **mobile-first approach**. Grid classes determine the column width at different screen sizes.
+
+- `s4` – 4 units on small screens and larger screens unless overridden.
+- `m4` – Full width on small screens, 4 units on medium and larger screens.
+- `l4` – Full width on small and medium screens, 4 units on large screens.
+
+---
+
+## 5.12.8 Creating Unequal Columns
+
+Grid units can be combined in different proportions to create **unequal columns**.
+
+```html
+<div class="w3-row">
+    <div class="w3-col s3 w3-blue">Sidebar</div>
+    <div class="w3-col s9 w3-light-grey">Main Content</div>
+</div>
+```
+
+> Here, the sidebar occupies **25%** and the main content occupies **75%** of the row.
+
+---
+
+## 5.12.9 `w3-row-padding`
+
+The `w3-row-padding` class adds **horizontal spacing** between columns, making the layout look cleaner.
+
+```html
+<div class="w3-row-padding">
+    <div class="w3-col s4">Column 1</div>
+    <div class="w3-col s4">Column 2</div>
+    <div class="w3-col s4">Column 3</div>
+</div>
+```
+```
+| Class               | Purpose                  |
+|---------------------|--------------------------|
+| `w3-row`            | Creates a row            |
+| `w3-row-padding`    | Adds horizontal spacing  |
+```
+---
+
+## 5.12.10 Using Percentage Widths
+
+We can set column widths using **inline CSS percentages** when custom sizes are required.
+
+```html
+<div class="w3-row">
+    <div class="w3-col" style="width:50%">50%</div>
+    <div class="w3-col" style="width:30%">30%</div>
+    <div class="w3-col" style="width:20%">20%</div>
+</div>
+```
+
+> The total width is **100%**.
+
+---
+
+## 5.12.11 `w3-rest`
+
+The `w3-rest` class occupies the **remaining available space** in a row after other columns have taken their widths.
+
+```html
+<div class="w3-row">
+    <div class="w3-col" style="width:60%">India</div>
+    <div class="w3-col" style="width:250px">Sri Lanka</div>
+    <div class="w3-rest">Pakistan</div>
+</div>
+```
+
+> Here, the last column automatically occupies the **remaining space**.
+
+---
+
+## 5.12.12 Important W3.CSS Grid Classes
+```
+| Class              | Purpose                          |
+|--------------------|----------------------------------|
+| `w3-row`          | Creates a row                     |
+| `w3-row-padding`  | Adds horizontal spacing            |
+| `w3-col`         | Defines a column                   |
+| `s1`–`s12`      | Column sizes for small screens     |
+| `m1`–`m12`      | Column sizes for medium screens   |
+| `l1`–`l12`      | Column sizes for large screens    |
+| `w3-rest`        | Occupies remaining space          |
+```
